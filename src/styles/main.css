@@ -1,16 +1,28 @@
 @import './markdown.css';
 
+:root {
+  --redline-black: #000000;
+  --redline-red: #e32521;
+  --redline-white: #ffffff;
+}
+
 html,
 body,
 #app {
   height: 100%;
   margin: 0;
   padding: 0;
+  font-family: 'DM Sans', sans-serif;
 }
 
 html.dark {
-  background: #121212;
+  background: var(--redline-black);
   color-scheme: dark;
+}
+
+html {
+  background: var(--redline-white);
+  color: var(--redline-black);
 }
 
 #nprogress {
@@ -18,7 +30,7 @@ html.dark {
 }
 
 #nprogress .bar {
-  background: rgb(13, 148, 136);
+  background: var(--redline-red);
   opacity: 0.75;
   position: fixed;
   z-index: 1031;
@@ -27,3 +39,46 @@ html.dark {
   width: 100%;
   height: 2px;
 }
+
+/* Brand button styles */
+.btn-primary {
+  background-color: var(--redline-red);
+  color: var(--redline-white);
+  padding: 12px 24px;
+  border-radius: 6px;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.3s ease;
+  border: 2px solid var(--redline-red);
+}
+
+.btn-primary:hover {
+  background-color: var(--redline-black);
+  border-color: var(--redline-black);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: var(--redline-black);
+  padding: 12px 24px;
+  border-radius: 6px;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.3s ease;
+  border: 2px solid var(--redline-black);
+}
+
+.btn-secondary:hover {
+  background-color: var(--redline-black);
+  color: var(--redline-white);
+}
+
+/* Utility classes for brand colors */
+.text-redline-red { color: var(--redline-red); }
+.text-redline-black { color: var(--redline-black); }
+.text-redline-white { color: var(--redline-white); }
+.bg-redline-red { background-color: var(--redline-red); }
+.bg-redline-black { background-color: var(--redline-black); }
+.bg-redline-white { background-color: var(--redline-white); }
