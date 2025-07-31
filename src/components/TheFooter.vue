@@ -21,7 +21,7 @@ function closeCalendarModal() {
           <h3 class="mb-4 text-xl text-redline-red font-bold">
             Redline Marketing
           </h3>
-          <p class="text-gray-300 leading-relaxed">
+          <p class="text-muted leading-relaxed">
             Redline is a growth-focused marketing agency built to help local businesses and online brands drive leads, sales, and long-term success.
           </p>
         </div>
@@ -33,22 +33,22 @@ function closeCalendarModal() {
           </h4>
           <ul class="space-y-2">
             <li>
-              <RouterLink to="/local-businesses" class="text-gray-300 transition-colors hover:text-redline-red">
+              <RouterLink to="/local-businesses" class="text-muted transition-colors hover:text-redline-red">
                 Who We Help
               </RouterLink>
             </li>
             <li>
-              <RouterLink to="/services" class="text-gray-300 transition-colors hover:text-redline-red">
+              <RouterLink to="/services" class="text-muted transition-colors hover:text-redline-red">
                 Services
               </RouterLink>
             </li>
             <li>
-              <RouterLink to="/case-studies" class="text-gray-300 transition-colors hover:text-redline-red">
+              <RouterLink to="/case-studies" class="text-muted transition-colors hover:text-redline-red">
                 Case Studies
               </RouterLink>
             </li>
             <li>
-              <RouterLink to="/about" class="text-gray-300 transition-colors hover:text-redline-red">
+              <RouterLink to="/about" class="text-muted transition-colors hover:text-redline-red">
                 About Us
               </RouterLink>
             </li>
@@ -60,7 +60,7 @@ function closeCalendarModal() {
           <h4 class="mb-4 font-semibold">
             Get In Touch
           </h4>
-          <div class="text-gray-300 space-y-2">
+          <div class="text-muted space-y-2">
             <p>Ready to redline your marketing?</p>
             <button class="mt-2 inline-block btn-primary" @click="openCalendarModal">
               Schedule a Consultation
@@ -69,7 +69,7 @@ function closeCalendarModal() {
         </div>
       </div>
 
-      <div class="mt-8 border-t border-gray-800 pt-8 text-center text-gray-400">
+      <div class="text-muted border-default mt-8 border-t pt-8 text-center">
         <p>&copy; 2025 Redline Marketing Agency. All rights reserved.</p>
       </div>
     </div>

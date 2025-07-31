@@ -1,9 +1,37 @@
 @import './markdown.css';
 
 :root {
-  --redline-black: #000000;
+  /* Light mode (default) */
+  --redline-background: #ffffff;
+  --redline-foreground: #000000;
   --redline-red: #e32521;
-  --redline-white: #ffffff;
+
+  /* Surface colors for cards, sections */
+  --redline-surface: #f9fafb; /* gray-50 equivalent */
+  --redline-surface-hover: #f3f4f6; /* gray-100 equivalent */
+  --redline-border: #e5e7eb; /* gray-200 equivalent */
+  --redline-muted: #6b7280; /* gray-500 equivalent */
+  --redline-muted-foreground: #374151; /* gray-700 equivalent */
+
+  /* Keep the old names for backwards compatibility but make them semantic */
+  --redline-black: var(--redline-foreground);
+  --redline-white: var(--redline-background);
+}
+
+html.dark {
+  /* Dark mode - invert primary colors */
+  --redline-background: #000000;
+  --redline-foreground: #ffffff;
+  --redline-red: #e32521; /* Keep red the same */
+
+  /* Dark mode surfaces */
+  --redline-surface: #111111; /* Very dark gray for cards */
+  --redline-surface-hover: #1f1f1f; /* Slightly lighter for hover */
+  --redline-border: #333333; /* Dark border */
+  --redline-muted: #9ca3af; /* Light gray for muted text */
+  --redline-muted-foreground: #d1d5db; /* Even lighter gray */
+
+  color-scheme: dark;
 }
 
 html,
@@ -15,14 +43,9 @@ body,
   font-family: 'DM Sans', sans-serif;
 }
 
-html.dark {
-  background: var(--redline-black);
-  color-scheme: dark;
-}
-
 html {
-  background: var(--redline-white);
-  color: var(--redline-black);
+  background: var(--redline-background);
+  color: var(--redline-foreground);
 }
 
 #nprogress {
@@ -43,7 +66,7 @@ html {
 /* Brand button styles */
 .btn-primary {
   background-color: var(--redline-red);
-  color: var(--redline-white);
+  color: var(--redline-background);
   padding: 12px 24px;
   border-radius: 6px;
   font-weight: 600;
@@ -54,31 +77,73 @@ html {
 }
 
 .btn-primary:hover {
-  background-color: var(--redline-black);
-  border-color: var(--redline-black);
+  background-color: var(--redline-foreground);
+  border-color: var(--redline-foreground);
+  color: var(--redline-background);
 }
 
 .btn-secondary {
   background-color: transparent;
-  color: var(--redline-black);
+  color: var(--redline-foreground);
   padding: 12px 24px;
   border-radius: 6px;
   font-weight: 600;
   text-decoration: none;
   display: inline-block;
   transition: all 0.3s ease;
-  border: 2px solid var(--redline-black);
+  border: 2px solid var(--redline-foreground);
 }
 
 .btn-secondary:hover {
-  background-color: var(--redline-black);
-  color: var(--redline-white);
+  background-color: var(--redline-foreground);
+  color: var(--redline-background);
+}
+
+/* New semantic utility classes */
+.bg-surface {
+  background-color: var(--redline-surface);
+}
+.bg-surface-hover {
+  background-color: var(--redline-surface-hover);
+}
+.bg-primary {
+  background-color: var(--redline-background);
+}
+.bg-secondary {
+  background-color: var(--redline-foreground);
+}
+.text-primary {
+  color: var(--redline-foreground);
+}
+.text-secondary {
+  color: var(--redline-background);
+}
+.text-muted {
+  color: var(--redline-muted);
+}
+.text-muted-foreground {
+  color: var(--redline-muted-foreground);
+}
+.border-default {
+  border-color: var(--redline-border);
 }
 
 /* Utility classes for brand colors */
-.text-redline-red { color: var(--redline-red); }
-.text-redline-black { color: var(--redline-black); }
-.text-redline-white { color: var(--redline-white); }
-.bg-redline-red { background-color: var(--redline-red); }
-.bg-redline-black { background-color: var(--redline-black); }
-.bg-redline-white { background-color: var(--redline-white); }
+.text-redline-red {
+  color: var(--redline-red);
+}
+.text-redline-black {
+  color: var(--redline-black);
+}
+.text-redline-white {
+  color: var(--redline-white);
+}
+.bg-redline-red {
+  background-color: var(--redline-red);
+}
+.bg-redline-black {
+  background-color: var(--redline-black);
+}
+.bg-redline-white {
+  background-color: var(--redline-white);
+}

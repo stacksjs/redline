@@ -22,46 +22,69 @@ function closeContactModal() {
 </script>
 
 <template>
-  <section id="contact" class="py-20 bg-redline-black text-white">
-    <div class="max-w-4xl mx-auto px-4 text-center">
-      <h2 class="text-4xl font-bold mb-6">
+  <section id="contact" class="bg-redline-black py-20 text-redline-white">
+    <div class="mx-auto max-w-4xl px-4 text-center">
+      <h2 class="mb-6 text-4xl font-bold">
         Ready to <span class="text-redline-red">Scale</span>?
       </h2>
 
-      <p class="text-xl text-gray-300 leading-relaxed mb-8">
+      <p class="text-muted mb-8 text-xl leading-relaxed">
         If you're tired of wasting ad spend, struggling to grow online, or just don't have time to manage it all — let's talk.
         We'll audit your current setup and show you exactly where the opportunities are.
       </p>
 
       <div class="mb-8">
-        <button @click="openCalendarModal" class="btn-primary text-lg px-8 py-4 inline-block">
+        <button class="inline-block px-8 py-4 text-lg btn-primary" @click="openCalendarModal">
           👉 Book a free strategy call today and let's redline your marketing.
         </button>
       </div>
 
       <!-- Contact Form or Additional Info -->
-      <div class="bg-gray-900 rounded-lg p-8 mt-12">
-        <h3 class="text-2xl font-semibold mb-6">Get Your Free Marketing Audit</h3>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div class="text-left">
-            <ul class="space-y-3 text-gray-300">
-              <li>✓ Complete analysis of your current marketing</li>
-              <li>✓ Identify missed opportunities</li>
-              <li>✓ Custom strategy recommendations</li>
-              <li>✓ No-obligation consultation</li>
-            </ul>
-          </div>
-          <div class="text-left">
-            <p class="text-gray-300 mb-4">Ready to get started?</p>
-            <div class="space-y-2">
-              <button @click="openContactModal" class="block w-full text-left text-redline-red hover:underline text-lg">
-                📧 Send us a message
-              </button>
-              <a href="tel:+1234567890" class="block text-gray-300 hover:text-white">
-                📞 (123) 456-7890
+      <div class="bg-surface mt-12 rounded-lg p-8">
+        <h3 class="text-primary mb-4 text-2xl font-bold">
+          Or Get In Touch Directly
+        </h3>
+        <p class="text-muted mb-6">
+          Prefer to reach out directly? We're here to help.
+        </p>
+
+        <div class="grid grid-cols-1 gap-6 text-left md:grid-cols-2">
+          <!-- Email -->
+          <div class="flex items-center space-x-3">
+            <div class="text-xl text-redline-red">
+              📧
+            </div>
+            <div>
+              <p class="text-primary font-semibold">
+                Email Us
+              </p>
+              <a href="mailto:hello@redlinemarketing.com" class="text-muted transition-colors hover:text-redline-red">
+                hello@redlinemarketing.com
               </a>
             </div>
           </div>
+
+          <!-- Phone -->
+          <div class="flex items-center space-x-3">
+            <div class="text-xl text-redline-red">
+              📞
+            </div>
+            <div>
+              <p class="text-primary font-semibold">
+                Call Us
+              </p>
+              <a href="tel:+1234567890" class="text-muted transition-colors hover:text-redline-red">
+                (123) 456-7890
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Additional Contact Button -->
+        <div class="mt-6">
+          <button class="btn-secondary" @click="openContactModal">
+            Send Us a Message
+          </button>
         </div>
       </div>
     </div>
