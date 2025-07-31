@@ -17,112 +17,110 @@ const teamMembers = [
   {
     name: 'Jesus Marquez',
     role: 'Founder & Marketing Director',
-    image: '/team/jesus.jpg'
+    image: '/team/jesus.jpg',
   },
   {
     name: 'Desiree Diaz',
     role: 'Social Media Manager',
-    image: '/team/desiree.jpg'
+    image: '/team/desiree.jpg',
   },
   {
     name: 'John Figueroa',
     role: 'Video Production Manager',
-    image: '/team/john.jpg'
+    image: '/team/john.jpg',
   },
   {
     name: 'Jose Ferrer',
     role: 'Marketing Specialist',
-    image: '/team/jose.jpg'
+    image: '/team/jose.jpg',
   },
   {
     name: 'Chris Breuer',
     role: 'Web Developer',
-    image: '/team/chris.jpg'
+    image: '/team/chris.jpg',
   },
   {
     name: 'Steven Rivera',
     role: 'Advertising Specialist',
-    image: '/team/steven.jpg'
+    image: '/team/steven.jpg',
   },
   {
     name: 'Bryan Elms',
     role: 'SEO Specialist',
-    image: '/team/bryan.jpg'
+    image: '/team/bryan.jpg',
   },
   {
     name: 'Cynthia Correa',
     role: 'Business Development Manager',
-    image: '/team/cynthia.jpg'
-  }
+    image: '/team/cynthia.jpg',
+  },
 ]
 </script>
 
 <template>
   <div>
     <!-- Hero Section -->
-    <section class="bg-redline-black text-white py-20">
-      <div class="max-w-4xl mx-auto px-4 text-center">
-        <h1 class="text-5xl font-bold mb-6">
-          Accelerating your <span class="text-redline-red">business</span>
-        </h1>
-        <p class="text-xl text-gray-300 leading-relaxed">
-          At Redline, we specialize in helping local service businesses and emerging e-commerce brands scale smarter, faster, and more profitably.
-          Our mission is simple: to remove the guesswork from digital marketing and replace it with strategies that actually move the needle.
+    <section class="bg-redline-black py-20 text-white">
+      <div class="mx-auto max-w-4xl px-4 text-center">
+        <h2 class="mb-6 text-4xl font-bold">
+          About <span class="text-redline-red">Redline Marketing</span>
+        </h2>
+        <p class="text-muted text-xl leading-relaxed">
+          We're the marketing team that treats your business like our own — because when you win, we win.
         </p>
       </div>
     </section>
 
-    <!-- Performance First Section -->
-    <section class="py-20 bg-white">
-      <div class="max-w-4xl mx-auto px-4">
-        <div class="text-center mb-12">
-          <h2 class="text-4xl font-bold text-redline-black mb-6">
-            Performance first. <span class="text-redline-red">Always.</span>
-          </h2>
-        </div>
-
-        <div class="prose prose-lg mx-auto text-gray-700">
-          <p class="text-xl leading-relaxed mb-8">
-            In an industry filled with fluff, outdated tactics, and cookie-cutter campaigns, we take a different approach.
-            Every strategy we implement is tailored, data-backed, and focused on one thing: results that drive business growth.
+    <!-- Main Content -->
+    <section class="bg-primary py-20">
+      <div class="mx-auto max-w-4xl px-4">
+        <div class="prose-lg text-primary mx-auto prose">
+          <p>
+            At Redline Marketing, we're not just another agency throwing around buzzwords and promising overnight success.
+            We're a results-focused team that specializes in helping local businesses and emerging e-commerce brands
+            break through the noise and drive real, measurable growth.
           </p>
-          <p class="text-lg leading-relaxed">
-            We work closely with your team, learn your market, and become a true extension of your business — not just a vendor.
+
+          <p>
+            Whether you're a local auto shop looking to fill your bays, a service business wanting to dominate your area,
+            or an online store ready to scale — we've got the strategies, tools, and expertise to get you there.
           </p>
         </div>
       </div>
     </section>
 
     <!-- Team Section -->
-    <section class="py-20 bg-gray-50">
-      <div class="max-w-6xl mx-auto px-4">
-        <div class="text-center mb-16">
-          <h2 class="text-4xl font-bold text-redline-black mb-6">
-            Meet your marketing <span class="text-redline-red">pit crew</span>
+    <section class="bg-surface py-20">
+      <div class="mx-auto max-w-6xl px-4">
+        <div class="mb-16 text-center">
+          <h2 class="text-primary mb-6 text-3xl font-bold">
+            Meet the Team
           </h2>
-          <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-            We're a lean team of marketing strategists, creatives, and performance pros obsessed with helping brands grow.
-            Think of us as your in-house marketing crew — without the overhead.
+          <p class="text-muted mx-auto max-w-3xl text-xl">
+            A lean, experienced team dedicated to your success.
           </p>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          <div
-            v-for="member in teamMembers"
-            :key="member.name"
-            class="text-center group"
-          >
-            <div class="mb-4 relative overflow-hidden rounded-lg">
-              <div class="w-full h-64 bg-gray-200 rounded-lg flex items-center justify-center">
-                <!-- Placeholder for team member photo -->
-                <div class="text-gray-400 text-center">
-                  <div class="text-4xl mb-2">👤</div>
-                  <p class="text-sm">Photo</p>
+        <div class="grid grid-cols-1 gap-8 md:grid-cols-3">
+          <div v-for="member in teamMembers" :key="member.name" class="text-center">
+            <!-- Placeholder for team member photo -->
+            <div class="bg-surface mb-4 h-64 w-full flex items-center justify-center rounded-lg">
+              <!-- Replace with actual photos when available -->
+              <div class="text-muted text-center">
+                <div class="mb-2 text-4xl">
+                  👤
                 </div>
+                <p class="text-sm">
+                  Photo Coming Soon
+                </p>
               </div>
             </div>
-            <h3 class="text-xl font-semibold text-redline-black mb-2">{{ member.name }}</h3>
-            <p class="text-gray-600">{{ member.role }}</p>
+            <h3 class="text-primary mb-2 text-xl font-semibold">
+              {{ member.name }}
+            </h3>
+            <p class="text-muted">
+              {{ member.role }}
+            </p>
           </div>
         </div>
       </div>

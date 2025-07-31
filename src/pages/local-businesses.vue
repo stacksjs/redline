@@ -17,82 +17,74 @@ useHead({
 <template>
   <div>
     <!-- Hero Section -->
-    <section class="bg-redline-black text-white py-20">
-      <div class="max-w-4xl mx-auto px-4 text-center">
-        <h1 class="text-5xl font-bold mb-6">
-          Marketing for <span class="text-redline-red">Local Businesses</span>
+    <section class="bg-redline-black py-20 text-white">
+      <div class="mx-auto max-w-4xl px-4 text-center">
+        <h1 class="mb-6 text-5xl font-bold">
+          <span class="text-redline-red">Local Business</span> Marketing That Works
         </h1>
-        <p class="text-xl text-gray-300 leading-relaxed">
-          Dominate your local market with proven strategies that drive foot traffic, phone calls, and revenue growth.
+        <p class="text-muted text-xl leading-relaxed">
+          Stop wasting money on marketing that doesn't drive customers through your door.
+          Get strategies built specifically for local businesses that want real results.
         </p>
       </div>
     </section>
 
-    <!-- Content Section -->
-    <section class="py-20 bg-white">
-      <div class="max-w-4xl mx-auto px-4">
-        <div class="prose prose-lg mx-auto text-gray-700">
-          <h2 class="text-3xl font-bold text-redline-black mb-8">
-            We understand <span class="text-redline-red">local business</span> challenges
+    <section class="bg-primary py-20">
+      <div class="mx-auto max-w-4xl px-4">
+        <div class="text-primary prose-lg mx-auto prose">
+          <h2 class="text-primary mb-8 text-3xl font-bold">
+            Why Most Local Business Marketing Fails
           </h2>
 
-          <p class="text-xl leading-relaxed mb-8">
-            Running a local business means competing not just with other local shops, but with big box stores,
-            online retailers, and national chains. You need marketing that cuts through the noise and reaches
-            customers right in your neighborhood.
+          <p class="mb-6 text-lg">
+            You've tried Facebook ads. You've posted on social media. Maybe you even hired an agency that promised the world
+            but delivered generic campaigns that could work for anyone, anywhere.
           </p>
 
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-            <div class="bg-gray-50 p-6 rounded-lg">
-              <h3 class="text-xl font-semibold text-redline-black mb-4">What We Do</h3>
-              <ul class="space-y-2">
-                <li class="flex items-center">
-                  <span class="text-redline-red mr-2">✓</span>
-                  Local SEO optimization
-                </li>
-                <li class="flex items-center">
-                  <span class="text-redline-red mr-2">✓</span>
-                  Google Business Profile management
-                </li>
-                <li class="flex items-center">
-                  <span class="text-redline-red mr-2">✓</span>
-                  Targeted local advertising
-                </li>
-                <li class="flex items-center">
-                  <span class="text-redline-red mr-2">✓</span>
-                  Review management
-                </li>
-                <li class="flex items-center">
-                  <span class="text-redline-red mr-2">✓</span>
-                  Social media marketing
-                </li>
-              </ul>
+          <p class="mb-8 text-lg">
+            The problem? Most marketing agencies don't understand local businesses. They treat your auto shop like it's Amazon,
+            or your restaurant like it's a SaaS company.
+          </p>
+
+          <h3 class="text-primary mb-6 text-2xl font-semibold">
+            What Makes Local Marketing Different
+          </h3>
+
+          <div class="not-prose grid grid-cols-1 gap-8 md:grid-cols-2">
+            <div class="bg-surface rounded-lg p-6">
+              <h4 class="text-primary mb-3 text-xl font-semibold">
+                Geographic Targeting
+              </h4>
+              <p class="text-muted">
+                Your customers are within a specific radius. We focus your budget on reaching people who can actually visit your business.
+              </p>
             </div>
 
-            <div class="bg-gray-50 p-6 rounded-lg">
-              <h3 class="text-xl font-semibold text-redline-black mb-4">Results You'll See</h3>
-              <ul class="space-y-2">
-                <li class="flex items-center">
-                  <span class="text-redline-red mr-2">📈</span>
-                  More local search visibility
-                </li>
-                <li class="flex items-center">
-                  <span class="text-redline-red mr-2">📞</span>
-                  Increased phone calls
-                </li>
-                <li class="flex items-center">
-                  <span class="text-redline-red mr-2">🚶</span>
-                  More foot traffic
-                </li>
-                <li class="flex items-center">
-                  <span class="text-redline-red mr-2">💰</span>
-                  Higher revenue
-                </li>
-                <li class="flex items-center">
-                  <span class="text-redline-red mr-2">⭐</span>
-                  Better online reputation
-                </li>
-              </ul>
+            <div class="bg-surface rounded-lg p-6">
+              <h4 class="text-primary mb-3 text-xl font-semibold">
+                Local Intent Keywords
+              </h4>
+              <p class="text-muted">
+                When someone searches "auto repair near me," they're ready to buy. We make sure they find you first.
+              </p>
+            </div>
+
+            <div class="bg-surface rounded-lg p-6">
+              <h4 class="text-primary mb-3 text-xl font-semibold">
+                Community Connection
+              </h4>
+              <p class="text-muted">
+                Local businesses thrive on relationships and reputation. Our strategies build both.
+              </p>
+            </div>
+
+            <div class="bg-surface rounded-lg p-6">
+              <h4 class="text-primary mb-3 text-xl font-semibold">
+                Immediate Results
+              </h4>
+              <p class="text-muted">
+                No waiting months to see if it's working. Local campaigns can drive phone calls and walk-ins within days.
+              </p>
             </div>
           </div>
         </div>
