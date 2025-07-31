@@ -59,7 +59,7 @@ onUnmounted(() => {
           <div class="relative h-10 w-10 flex items-center justify-center">
             <div
               class="h-8 w-8 flex items-center justify-center rounded-full"
-              :class="isScrolled ? 'bg-secondary' : 'bg-primary'"
+              :class="isScrolled ? 'bg-black' : 'bg-white'"
             >
               <div
                 class="h-0.5 w-5 bg-redline-red"
@@ -90,7 +90,7 @@ onUnmounted(() => {
             </button>
             <div
               v-show="whoWeHelpOpen"
-              class="border-default bg-primary absolute left-0 top-full mt-2 w-48 border rounded-lg py-2 shadow-lg"
+              class="bg-primary border-default absolute left-0 top-full mt-2 w-48 border rounded-lg py-2 shadow-lg"
             >
               <RouterLink to="/local-businesses" class="text-primary hover:bg-surface block px-4 py-2 transition-colors hover:text-redline-red" @click="closeDropdowns">
                 Local Businesses
@@ -169,9 +169,9 @@ onUnmounted(() => {
           </button>
 
           <!-- Dark Mode Toggle - Connect to global state -->
-          <div class="bg-surface group relative w-11 inline-flex shrink-0 rounded-full p-0.5 transition-colors duration-200 ease-in-out">
+          <div class="group relative w-11 inline-flex shrink-0 rounded-full bg-gray-100 p-0.5 transition-colors duration-200 ease-in-out">
             <span
-              class="bg-primary ring-border relative size-5 rounded-full ring-1 transition-transform duration-200 ease-in-out"
+              class="ring-border relative size-5 rounded-full bg-white ring-1 transition-transform duration-200 ease-in-out"
               :class="{ 'translate-x-5': isDark }"
             >
               <span

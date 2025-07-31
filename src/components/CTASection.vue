@@ -22,7 +22,7 @@ function closeContactModal() {
 </script>
 
 <template>
-  <section id="contact" class="bg-redline-black py-20 text-redline-white">
+  <section id="contact" class="bg-surface text-primary py-20">
     <div class="mx-auto max-w-4xl px-4 text-center">
       <h2 class="mb-6 text-4xl font-bold">
         Ready to <span class="text-redline-red">Scale</span>?
@@ -34,13 +34,13 @@ function closeContactModal() {
       </p>
 
       <div class="mb-8">
-        <button class="inline-block px-8 py-4 text-lg btn-primary" @click="openCalendarModal">
+        <button class="cta-btn inline-block px-8 py-4 text-lg btn-primary" @click="openCalendarModal">
           👉 Book a free strategy call today and let's redline your marketing.
         </button>
       </div>
 
       <!-- Contact Form or Additional Info -->
-      <div class="bg-surface mt-12 rounded-lg p-8">
+      <div class="bg-primary mt-12 rounded-lg p-8">
         <h3 class="text-primary mb-4 text-2xl font-bold">
           Or Get In Touch Directly
         </h3>
@@ -58,7 +58,7 @@ function closeContactModal() {
               <p class="text-primary font-semibold">
                 Email Us
               </p>
-              <a href="mailto:hello@redlinemarketing.com" class="text-muted transition-colors hover:text-redline-red">
+              <a href="mailto:hello@redlinemarketing.com" class="text-muted transition-colors hover:text-redline-red" tabindex="0">
                 hello@redlinemarketing.com
               </a>
             </div>
@@ -73,7 +73,7 @@ function closeContactModal() {
               <p class="text-primary font-semibold">
                 Call Us
               </p>
-              <a href="tel:+1234567890" class="text-muted transition-colors hover:text-redline-red">
+              <a href="tel:+1234567890" class="text-muted transition-colors hover:text-redline-red" tabindex="0">
                 (123) 456-7890
               </a>
             </div>
@@ -82,7 +82,7 @@ function closeContactModal() {
 
         <!-- Additional Contact Button -->
         <div class="mt-6">
-          <button class="btn-secondary" @click="openContactModal">
+          <button class="btn-secondary dark:btn-primary" @click="openContactModal">
             Send Us a Message
           </button>
         </div>
@@ -94,3 +94,28 @@ function closeContactModal() {
   <CalendarModal :is-open="calendarModalOpen" @close="closeCalendarModal" />
   <ContactModal :is-open="contactModalOpen" @close="closeContactModal" />
 </template>
+
+<style scoped>
+.cta-btn {
+  /* Ensure button is always red with white text, and on hover stays red but with higher contrast */
+  background-color: var(--redline-red) !important;
+  color: var(--redline-background) !important;
+  border: 2px solid var(--redline-red) !important;
+  transition:
+    background 0.2s,
+    color 0.2s,
+    border 0.2s;
+}
+.cta-btn:hover,
+.cta-btn:focus {
+  background-color: #b91c1c !important; /* deeper red for hover, passes contrast */
+  color: var(--redline-background) !important;
+  border-color: #b91c1c !important;
+}
+
+/* Ensure focus ring for accessibility */
+.cta-btn:focus {
+  outline: 2px solid #b91c1c;
+  outline-offset: 2px;
+}
+</style>

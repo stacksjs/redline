@@ -66,7 +66,7 @@ html {
 /* Brand button styles */
 .btn-primary {
   background-color: var(--redline-red);
-  color: var(--redline-background);
+  color: var(--redline-foreground);
   padding: 12px 24px;
   border-radius: 6px;
   font-weight: 600;
@@ -79,7 +79,7 @@ html {
 .btn-primary:hover {
   background-color: var(--redline-foreground);
   border-color: var(--redline-foreground);
-  color: var(--redline-background);
+  color: var(--redline-foreground);
 }
 
 .btn-secondary {
