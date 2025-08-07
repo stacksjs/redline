@@ -34,13 +34,15 @@ function closeContactModal() {
       </p>
 
       <div class="mb-8">
-        <button class="cta-btn inline-block px-8 py-4 text-lg btn-primary" @click="openCalendarModal">
+        <button class="cta-btn relative inline-block px-8 py-4 text-lg btn-primary" @click="openCalendarModal">
           👉 Book a free strategy call today and let's redline your marketing.
+
+          <img src="/custom-arrow.svg" alt="Transistor" class="absolute col-span-2 size-20 w-full object-contain text-blue-500 -bottom-[90px] -right-[180px] lg:col-span-1">
         </button>
       </div>
 
       <!-- Contact Form or Additional Info -->
-      <div class="bg-primary mt-12 rounded-lg p-8">
+      <div class="bg-surface mt-12 rounded-lg p-8">
         <h3 class="text-primary mb-4 text-2xl font-bold">
           Or Get In Touch Directly
         </h3>
