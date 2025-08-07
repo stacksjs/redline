@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import { ref, onMounted } from 'vue'
+import { ref } from 'vue'
 
-const props = defineProps<{
+defineProps<{
   isOpen: boolean
 }>()
 
@@ -26,92 +26,99 @@ function onIframeLoad() {
 }
 
 // You can replace this with your actual Cal.com link
-const calendarUrl = 'https://cal.com/redline-marketing/consultation'
+const calendarUrl = 'https://cal.com/adelino-jose-ee7zyu/test-meeting'
 </script>
 
 <template>
   <Teleport to="body">
     <div
       v-if="isOpen"
-      class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black bg-opacity-50"
+      class="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 p-4"
       @click="handleBackdropClick"
     >
-      <div class="bg-white rounded-lg max-w-4xl w-full h-[80vh] flex flex-col">
+      <div class="h-[80vh] max-w-4xl w-full flex flex-col rounded-lg bg-white">
         <!-- Header -->
-        <div class="flex items-center justify-between p-6 border-b">
+        <div class="flex items-center justify-between border-b p-6">
           <div>
-            <h2 class="text-2xl font-bold text-redline-black">Schedule a Consultation</h2>
-            <p class="text-gray-600 mt-1">Book a free 30-minute strategy call with our team</p>
+            <h2 class="text-2xl text-redline-black font-bold">
+              Schedule a Consultation
+            </h2>
+            <p class="mt-1 text-gray-600">
+              Book a free 30-minute strategy call with our team
+            </p>
           </div>
           <button
+            class="text-gray-400 transition-colors hover:text-gray-600"
             @click="closeModal"
-            class="text-gray-400 hover:text-gray-600 transition-colors"
           >
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
             </svg>
           </button>
         </div>
 
         <!-- Calendar Content -->
-        <div class="flex-1 p-6 relative">
+        <div class="relative flex-1 p-6">
           <!-- Loading State -->
           <div
             v-if="!iframeLoaded"
-            class="absolute inset-0 flex items-center justify-center bg-gray-50 rounded-lg"
+            class="absolute inset-0 flex items-center justify-center rounded-lg bg-gray-50"
           >
             <div class="text-center">
-              <div class="animate-spin rounded-full h-12 w-12 border-b-2 border-redline-red mx-auto mb-4"></div>
-              <p class="text-gray-600">Loading calendar...</p>
+              <div class="mx-auto mb-4 h-12 w-12 animate-spin border-b-2 border-redline-red rounded-full" />
+              <p class="text-gray-600">
+                Loading calendar...
+              </p>
             </div>
           </div>
 
           <!-- Calendar Embed (Demo) -->
-          <div class="h-full bg-gray-50 rounded-lg p-8 flex items-center justify-center">
-            <div class="text-center max-w-md">
-              <div class="text-6xl mb-6">📅</div>
-              <h3 class="text-xl font-semibold text-redline-black mb-4">
+          <!-- <div class="h-full flex items-center justify-center rounded-lg bg-gray-50 p-8">
+            <div class="max-w-md text-center">
+              <div class="mb-6 text-6xl">
+                📅
+              </div>
+              <h3 class="mb-4 text-xl text-redline-black font-semibold">
                 Schedule Your Free Strategy Call
               </h3>
-              <p class="text-gray-600 mb-6">
+              <p class="mb-6 text-gray-600">
                 During this 30-minute call, we'll:
               </p>
-              <ul class="text-left space-y-2 mb-6 text-gray-700">
+              <ul class="mb-6 text-left text-gray-700 space-y-2">
                 <li class="flex items-center">
-                  <span class="text-redline-red mr-2">✓</span>
+                  <span class="mr-2 text-redline-red">✓</span>
                   Audit your current marketing setup
                 </li>
                 <li class="flex items-center">
-                  <span class="text-redline-red mr-2">✓</span>
+                  <span class="mr-2 text-redline-red">✓</span>
                   Identify missed opportunities
                 </li>
                 <li class="flex items-center">
-                  <span class="text-redline-red mr-2">✓</span>
+                  <span class="mr-2 text-redline-red">✓</span>
                   Provide custom recommendations
                 </li>
                 <li class="flex items-center">
-                  <span class="text-redline-red mr-2">✓</span>
+                  <span class="mr-2 text-redline-red">✓</span>
                   Discuss how we can help
                 </li>
               </ul>
 
-              <!-- Demo Calendar Interface -->
               <div class="space-y-4">
                 <div class="text-left">
-                  <label class="block text-sm font-medium text-gray-700 mb-2">
+                  <label class="mb-2 block text-sm text-gray-700 font-medium">
                     Select a Date & Time
                   </label>
-                  <div class="grid grid-cols-2 gap-2 mb-4">
-                    <button class="p-3 border border-gray-300 rounded-md hover:border-redline-red hover:bg-red-50 transition-colors">
+                  <div class="grid grid-cols-2 mb-4 gap-2">
+                    <button class="border border-gray-300 rounded-md p-3 transition-colors hover:border-redline-red hover:bg-red-50">
                       Today 2:00 PM
                     </button>
-                    <button class="p-3 border border-gray-300 rounded-md hover:border-redline-red hover:bg-red-50 transition-colors">
+                    <button class="border border-gray-300 rounded-md p-3 transition-colors hover:border-redline-red hover:bg-red-50">
                       Today 3:30 PM
                     </button>
-                    <button class="p-3 border border-gray-300 rounded-md hover:border-redline-red hover:bg-red-50 transition-colors">
+                    <button class="border border-gray-300 rounded-md p-3 transition-colors hover:border-redline-red hover:bg-red-50">
                       Tomorrow 10:00 AM
                     </button>
-                    <button class="p-3 border border-gray-300 rounded-md hover:border-redline-red hover:bg-red-50 transition-colors">
+                    <button class="border border-gray-300 rounded-md p-3 transition-colors hover:border-redline-red hover:bg-red-50">
                       Tomorrow 1:00 PM
                     </button>
                   </div>
@@ -121,7 +128,7 @@ const calendarUrl = 'https://cal.com/redline-marketing/consultation'
                   href="https://cal.com/redline-marketing"
                   target="_blank"
                   rel="noopener noreferrer"
-                  class="btn-primary w-full text-center block"
+                  class="block w-full text-center btn-primary"
                   @click="closeModal"
                 >
                   Book Your Free Consultation
@@ -132,17 +139,16 @@ const calendarUrl = 'https://cal.com/redline-marketing/consultation'
                 </p>
               </div>
             </div>
-          </div>
+          </div> -->
 
           <!-- If you have an actual Cal.com embed, you can use this instead: -->
-          <!--
+
           <iframe
             :src="calendarUrl"
-            @load="onIframeLoad"
-            class="w-full h-full border-0 rounded-lg"
+            class="h-full w-full border-0 rounded-lg"
             title="Schedule a consultation"
-          ></iframe>
-          -->
+            @load="onIframeLoad"
+          />
         </div>
       </div>
     </div>
