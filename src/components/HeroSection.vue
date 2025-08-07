@@ -49,17 +49,17 @@ function closeCalendarModal() {
             </p>
             <div class="flex flex-wrap items-center gap-8 opacity-70">
               <!-- Placeholder for customer logos -->
-              <div class="h-12 min-w-[120px] flex items-center justify-center border border-gray-600 rounded bg-gray-800 bg-opacity-60 p-4 text-center">
-                <span class="text-sm text-gray-200">Customer Logo</span>
+              <div class="h-12 min-w-[120px] flex items-center justify-center border border-gray-600 rounded bg-gray-800 bg-opacity-60 px-2 py-8 text-center">
+                <img src="https://tailwindcss.com/plus-assets/img/logos/158x48/transistor-logo-white.svg" alt="Transistor" class="col-span-2 h-10 max-h-12 w-20 w-full object-contain lg:col-span-1">
               </div>
-              <div class="h-12 min-w-[120px] flex items-center justify-center border border-gray-600 rounded bg-gray-800 bg-opacity-60 p-4 text-center">
-                <span class="text-sm text-gray-200">Customer Logo</span>
+              <div class="h-12 min-w-[120px] flex items-center justify-center border border-gray-600 rounded bg-gray-800 bg-opacity-60 px-2 py-8 text-center">
+                <img src="https://tailwindcss.com/plus-assets/img/logos/158x48/reform-logo-white.svg" alt="Transistor" class="col-span-2 h-10 max-h-12 w-20 w-full object-contain lg:col-span-1">
               </div>
-              <div class="h-12 min-w-[120px] flex items-center justify-center border border-gray-600 rounded bg-gray-800 bg-opacity-60 p-4 text-center">
-                <span class="text-sm text-gray-200">Customer Logo</span>
+              <div class="h-12 min-w-[120px] flex items-center justify-center border border-gray-600 rounded bg-gray-800 bg-opacity-60 px-2 py-8 text-center">
+                <img src="https://tailwindcss.com/plus-assets/img/logos/158x48/tuple-logo-white.svg" alt="Transistor" class="col-span-2 h-10 max-h-12 w-20 w-full object-contain lg:col-span-1">
               </div>
-              <div class="h-12 min-w-[120px] flex items-center justify-center border border-gray-600 rounded bg-gray-800 bg-opacity-60 p-4 text-center">
-                <span class="text-sm text-gray-200">Customer Logo</span>
+              <div class="h-12 min-w-[120px] flex items-center justify-center border border-gray-600 rounded bg-gray-800 bg-opacity-60 px-2 py-8 text-center">
+                <img src="https://tailwindcss.com/plus-assets/img/logos/158x48/savvycal-logo-white.svg" alt="Transistor" class="col-span-2 h-10 max-h-12 w-20 w-full object-contain lg:col-span-1">
               </div>
             </div>
           </div>
