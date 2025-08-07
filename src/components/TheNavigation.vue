@@ -56,15 +56,16 @@ onUnmounted(() => {
         <!-- Logo -->
         <RouterLink to="/" class="flex items-center space-x-3" @click="closeDropdowns">
           <!-- Logo with black circle and red line -->
-          <div class="relative h-10 w-10 flex items-center justify-center">
-            <div
+          <div class="relative flex items-center justify-center">
+            <!-- <div
               class="h-8 w-8 flex items-center justify-center rounded-full"
               :class="isScrolled ? 'bg-black' : 'bg-white'"
             >
               <div
                 class="h-0.5 w-5 bg-redline-red"
               />
-            </div>
+            </div> -->
+            <img src="/logo.png" alt="Redline Marketing Logo" class="h-12">
           </div>
           <span
             class="text-xl font-bold transition-colors"
