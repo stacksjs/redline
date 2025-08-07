@@ -31,7 +31,7 @@ function closeCalendarModal() {
             <p class="mb-8 text-xl text-gray-200 leading-relaxed lg:text-2xl">
               Fuel your growth with high-performance marketing built for local businesses and e-commerce brands.
             </p>
-            <p class="mb-8 text-lg text-gray-300 leading-relaxed">
+            <p class="mb-8 text-lg text-gray-300 leading-relaxed italic">
               From lead generation to full-funnel strategy, we deliver bold, data-driven campaigns that convert.
             </p>
           </div>
