@@ -1,6 +1,6 @@
-import {
-  createLocalFontProcessor,
-} from '@unocss/preset-web-fonts/local'
+// import {
+//   createLocalFontProcessor,
+// } from '@unocss/preset-web-fonts/local'
 import {
   defineConfig,
   presetAttributify,
@@ -40,8 +40,10 @@ export default defineConfig({
         sans: 'DM Sans',
         serif: 'DM Serif Display',
         mono: 'DM Mono',
+        racing: 'Racing Sans One',
+        nunito: 'Nunito Sans',
       },
-      processors: createLocalFontProcessor(),
+      // processors: createLocalFontProcessor(),
     }),
   ],
   transformers: [

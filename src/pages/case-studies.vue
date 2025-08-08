@@ -70,7 +70,7 @@ const caseStudies = [
     <!-- Hero Section -->
     <section class="bg-redline-black py-20 text-white">
       <div class="mx-auto max-w-4xl px-4 text-center">
-        <h1 class="mb-6 text-5xl font-bold">
+        <h1 class="mb-6 text-5xl font-bold font-racing">
           Client <span class="text-redline-red">Success Stories</span>
         </h1>
         <p class="text-muted text-xl leading-relaxed">

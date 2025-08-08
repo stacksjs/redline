@@ -5,7 +5,7 @@
   <section class="bg-primary py-20">
     <div class="mx-auto max-w-6xl px-4">
       <div class="mb-16 text-center">
-        <h2 class="text-primary mb-6 text-4xl font-bold">
+        <h2 class="text-primary mb-6 text-4xl font-bold font-racing">
           Our Services Include:
         </h2>
       </div>

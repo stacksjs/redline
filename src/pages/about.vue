@@ -62,7 +62,7 @@ const teamMembers = [
     <!-- Hero Section -->
     <section class="bg-redline-black py-20 text-white">
       <div class="mx-auto max-w-4xl px-4 text-center">
-        <h2 class="mb-6 text-4xl font-bold">
+        <h2 class="mb-6 text-4xl font-bold font-racing">
           About <span class="text-redline-red">Redline Marketing</span>
         </h2>
         <p class="text-muted text-xl leading-relaxed">
@@ -74,7 +74,7 @@ const teamMembers = [
     <!-- Main Content -->
     <section class="bg-primary py-20">
       <div class="mx-auto max-w-4xl px-4">
-        <div class="prose-lg text-primary mx-auto prose">
+        <div class="text-primary prose-lg mx-auto prose">
           <p>
             At Redline Marketing, we're not just another agency throwing around buzzwords and promising overnight success.
             We're a results-focused team that specializes in helping local businesses and emerging e-commerce brands
@@ -93,7 +93,7 @@ const teamMembers = [
     <section class="bg-surface py-20">
       <div class="mx-auto max-w-6xl px-4">
         <div class="mb-16 text-center">
-          <h2 class="text-primary mb-6 text-3xl font-bold">
+          <h2 class="text-primary mb-6 text-3xl font-bold font-racing">
             Meet the Team
           </h2>
           <p class="text-muted mx-auto max-w-3xl text-xl">
