@@ -22,7 +22,7 @@ function closeContactModal() {
 </script>
 
 <template>
-  <section id="contact" class="bg-surface text-primary py-20">
+  <section id="contact" class="text-primary bg-surface py-20">
     <div class="mx-auto max-w-4xl px-4 text-center">
       <h2 class="mb-6 text-4xl font-bold font-racing">
         Ready to <span class="text-redline-red">Scale</span>?
@@ -43,14 +43,14 @@ function closeContactModal() {
 
       <!-- Contact Form or Additional Info -->
       <div class="bg-surface mt-12 rounded-lg p-8">
-        <h3 class="text-primary mb-4 text-2xl font-bold">
+        <h3 class="text-primary mb-2 text-2xl font-bold">
           Or Get In Touch Directly
         </h3>
-        <p class="text-muted mb-6">
+        <p class="text-muted mb-12">
           Prefer to reach out directly? We're here to help.
         </p>
 
-        <div class="grid grid-cols-1 gap-6 text-left md:grid-cols-2">
+        <div class="grid grid-cols-1 gap-6 px-4 text-left md:grid-cols-2 md:px-10">
           <!-- Email -->
           <div class="flex items-center space-x-3">
             <div class="text-xl text-redline-red">

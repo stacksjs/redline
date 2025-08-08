@@ -69,7 +69,7 @@ function closeCalendarModal() {
         </div>
       </div>
 
-      <div class="text-muted border-default mt-8 border-t pt-8 text-center">
+      <div class="text-muted mt-8 border-t border-[#333333] pt-8 text-center">
         <p>&copy; 2025 Redline Marketing Agency. All rights reserved.</p>
       </div>
     </div>

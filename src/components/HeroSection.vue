@@ -58,9 +58,6 @@ function closeCalendarModal() {
               <div class="h-12 min-w-[120px] flex items-center justify-center border border-gray-600 rounded bg-gray-800 px-2 py-8 text-center dark:bg-opacity-60">
                 <img src="https://tailwindcss.com/plus-assets/img/logos/158x48/tuple-logo-white.svg" alt="Transistor" class="col-span-2 h-10 max-h-12 w-20 w-full object-contain lg:col-span-1">
               </div>
-              <div class="h-12 min-w-[120px] flex items-center justify-center border border-gray-600 rounded bg-gray-800 px-2 py-8 text-center dark:bg-opacity-60">
-                <img src="https://tailwindcss.com/plus-assets/img/logos/158x48/savvycal-logo-white.svg" alt="Transistor" class="col-span-2 h-10 max-h-12 w-20 w-full object-contain lg:col-span-1">
-              </div>
             </div>
           </div>
         </div>

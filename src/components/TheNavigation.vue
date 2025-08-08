@@ -52,27 +52,13 @@ onUnmounted(() => {
     :class="isScrolled ? 'bg-primary' : 'bg-secondary bg-opacity-90'"
   >
     <div class="mx-auto max-w-6xl px-4">
-      <div class="flex items-center justify-between py-4">
+      <div class="flex items-center justify-between py-2">
         <!-- Logo -->
         <RouterLink to="/" class="flex items-center space-x-3" @click="closeDropdowns">
           <!-- Logo with black circle and red line -->
           <div class="relative flex items-center justify-center">
-            <!-- <div
-              class="h-8 w-8 flex items-center justify-center rounded-full"
-              :class="isScrolled ? 'bg-black' : 'bg-white'"
-            >
-              <div
-                class="h-0.5 w-5 bg-redline-red"
-              />
-            </div> -->
-            <img src="/logo.png" alt="Redline Marketing Logo" class="h-12">
+            <img src="/logo.png" alt="Redline Marketing Logo" class="h-24">
           </div>
-          <span
-            class="text-xl font-bold transition-colors"
-            :class="isScrolled ? 'text-redline-red' : 'text-secondary'"
-          >
-            Redline Marketing
-          </span>
         </RouterLink>
 
         <!-- Desktop Navigation -->
