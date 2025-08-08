@@ -17,42 +17,42 @@ const teamMembers = [
   {
     name: 'Jesus Marquez',
     role: 'Founder & Marketing Director',
-    image: '/team/jesus.jpg',
+    image: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80',
   },
   {
     name: 'Desiree Diaz',
     role: 'Social Media Manager',
-    image: '/team/desiree.jpg',
+    image: 'https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80',
   },
   {
     name: 'John Figueroa',
     role: 'Video Production Manager',
-    image: '/team/john.jpg',
+    image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80',
   },
   {
     name: 'Jose Ferrer',
     role: 'Marketing Specialist',
-    image: '/team/jose.jpg',
+    image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80',
   },
   {
     name: 'Chris Breuer',
     role: 'Web Developer',
-    image: '/team/chris.jpg',
+    image: 'https://images.unsplash.com/photo-1519345182560-3f2917c472ef?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80',
   },
   {
     name: 'Steven Rivera',
     role: 'Advertising Specialist',
-    image: '/team/steven.jpg',
+    image: 'https://images.unsplash.com/photo-1463453091185-61582044d556?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80',
   },
   {
     name: 'Bryan Elms',
     role: 'SEO Specialist',
-    image: '/team/bryan.jpg',
+    image: 'https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80',
   },
   {
     name: 'Cynthia Correa',
     role: 'Business Development Manager',
-    image: '/team/cynthia.jpg',
+    image: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80',
   },
 ]
 </script>
@@ -104,15 +104,14 @@ const teamMembers = [
         <div class="grid grid-cols-1 gap-8 md:grid-cols-3">
           <div v-for="member in teamMembers" :key="member.name" class="text-center">
             <!-- Placeholder for team member photo -->
-            <div class="bg-surface mb-4 h-64 w-full flex items-center justify-center rounded-lg">
+            <div class="bg-surface mb-4 h-32 w-full flex items-center justify-center rounded-lg">
               <!-- Replace with actual photos when available -->
               <div class="text-muted text-center">
-                <div class="mb-2 text-4xl">
-                  👤
-                </div>
-                <p class="text-sm">
-                  Photo Coming Soon
-                </p>
+                <img
+                  alt=""
+                  :src="member.image"
+                  className="mx-auto size-24 rounded-full outline-1 -outline-offset-1 outline-black/5"
+                >
               </div>
             </div>
             <h3 class="text-primary mb-2 text-xl font-semibold">
