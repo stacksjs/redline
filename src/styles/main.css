@@ -66,7 +66,7 @@ html {
 /* Brand button styles */
 .btn-primary {
   background-color: var(--redline-red);
-  color: var(--redline-foreground);
+  color: white;
   padding: 12px 24px;
   border-radius: 6px;
   font-weight: 600;
@@ -79,12 +79,12 @@ html {
 .btn-primary:hover {
   background-color: var(--redline-foreground);
   border-color: var(--redline-foreground);
-  color: var(--redline-foreground);
+  color: white;
 }
 
 .btn-secondary {
   background-color: transparent;
-  color: var(--redline-foreground);
+  color: white;
   padding: 12px 24px;
   border-radius: 6px;
   font-weight: 600;
@@ -96,7 +96,7 @@ html {
 
 .btn-secondary:hover {
   background-color: var(--redline-foreground);
-  color: var(--redline-background);
+  color: white;
 }
 
 /* New semantic utility classes */
