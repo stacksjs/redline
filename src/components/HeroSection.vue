@@ -26,7 +26,7 @@ function closeCalendarModal() {
         <div class="space-y-8">
           <div>
             <h1 class="mb-6 text-5xl font-bold leading-tight font-racing lg:text-6xl">
-              <span class="text-redline-red">Redline</span> your marketing today
+              <span class="text-redline-red">Redline</span> Your Marketing Today
             </h1>
             <p class="mb-8 text-xl leading-relaxed lg:text-2xl dark:text-gray-200">
               Fuel your growth with high-performance marketing built for local businesses and e-commerce brands.
