@@ -150,7 +150,7 @@ onUnmounted(() => {
           >
             About Us
           </RouterLink>
-          <button class="btn-primary" @click="openContactModal">
+          <button class="border-none btn-primary hover:bg-red-800" @click="openContactModal">
             Contact Us
           </button>
 

@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { onMounted, onUnmounted, ref, watchEffect } from 'vue'
+
 defineOptions({
   name: 'AboutPage',
 })
@@ -11,6 +13,26 @@ useHead({
       content: 'Meet the Redline Marketing team. We specialize in helping local service businesses and emerging e-commerce brands scale smarter, faster, and more profitably.',
     },
   ],
+})
+
+// Force dark mode while on this page and restore previous preference on leave
+const previousIsDark = ref<boolean | null>(null)
+let stopEnforceDark: (() => void) | null = null
+
+onMounted(() => {
+  previousIsDark.value = isDark.value
+  isDark.value = true
+  stopEnforceDark = watchEffect(() => {
+    if (!isDark.value)
+      isDark.value = true
+  })
+})
+
+onUnmounted(() => {
+  if (stopEnforceDark)
+    stopEnforceDark()
+  if (previousIsDark.value !== null)
+    isDark.value = previousIsDark.value
 })
 
 const teamMembers = [
@@ -65,14 +87,14 @@ const teamMembers = [
         <h2 class="mb-6 text-4xl font-bold font-racing">
           About <span class="text-redline-red">Redline Marketing</span>
         </h2>
-        <p class="text-muted text-xl leading-relaxed">
+        <p class="text-muted [text-wrap:balance] mx-auto max-w-3xl leading-relaxed md:text-2xl">
           We're the marketing team that treats your business like our own — because when you win, we win.
         </p>
       </div>
     </section>
 
     <!-- Main Content -->
-    <section class="bg-primary py-20">
+    <section class="bg-primary py-20 md:text-2xl">
       <div class="mx-auto max-w-4xl px-4">
         <div class="text-primary prose-lg mx-auto prose">
           <p>
