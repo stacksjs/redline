@@ -19,7 +19,9 @@
         <div class="space-y-6">
           <div class="flex items-start space-x-4">
             <div class="text-2xl text-redline-red font-bold">
-              ✔️
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M5 13l4 4L19 7" />
+              </svg>
             </div>
             <div>
               <h3 class="text-primary mb-2 text-xl font-semibold">
@@ -33,7 +35,9 @@
 
           <div class="flex items-start space-x-4">
             <div class="text-2xl text-redline-red font-bold">
-              ✔️
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M5 13l4 4L19 7" />
+              </svg>
             </div>
             <div>
               <h3 class="text-primary mb-2 text-xl font-semibold">
@@ -47,7 +51,9 @@
 
           <div class="flex items-start space-x-4">
             <div class="text-2xl text-redline-red font-bold">
-              ✔️
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M5 13l4 4L19 7" />
+              </svg>
             </div>
             <div>
               <h3 class="text-primary mb-2 text-xl font-semibold">
@@ -64,7 +70,9 @@
         <div class="space-y-6">
           <div class="flex items-start space-x-4">
             <div class="text-2xl text-redline-red font-bold">
-              ✔️
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M5 13l4 4L19 7" />
+              </svg>
             </div>
             <div>
               <h3 class="text-primary mb-2 text-xl font-semibold">
@@ -78,7 +86,9 @@
 
           <div class="flex items-start space-x-4">
             <div class="text-2xl text-redline-red font-bold">
-              ✔️
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M5 13l4 4L19 7" />
+              </svg>
             </div>
             <div>
               <h3 class="text-primary mb-2 text-xl font-semibold">
@@ -92,7 +102,9 @@
 
           <div class="flex items-start space-x-4">
             <div class="text-2xl text-redline-red font-bold">
-              ✔️
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M5 13l4 4L19 7" />
+              </svg>
             </div>
             <div>
               <h3 class="text-primary mb-2 text-xl font-semibold">
