@@ -91,13 +91,44 @@ const caseStudies = [
           >
             <!-- Image -->
             <div class="order-2 lg:order-1" :class="{ 'lg:order-2': index % 2 === 1 }">
-              <div class="bg-surface h-80 flex items-center justify-center rounded-lg">
-                <div class="text-muted text-center">
+              <div class="bg-surface h-80 flex items-center justify-center overflow-hidden rounded-lg">
+                <!-- Automotive -->
+                <img
+                  v-if="study.industry === 'Automotive'"
+                  src="https://source.unsplash.com/V37iTrYZz2E/1200x800"
+                  alt="Mechanic working on a car engine in a garage"
+                  class="h-full w-full object-cover"
+                  loading="lazy"
+                  decoding="async"
+                >
+
+                <!-- E-commerce (Home Decor) -->
+                <img
+                  v-else-if="study.industry === 'E-commerce'"
+                  src="https://source.unsplash.com/OtXADkUh3-I/1200x800"
+                  alt="Stylish home decor living room setup"
+                  class="h-full w-full object-cover"
+                  loading="lazy"
+                  decoding="async"
+                >
+
+                <!-- Home Services (Landscaping) -->
+                <img
+                  v-else-if="study.industry === 'Home Services'"
+                  src="https://source.unsplash.com/VqWy2xlGK6Q/1200x800"
+                  alt="Landscaped home garden with green lawn"
+                  class="h-full w-full object-cover"
+                  loading="lazy"
+                  decoding="async"
+                >
+
+                <!-- Fallback (should not occur) -->
+                <div v-else class="text-muted text-center">
                   <div class="mb-2 text-4xl">
-                    📊
+                    📄
                   </div>
                   <p class="text-sm">
-                    Case Study Image
+                    Case Study
                   </p>
                 </div>
               </div>
