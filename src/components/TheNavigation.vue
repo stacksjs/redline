@@ -48,8 +48,7 @@ onUnmounted(() => {
 
 <template>
   <nav
-    class="sticky top-0 z-50 shadow-lg transition-all duration-300"
-    :class="isScrolled ? 'bg-primary' : 'bg-secondary bg-opacity-90'"
+    class="bg-primary sticky top-0 z-50 bg-opacity-90 shadow-lg transition-all duration-300"
   >
     <div class="mx-auto max-w-6xl px-4">
       <div class="flex items-center justify-between py-2">
@@ -57,7 +56,7 @@ onUnmounted(() => {
         <RouterLink to="/" class="flex items-center space-x-3" @click="closeDropdowns">
           <!-- Logo with black circle and red line -->
           <div class="relative flex items-center justify-center">
-            <img src="/logo.png" alt="Redline Marketing Logo" class="h-24">
+            <img src="/logo.png" alt="Redline Marketing Logo" class="transition-all duration-300" :class="isScrolled ? 'h-24' : 'h-32'">
           </div>
         </RouterLink>
 
