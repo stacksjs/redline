@@ -15,7 +15,7 @@ function closeCalendarModal() {
 <template>
   <section
     class="relative min-h-screen flex items-center overflow-hidden dark:bg-redline-black dark:text-white"
-    style="background-image: url('/hero-blob.png'); background-size: contain; background-position: right; background-repeat: no-repeat;"
+    style="background-image: url('/hero-blob.png'); background-position: right; background-repeat: no-repeat;"
   >
     <!-- Dark overlay for better text readability -->
     <div class="absolute inset-0 dark:bg-black dark:bg-opacity-60" />
@@ -28,10 +28,10 @@ function closeCalendarModal() {
             <h1 class="mb-6 text-5xl font-bold leading-tight font-racing lg:text-6xl">
               <span class="text-redline-red">Redline</span> Your Marketing Today
             </h1>
-            <p class="mb-8 text-xl leading-relaxed lg:text-2xl dark:text-gray-200">
+            <p class="mb-8 text-xl leading-relaxed mix-blend-difference lg:text-2xl dark:text-gray-200">
               Fuel your growth with high-performance marketing built for local businesses and e-commerce brands.
             </p>
-            <p class="mb-8 text-lg leading-relaxed italic dark:text-gray-300">
+            <p class="mb-8 text-lg leading-relaxed italic mix-blend-difference dark:text-gray-300">
               From lead generation to full-funnel strategy, we deliver bold, data-driven campaigns that convert.
             </p>
           </div>

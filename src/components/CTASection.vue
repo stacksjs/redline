@@ -22,7 +22,7 @@ function closeContactModal() {
 </script>
 
 <template>
-  <section id="contact" class="text-primary bg-surface py-20">
+  <section id="contact" class="bg-surface text-primary py-20">
     <div class="mx-auto max-w-4xl px-4 text-center">
       <h2 class="mb-6 text-4xl font-bold font-racing">
         Ready to <span class="text-redline-red">Scale</span>?
@@ -33,11 +33,11 @@ function closeContactModal() {
         We'll audit your current setup and show you exactly where the opportunities are.
       </p>
 
-      <div class="mb-8">
+      <div class="mb-28">
         <button class="cta-btn relative inline-block px-8 py-4 text-lg btn-primary" @click="openCalendarModal">
           👉 Book a free strategy call today and let's redline your marketing.
 
-          <img src="/custom-arrow.svg" alt="Transistor" class="absolute col-span-2 size-20 w-full object-contain text-blue-500 -bottom-[90px] -right-[180px] lg:col-span-1">
+          <img src="/custom-arrow.svg" alt="Transistor" class="absolute col-span-2 size-20 w-full object-contain text-blue-500 -bottom-[120px] -right-[180px] lg:col-span-1">
         </button>
       </div>
 
@@ -50,7 +50,7 @@ function closeContactModal() {
           Prefer to reach out directly? We're here to help.
         </p>
 
-        <div class="grid grid-cols-1 gap-6 px-4 text-left md:grid-cols-2 md:px-10">
+        <div class="grid grid-cols-1 gap-6 px-4 text-left md:grid-cols-2 md:gap-x-12 md:px-10">
           <!-- Email -->
           <div class="flex items-center space-x-3">
             <div class="text-xl text-redline-red">
