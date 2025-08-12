@@ -65,7 +65,7 @@ onUnmounted(() => {
           <!-- Who We Help Dropdown -->
           <div class="relative">
             <button
-              class="flex items-center font-medium transition-colors"
+              class="flex items-center rounded-md font-medium ring-offset-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-red-500 dark:ring-offset-black"
               :class="isScrolled ? 'text-muted-foreground hover:text-redline-red' : 'text-muted hover:text-redline-red'"
               @click="toggleWhoWeHelp"
             >
@@ -78,13 +78,13 @@ onUnmounted(() => {
               v-show="whoWeHelpOpen"
               class="bg-primary border-default absolute left-0 top-full mt-2 w-48 border rounded-lg py-2 shadow-lg"
             >
-              <RouterLink to="/local-businesses" class="text-primary hover:bg-surface block px-4 py-2 transition-colors hover:text-redline-red" @click="closeDropdowns">
+              <RouterLink to="/local-businesses" class="text-primary hover:bg-surface block rounded-md px-4 py-2 ring-offset-white transition-colors hover:text-redline-red focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-red-500 dark:ring-offset-black" @click="closeDropdowns">
                 Local Businesses
               </RouterLink>
-              <RouterLink to="/auto-shops" class="text-primary hover:bg-surface block px-4 py-2 transition-colors hover:text-redline-red" @click="closeDropdowns">
+              <RouterLink to="/auto-shops" class="text-primary hover:bg-surface block rounded-md px-4 py-2 ring-offset-white transition-colors hover:text-redline-red focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-red-500 dark:ring-offset-black" @click="closeDropdowns">
                 Auto Shop Brands
               </RouterLink>
-              <RouterLink to="/ecommerce" class="text-primary hover:bg-surface block px-4 py-2 transition-colors hover:text-redline-red" @click="closeDropdowns">
+              <RouterLink to="/ecommerce" class="text-primary hover:bg-surface block rounded-md px-4 py-2 ring-offset-white transition-colors hover:text-redline-red focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-red-500 dark:ring-offset-black" @click="closeDropdowns">
                 E-comm Brands
               </RouterLink>
             </div>
@@ -93,7 +93,7 @@ onUnmounted(() => {
           <!-- Services Dropdown -->
           <div class="relative">
             <button
-              class="flex items-center font-medium transition-colors"
+              class="flex items-center rounded-md font-medium ring-offset-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-red-500 dark:ring-offset-black"
               :class="isScrolled ? 'text-muted-foreground hover:text-redline-red' : 'text-muted hover:text-redline-red'"
               @click="toggleServices"
             >
@@ -106,28 +106,28 @@ onUnmounted(() => {
               v-show="servicesOpen"
               class="border-default bg-primary absolute left-0 top-full mt-2 w-56 border rounded-lg py-2 shadow-lg"
             >
-              <RouterLink to="/services/ppc" class="text-primary hover:bg-surface block px-4 py-2 transition-colors hover:text-redline-red" @click="closeDropdowns">
+              <RouterLink to="/services/ppc" class="text-primary hover:bg-surface block rounded-md px-4 py-2 ring-offset-white transition-colors hover:text-redline-red focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-red-500 dark:ring-offset-black" @click="closeDropdowns">
                 PPC Advertising
               </RouterLink>
-              <RouterLink to="/services/seo" class="text-primary hover:bg-surface block px-4 py-2 transition-colors hover:text-redline-red" @click="closeDropdowns">
+              <RouterLink to="/services/seo" class="text-primary hover:bg-surface block rounded-md px-4 py-2 ring-offset-white transition-colors hover:text-redline-red focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-red-500 dark:ring-offset-black" @click="closeDropdowns">
                 SEO
               </RouterLink>
-              <RouterLink to="/services/google-business" class="text-primary hover:bg-surface block px-4 py-2 transition-colors hover:text-redline-red" @click="closeDropdowns">
+              <RouterLink to="/services/google-business" class="text-primary hover:bg-surface block rounded-md px-4 py-2 ring-offset-white transition-colors hover:text-redline-red focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-red-500 dark:ring-offset-black" @click="closeDropdowns">
                 Google Business Page Management
               </RouterLink>
-              <RouterLink to="/services/meta-ads" class="text-primary hover:bg-surface block px-4 py-2 transition-colors hover:text-redline-red" @click="closeDropdowns">
+              <RouterLink to="/services/meta-ads" class="text-primary hover:bg-surface block rounded-md px-4 py-2 ring-offset-white transition-colors hover:text-redline-red focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-red-500 dark:ring-offset-black" @click="closeDropdowns">
                 Meta Ads
               </RouterLink>
-              <RouterLink to="/services/cro" class="text-primary hover:bg-surface block px-4 py-2 transition-colors hover:text-redline-red" @click="closeDropdowns">
+              <RouterLink to="/services/cro" class="text-primary hover:bg-surface block rounded-md px-4 py-2 ring-offset-white transition-colors hover:text-redline-red focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-red-500 dark:ring-offset-black" @click="closeDropdowns">
                 CRO
               </RouterLink>
-              <RouterLink to="/services/web-design" class="text-primary hover:bg-surface block px-4 py-2 transition-colors hover:text-redline-red" @click="closeDropdowns">
+              <RouterLink to="/services/web-design" class="text-primary hover:bg-surface block rounded-md px-4 py-2 ring-offset-white transition-colors hover:text-redline-red focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-red-500 dark:ring-offset-black" @click="closeDropdowns">
                 Web Design
               </RouterLink>
-              <RouterLink to="/services/social-media" class="text-primary hover:bg-surface block px-4 py-2 transition-colors hover:text-redline-red" @click="closeDropdowns">
+              <RouterLink to="/services/social-media" class="text-primary hover:bg-surface block rounded-md px-4 py-2 ring-offset-white transition-colors hover:text-redline-red focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-red-500 dark:ring-offset-black" @click="closeDropdowns">
                 Social Media
               </RouterLink>
-              <RouterLink to="/services/lead-generation" class="text-primary hover:bg-surface block px-4 py-2 transition-colors hover:text-redline-red" @click="closeDropdowns">
+              <RouterLink to="/services/lead-generation" class="text-primary hover:bg-surface block rounded-md px-4 py-2 ring-offset-white transition-colors hover:text-redline-red focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-red-500 dark:ring-offset-black" @click="closeDropdowns">
                 Lead Generation
               </RouterLink>
             </div>
@@ -136,7 +136,7 @@ onUnmounted(() => {
           <!-- Direct Links -->
           <RouterLink
             to="/case-studies"
-            class="font-medium transition-colors"
+            class="rounded-md font-medium ring-offset-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-red-500 dark:ring-offset-black"
             :class="isScrolled ? 'text-muted-foreground hover:text-redline-red' : 'text-muted hover:text-redline-red'"
             @click="closeDropdowns"
           >
@@ -144,7 +144,7 @@ onUnmounted(() => {
           </RouterLink>
           <RouterLink
             to="/about"
-            class="font-medium transition-colors"
+            class="rounded-md font-medium ring-offset-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-red-500 dark:ring-offset-black"
             :class="isScrolled ? 'text-muted-foreground hover:text-redline-red' : 'text-muted hover:text-redline-red'"
             @click="closeDropdowns"
           >
@@ -191,7 +191,7 @@ onUnmounted(() => {
 
         <!-- Mobile Menu Button -->
         <button
-          class="transition-colors md:hidden"
+          class="rounded-md ring-offset-white transition-colors md:hidden focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-red-500 dark:ring-offset-black"
           :class="isScrolled ? 'text-muted-foreground hover:text-redline-red' : 'text-muted hover:text-redline-red'"
         >
           <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">

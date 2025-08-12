@@ -45,5 +45,7 @@ useHead({
 </script>
 
 <template>
-  <RouterView />
+  <div class="selection:bg-red-600 selection:text-white dark:selection:bg-red-400 dark:selection:text-black">
+    <RouterView />
+  </div>
 </template>
