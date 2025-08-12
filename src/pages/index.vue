@@ -18,8 +18,8 @@ useHead({
   <div>
     <HeroSection />
     <WhyTrustSection />
-    <ServicesSection />
     <CTASection />
+    <ServicesSection />
   </div>
 </template>
 
