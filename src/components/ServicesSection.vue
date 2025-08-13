@@ -2,7 +2,9 @@
 </script>
 
 <template>
-  <section class="bg-primary py-20">
+  <section class="bg-primary relative py-20">
+    <img src="/custom-arrow.svg" alt="Transistor" class="absolute right-[180px] col-span-2 size-20 w-full rotate-180 object-contain text-blue-500 -top-[40px] lg:col-span-1">
+
     <div class="mx-auto max-w-6xl px-4">
       <div class="mb-16 text-center">
         <h2 class="text-primary mb-6 text-4xl font-bold font-racing">
