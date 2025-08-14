@@ -48,7 +48,7 @@ onUnmounted(() => {
 
 <template>
   <nav
-    class="bg-primary sticky top-0 z-50 bg-opacity-90 shadow-lg transition-all duration-300"
+    class="bg-primary sticky top-0 z-50 bg-opacity-90 transition-all duration-300" :class="[{ 'shadow-lg': isDark }]"
   >
     <div class="mx-auto max-w-6xl px-4">
       <div class="flex items-center justify-between py-2">
