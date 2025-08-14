@@ -63,7 +63,7 @@ function closeCalendarModal() {
 
         <!-- Right side - empty space for background image to show through -->
         <div class="size-full flex items-center justify-end">
-          <img src="/hero-blob.png" alt="Redline Marketing" class="size-[80%] object-contain">
+          <img src="/hero-blob.png" alt="Redline Marketing" class="size-full object-contain">
         </div>
       </div>
     </div>

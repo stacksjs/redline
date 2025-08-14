@@ -2,8 +2,8 @@
 </script>
 
 <template>
-  <section class="bg-primary relative pb-24 pt-16">
-    <img src="/custom-arrow.svg" alt="Transistor" class="absolute right-[180px] col-span-2 size-20 w-full rotate-180 object-contain text-blue-500 -top-[50px] lg:col-span-1">
+  <section class="bg-primary relative pb-24 pt-40">
+    <img src="/doodle.png" alt="Transistor" class="absolute col-span-2 size-32 w-full object-contain text-blue-500 opacity-75 -top-[25px] lg:col-span-1">
 
     <div class="mx-auto max-w-7xl px-6 lg:px-8">
       <div class="mx-auto max-w-2xl">

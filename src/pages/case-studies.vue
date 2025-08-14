@@ -80,8 +80,8 @@ const caseStudies = [
     </section>
 
     <!-- Case Studies -->
-    <section class="bg-primary relative py-20">
-      <img src="/doodle.png" alt="Transistor" class="absolute z-10 size-32 w-full object-contain text-blue-500 opacity-75 -bottom-[40px]">
+    <section class="bg-primary relative py-20 pb-40">
+      <img src="/doodle.png" alt="Transistor" class="absolute z-10 size-32 w-full object-contain text-blue-500 opacity-75 -bottom-[30px]">
       <div class="mx-auto max-w-6xl px-4">
         <div class="space-y-20">
           <div
