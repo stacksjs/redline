@@ -2,16 +2,16 @@
 
 :root {
   /* Light mode (default) */
-  --redline-background: #ffffff;
+  --redline-background: #f3f4f6; /* gray-100 */
   --redline-foreground: #000000;
   --redline-red: #e32521;
 
   /* Surface colors for cards, sections */
-  --redline-surface: #f9fafb; /* gray-50 equivalent */
-  --redline-surface-hover: #f3f4f6; /* gray-100 equivalent */
-  --redline-border: #e5e7eb; /* gray-200 equivalent */
-  --redline-muted: #6b7280; /* gray-500 equivalent */
-  --redline-muted-foreground: #374151; /* gray-700 equivalent */
+  --redline-surface: #f3f4f6; /* unify to grayish background */
+  --redline-surface-hover: #e5e7eb; /* gray-200 */
+  --redline-border: #d1d5db; /* gray-300 */
+  --redline-muted: #6b7280; /* gray-500 */
+  --redline-muted-foreground: #374151; /* gray-700 */
 
   /* Keep the old names for backwards compatibility but make them semantic */
   --redline-black: var(--redline-foreground);
@@ -19,15 +19,15 @@
 }
 
 html.dark {
-  /* Dark mode - invert primary colors */
+  /* Dark mode - make backgrounds fully black */
   --redline-background: #000000;
   --redline-foreground: #ffffff;
   --redline-red: #e32521; /* Keep red the same */
 
   /* Dark mode surfaces */
-  --redline-surface: #111111; /* Very dark gray for cards */
-  --redline-surface-hover: #1f1f1f; /* Slightly lighter for hover */
-  --redline-border: #333333; /* Dark border */
+  --redline-surface: #000000; /* unify to black */
+  --redline-surface-hover: #0a0a0a;
+  --redline-border: #1f1f1f; /* Dark border */
   --redline-muted: #9ca3af; /* Light gray for muted text */
   --redline-muted-foreground: #d1d5db; /* Even lighter gray */
 
@@ -146,4 +146,13 @@ html {
 }
 .bg-redline-white {
   background-color: var(--redline-white);
+}
+
+/* Normalize utility backgrounds to the semantic surface so the app looks
+   uniformly grayish in light and uniformly black in dark */
+.bg-white,
+.bg-gray-50,
+.bg-gray-100,
+.bg-gray-200 {
+  background-color: var(--redline-surface) !important;
 }
