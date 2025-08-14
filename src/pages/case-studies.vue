@@ -96,7 +96,7 @@ const caseStudies = [
                 <!-- Automotive -->
                 <img
                   v-if="study.industry === 'Automotive'"
-                  src="https://source.unsplash.com/V37iTrYZz2E/1200x800"
+                  src="/case-studies/auto-shop.jpg"
                   alt="Mechanic working on a car engine in a garage"
                   class="h-full w-full object-cover"
                   loading="lazy"
@@ -106,7 +106,7 @@ const caseStudies = [
                 <!-- E-commerce (Home Decor) -->
                 <img
                   v-else-if="study.industry === 'E-commerce'"
-                  src="https://source.unsplash.com/OtXADkUh3-I/1200x800"
+                  src="/case-studies/ecommerce.jpg"
                   alt="Stylish home decor living room setup"
                   class="h-full w-full object-cover"
                   loading="lazy"
@@ -116,7 +116,7 @@ const caseStudies = [
                 <!-- Home Services (Landscaping) -->
                 <img
                   v-else-if="study.industry === 'Home Services'"
-                  src="https://source.unsplash.com/VqWy2xlGK6Q/1200x800"
+                  src="/case-studies/landscaping.jpg"
                   alt="Landscaped home garden with green lawn"
                   class="h-full w-full object-cover"
                   loading="lazy"
