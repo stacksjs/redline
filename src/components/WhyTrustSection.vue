@@ -15,7 +15,7 @@
         </p>
       </div>
 
-      <div class="grid grid-cols-1 mb-16 gap-8 md:grid-cols-2">
+      <div class="grid grid-cols-1 mx-auto mb-24 max-w-4xl gap-8 md:grid-cols-2">
         <!-- Left Column -->
         <div class="space-y-6">
           <div class="flex items-start space-x-4">
@@ -121,7 +121,7 @@
 
       <!-- Call to Action -->
       <div class="text-center">
-        <p class="text-muted mb-6 text-lg">
+        <p class="text-muted mb-6 text-lg italic">
           Ready to see what's possible when you partner with a team that truly gets your business?
         </p>
         <RouterLink to="#contact" class="btn-primary">
