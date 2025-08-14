@@ -18,7 +18,7 @@ function closeCalendarModal() {
       <div class="grid grid-cols-1 gap-8 md:grid-cols-3">
         <!-- Brand Section -->
         <div>
-          <h3 class="mb-4 text-xl text-redline-red font-bold">
+          <h3 class="mb-4 text-xl text-redline-red font-bold font-racing">
             Redline Marketing
           </h3>
           <p class="text-muted leading-relaxed">
@@ -28,7 +28,7 @@ function closeCalendarModal() {
 
         <!-- Quick Links -->
         <div>
-          <h4 class="mb-4 font-semibold">
+          <h4 class="mb-4 font-semibold font-racing">
             Quick Links
           </h4>
           <ul class="space-y-2">
@@ -57,7 +57,7 @@ function closeCalendarModal() {
 
         <!-- Contact Info -->
         <div>
-          <h4 class="mb-4 font-semibold">
+          <h4 class="mb-4 font-semibold font-racing">
             Get In Touch
           </h4>
           <div class="text-muted space-y-2">

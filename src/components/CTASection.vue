@@ -37,7 +37,7 @@ function closeContactModal() {
         <button class="cta-btn relative inline-block px-8 py-4 text-lg btn-primary" @click="openCalendarModal">
           👉 Book a free strategy call today and let's redline your marketing.
 
-          <img src="/custom-arrow.svg" alt="Transistor" class="absolute col-span-2 size-20 w-full object-contain text-blue-500 -bottom-[120px] -right-[180px] lg:col-span-1">
+          <!-- <img src="/custom-arrow.svg" alt="Transistor" class="absolute col-span-2 size-20 w-full object-contain text-blue-500 -bottom-[120px] -right-[180px] lg:col-span-1"> -->
         </button>
       </div>
 
