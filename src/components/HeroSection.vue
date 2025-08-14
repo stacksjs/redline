@@ -15,7 +15,6 @@ function closeCalendarModal() {
 <template>
   <section
     class="relative min-h-screen flex items-center overflow-hidden dark:bg-redline-black dark:text-white"
-    style="background-image: url('/hero-blob.png'); background-position: right; background-repeat: no-repeat;"
   >
     <!-- Dark overlay for better text readability -->
     <div class="absolute inset-0 dark:bg-black dark:bg-opacity-60" />
@@ -63,7 +62,9 @@ function closeCalendarModal() {
         </div>
 
         <!-- Right side - empty space for background image to show through -->
-        <div class="hidden lg:block" />
+        <div class="size-full flex items-center justify-end">
+          <img src="/hero-blob.png" alt="Redline Marketing" class="size-[80%] object-contain">
+        </div>
       </div>
     </div>
   </section>
