@@ -87,7 +87,7 @@ const teamMembers = [
         <h2 class="mb-6 text-4xl font-bold font-racing">
           About <span class="text-redline-red">Redline Marketing</span>
         </h2>
-        <p class="text-muted [text-wrap:balance] mx-auto max-w-3xl leading-relaxed md:text-2xl">
+        <p class="[text-wrap:balance] mx-auto max-w-3xl text-white leading-relaxed md:text-2xl">
           We're the marketing team that treats your business like our own — because when you win, we win.
         </p>
       </div>
@@ -95,7 +95,7 @@ const teamMembers = [
 
     <!-- Main Content -->
     <section class="bg-primary py-20 md:text-2xl">
-      <div class="mx-auto max-w-4xl px-4">
+      <div class="mx-auto max-w-4xl px-4 text-center leading-relaxed">
         <div class="text-primary prose-lg mx-auto prose">
           <p>
             At Redline Marketing, we're not just another agency throwing around buzzwords and promising overnight success.
@@ -113,7 +113,7 @@ const teamMembers = [
 
     <!-- Team Section -->
     <section class="bg-surface relative py-20">
-      <img src="/doodle.png" alt="Transistor" class="absolute z-10 size-32 w-full object-contain text-blue-500 opacity-75 -bottom-[40px]">
+      <!-- <img src="/doodle.png" alt="Transistor" class="absolute z-10 size-32 w-full object-contain text-blue-500 opacity-75 -bottom-[40px]"> -->
       <div class="mx-auto max-w-6xl px-4">
         <div class="mb-16 text-center">
           <h2 class="text-primary mb-6 text-3xl font-bold font-racing">
