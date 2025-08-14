@@ -78,7 +78,7 @@ async function submitForm() {
       <div class="bg-primary border-default max-h-[90vh] max-w-md w-full overflow-y-auto border rounded-lg shadow-2xl">
         <!-- Header -->
         <div class="border-default flex items-center justify-between border-b p-6">
-          <h2 class="text-primary text-2xl font-bold">
+          <h2 class="text-primary text-2xl font-bold font-racing">
             Get In Touch
           </h2>
           <button
@@ -165,7 +165,8 @@ async function submitForm() {
                   <select
                     id="service"
                     v-model="form.service"
-                    class="bg-surface text-primary placeholder:text-muted w-full rounded-md px-3 py-2 transition-colors focus:border-redline-red focus:outline-none focus:ring-2 focus:ring-redline-red"
+                    class="bg-surface w-full rounded-md px-3 py-2 transition-colors focus:border-redline-red focus:outline-none focus:ring-2 focus:ring-redline-red"
+                    :class="form.service ? 'text-primary' : 'text-muted'"
                   >
                     <option value="">
                       Select a service
