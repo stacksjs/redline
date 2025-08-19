@@ -18,7 +18,7 @@ function closeCalendarModal() {
       <div class="flex flex-col gap-8 md:flex-row md:justify-between">
         <!-- Brand Section -->
         <div class="flex-1">
-          <h3 class="mb-4 text-xl text-redline-red font-bold font-racing">
+          <h3 class="mb-4 text-xl text-black font-bold font-racing dark:text-white">
             Redline Marketing
           </h3>
           <p class="text-muted-foreground leading-relaxed">
