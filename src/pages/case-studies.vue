@@ -79,6 +79,46 @@ const caseStudies = [
       </div>
     </section>
 
+    <!-- Stats Section -->
+    <section class="bg-primary border-default border-b py-16">
+      <div class="mx-auto max-w-6xl px-4">
+        <div class="grid grid-cols-2 gap-8 md:grid-cols-4">
+          <div class="text-center">
+            <div class="mb-2 text-4xl text-redline-red font-bold font-racing">
+              600%
+            </div>
+            <div class="text-muted-foreground text-sm font-medium">
+              Average Lead Increase
+            </div>
+          </div>
+          <div class="text-center">
+            <div class="mb-2 text-4xl text-redline-red font-bold font-racing">
+              8x
+            </div>
+            <div class="text-muted-foreground text-sm font-medium">
+              Return on Ad Spend
+            </div>
+          </div>
+          <div class="text-center">
+            <div class="mb-2 text-4xl text-redline-red font-bold font-racing">
+              85%
+            </div>
+            <div class="text-muted-foreground text-sm font-medium">
+              Client Retention Rate
+            </div>
+          </div>
+          <div class="text-center">
+            <div class="mb-2 text-4xl text-redline-red font-bold font-racing">
+              300+
+            </div>
+            <div class="text-muted-foreground text-sm font-medium">
+              Successful Campaigns
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Case Studies -->
     <section class="bg-primary relative py-20 pb-40">
       <img src="/doodle.png" alt="Transistor" class="absolute z-10 size-32 w-full object-contain text-blue-500 opacity-75 -bottom-[30px]">
@@ -183,7 +223,7 @@ const caseStudies = [
                 <blockquote class="text-primary mb-4 border-l-4 border-redline-red pl-4 italic">
                   "{{ study.testimonial }}"
                 </blockquote>
-                <cite class="text-sm text-gray-600">— {{ study.clientName }}</cite>
+                <cite class="text-muted-foreground text-sm">— {{ study.clientName }}</cite>
               </div>
             </div>
           </div>
