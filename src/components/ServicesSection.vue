@@ -96,6 +96,32 @@
             Scale your marketing efforts with smart automation that works around the clock.
           </dd>
         </div>
+
+        <!-- Application/Web Presence Development -->
+        <div class="relative pl-9">
+          <dt class="text-primary inline font-semibold">
+            <div class="absolute left-1 top-1 text-xl text-redline-red">
+              🚀
+            </div>
+            Application & Web Development.
+          </dt>
+          <dd class="inline">
+            Build powerful web applications and digital experiences that engage users and drive business growth.
+          </dd>
+        </div>
+
+        <!-- Brand Strategy & Design -->
+        <div class="relative pl-9">
+          <dt class="text-primary inline font-semibold">
+            <div class="absolute left-1 top-1 text-xl text-redline-red">
+              🎨
+            </div>
+            Brand Strategy & Design.
+          </dt>
+          <dd class="inline">
+            Create a compelling brand identity that resonates with your audience and stands out in the market.
+          </dd>
+        </div>
       </dl>
     </div>
   </section>
