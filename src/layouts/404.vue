@@ -17,7 +17,7 @@ useHead({
         <!-- Navigation Buttons -->
         <div class="mt-8 flex flex-col justify-center gap-4 sm:flex-row">
           <button
-            class="btn-primary"
+            class="btn-primary hover:bg-red-800"
             @click="router.back()"
           >
             ← {{ t('button.back') }}

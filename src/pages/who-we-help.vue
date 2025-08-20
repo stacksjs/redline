@@ -150,7 +150,7 @@ const stats = [
 
               <RouterLink
                 :to="client.link"
-                class="inline-block btn-primary"
+                class="inline-block btn-primary hover:bg-red-800"
               >
                 Learn More
               </RouterLink>

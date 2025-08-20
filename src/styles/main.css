@@ -5,6 +5,7 @@
   --redline-background: #f3f4f6; /* gray-100 */
   --redline-foreground: #000000;
   --redline-red: #e32521;
+  --redline-red-darker: #9f0712;
 
   /* Surface colors for cards, sections */
   --redline-surface: #f3f4f6; /* unify to grayish background */
@@ -23,6 +24,7 @@ html.dark {
   --redline-background: #000000;
   --redline-foreground: #ffffff;
   --redline-red: #e32521; /* Keep red the same */
+  --redline-red-darker: #9f0712;
 
   /* Dark mode surfaces */
   --redline-surface: #000000; /* unify to black */
@@ -77,8 +79,8 @@ html {
 }
 
 .btn-primary:hover {
-  background-color: var(--redline-foreground);
-  border-color: var(--redline-foreground);
+  background-color: var(--redline-red-darker);
+  border-color: var(--redline-red-darker);
   color: white;
 }
 

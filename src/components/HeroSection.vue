@@ -14,7 +14,7 @@ function closeCalendarModal() {
 
 <template>
   <section
-    class="relative min-h-screen flex items-center overflow-hidden dark:bg-redline-black dark:text-white"
+    class="relative flex items-center overflow-hidden dark:bg-redline-black dark:text-white"
   >
     <!-- Dark overlay for better text readability -->
     <div class="absolute inset-0 dark:bg-black dark:bg-opacity-60" />
@@ -36,7 +36,7 @@ function closeCalendarModal() {
           </div>
 
           <div>
-            <button class="mb-4 mr-4 inline-block px-8 py-4 text-lg text-white btn-primary" @click="openCalendarModal">
+            <button class="mb-4 mr-4 inline-block px-8 py-4 text-lg btn-primary hover:bg-red-800" @click="openCalendarModal">
               Schedule a Consultation
             </button>
           </div>

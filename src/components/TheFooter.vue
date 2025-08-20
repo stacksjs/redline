@@ -13,7 +13,7 @@ function closeCalendarModal() {
 </script>
 
 <template>
-  <footer class="bg-surface text-primary border-default border-t py-12">
+  <footer class="text-primary bg-surface border-default border-t py-12">
     <div class="mx-auto max-w-6xl px-4">
       <div class="flex flex-col gap-8 md:flex-row md:justify-between">
         <!-- Brand Section -->
@@ -62,7 +62,7 @@ function closeCalendarModal() {
           </h4>
           <div class="text-muted-foreground space-y-2">
             <p>Ready to redline your marketing?</p>
-            <button class="mt-2 block btn-primary" @click="openCalendarModal">
+            <button class="mt-2 block btn-primary hover:bg-red-800" @click="openCalendarModal">
               Schedule a Consultation
             </button>
           </div>
