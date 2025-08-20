@@ -128,10 +128,9 @@ const caseStudies = [
             v-for="(study, index) in caseStudies"
             :key="study.title"
             class="grid grid-cols-1 items-center gap-12 lg:grid-cols-2"
-            :class="{ 'lg:grid-cols-2': index % 2 === 0, 'lg:grid-cols-2 lg:flex-row-reverse': index % 2 === 1 }"
           >
             <!-- Image -->
-            <div class="order-2 lg:order-1" :class="{ 'lg:order-2': index % 2 === 1 }">
+            <div class="order-2" :class="index % 2 === 0 ? 'lg:order-1' : 'lg:order-2'">
               <div class="bg-surface h-80 flex items-center justify-center overflow-hidden rounded-lg">
                 <!-- Automotive -->
                 <img
@@ -176,7 +175,7 @@ const caseStudies = [
             </div>
 
             <!-- Content -->
-            <div class="order-1 lg:order-2" :class="{ 'lg:order-1': index % 2 === 1 }">
+            <div class="order-1" :class="index % 2 === 0 ? 'lg:order-2' : 'lg:order-1'">
               <div class="bg-surface rounded-lg p-8">
                 <div class="mb-4">
                   <span class="text-sm text-redline-red font-semibold tracking-wider uppercase">{{ study.industry }}</span>
