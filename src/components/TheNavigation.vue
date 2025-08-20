@@ -38,7 +38,7 @@ onUnmounted(() => {
     class="bg-primary sticky top-0 z-50 bg-opacity-90 transition-all duration-300" :class="[{ 'shadow-lg': isDark }]"
   >
     <div class="mx-auto max-w-6xl px-4">
-      <div class="flex items-center justify-between py-2">
+      <div class="flex items-center justify-between">
         <!-- Logo -->
         <RouterLink to="/" class="flex items-center space-x-3" @click="closeDropdowns">
           <!-- Logo with black circle and red line -->
