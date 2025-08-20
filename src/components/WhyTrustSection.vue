@@ -124,7 +124,7 @@
         <p class="text-muted mb-6 text-lg italic">
           Ready to see what's possible when you partner with a team that truly gets your business?
         </p>
-        <RouterLink to="#contact" class="btn-primary hover:bg-red-800">
+        <RouterLink to="#contact" class="font-semibold btn-primary hover:bg-red-800">
           Let's Talk Strategy
         </RouterLink>
       </div>
