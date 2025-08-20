@@ -98,8 +98,8 @@ const stats = [
     </section>
 
     <!-- Client Types Section -->
-    <section class="bg-primary relative pb-24 pt-60">
-      <img src="/doodle.png" alt="Design Element" class="absolute right-0 top-12 size-32 w-full rotate-12 object-contain opacity-75">
+    <section class="bg-primary relative py-20">
+      <!-- <img src="/doodle.png" alt="Design Element" class="absolute right-0 top-12 size-32 w-full rotate-12 object-contain opacity-75"> -->
 
       <div class="mx-auto max-w-6xl px-4">
         <div class="mb-16 text-center">
@@ -179,9 +179,11 @@ const stats = [
       </div>
     </section>
 
+    <Doodle />
+
     <!-- Why Choose Us Section -->
-    <section class="bg-surface relative pb-32 pt-20">
-      <img src="/doodle.png" alt="Transistor" class="absolute z-10 col-span-2 size-32 w-full rotate-y-180 object-contain text-blue-500 opacity-75 -bottom-10 lg:col-span-1">
+    <section class="bg-surface relative py-20">
+      <!-- <img src="/doodle.png" alt="Transistor" class="absolute z-10 col-span-2 size-32 w-full rotate-y-180 object-contain text-blue-500 opacity-75 -bottom-10 lg:col-span-1"> -->
 
       <div class="mx-auto max-w-4xl px-4">
         <div class="text-center">
@@ -230,6 +232,7 @@ const stats = [
       </div>
     </section>
 
+    <Doodle invert />
     <!-- CTA Section -->
     <CTASection />
   </div>

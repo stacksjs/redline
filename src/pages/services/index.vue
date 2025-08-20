@@ -113,7 +113,7 @@ const processSteps = [
     <!-- Services Introduction -->
     <section class="bg-primary py-16">
       <div class="mx-auto max-w-4xl px-4 text-center">
-        <h2 class="text-primary mb-6 text-3xl font-bold">
+        <h2 class="text-primary mb-6 text-3xl font-bold font-racing">
           Marketing That Drives Results
         </h2>
         <p class="text-muted-foreground text-lg leading-relaxed">
@@ -123,9 +123,7 @@ const processSteps = [
     </section>
 
     <!-- Services Grid -->
-    <section class="bg-primary relative pb-20 pt-60">
-      <img src="/doodle.png" alt="Design Element" class="absolute top-10 size-32 w-full object-contain opacity-75 -rotate-12">
-
+    <section class="bg-primary relative py-20">
       <div class="mx-auto max-w-6xl px-4">
         <div class="grid grid-cols-1 gap-8 lg:grid-cols-3 md:grid-cols-2">
           <div
@@ -165,13 +163,13 @@ const processSteps = [
       </div>
     </section>
 
-    <!-- Process Section -->
-    <section class="bg-surface relative pb-20 pt-40">
-      <img src="/doodle.png" alt="Design Element" class="absolute size-32 w-full rotate-y-180 object-contain opacity-75 -top-10">
+    <Doodle />
 
+    <!-- Process Section -->
+    <section class="bg-surface relative py-20">
       <div class="mx-auto max-w-6xl px-4">
         <div class="mb-16 text-center">
-          <h2 class="text-primary mb-6 text-3xl font-bold">
+          <h2 class="text-primary mb-6 text-3xl font-bold font-racing">
             Our Process
           </h2>
           <p class="text-muted-foreground mx-auto max-w-2xl text-lg">
@@ -203,11 +201,12 @@ const processSteps = [
       </div>
     </section>
 
+    <Doodle invert />
+
     <!-- Why Choose Us -->
-    <section class="bg-primary relative pb-40 pt-20">
-      <img src="/doodle.png" alt="Transistor" class="absolute z-10 size-32 w-full object-contain text-blue-500 opacity-75 -bottom-[40px]">
+    <section class="bg-primary relative py-20">
       <div class="mx-auto max-w-4xl px-4 text-center">
-        <h2 class="text-primary mb-8 text-3xl font-bold">
+        <h2 class="text-primary mb-8 text-3xl font-bold font-racing">
           Why Choose Redline Marketing
         </h2>
 
@@ -250,6 +249,8 @@ const processSteps = [
         </div>
       </div>
     </section>
+
+    <Doodle />
 
     <!-- CTA Section -->
     <CTASection />

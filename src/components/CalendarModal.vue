@@ -36,19 +36,19 @@ const calendarUrl = 'https://cal.com/adelino-jose-ee7zyu/test-meeting'
       class="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 p-4"
       @click="handleBackdropClick"
     >
-      <div class="h-[80vh] max-w-4xl w-full flex flex-col rounded-lg bg-white">
+      <div class="bg-primary border-default h-[80vh] max-w-4xl w-full flex flex-col border rounded-lg">
         <!-- Header -->
-        <div class="flex items-center justify-between border-b p-6">
+        <div class="border-default flex items-center justify-between border-b p-6">
           <div>
-            <h2 class="text-2xl text-redline-black font-bold">
+            <h2 class="text-primary text-2xl font-bold font-racing">
               Schedule a Consultation
             </h2>
-            <p class="mt-1 text-gray-600">
+            <p class="text-muted-foreground mt-1">
               Book a free 30-minute strategy call with our team
             </p>
           </div>
           <button
-            class="text-gray-400 transition-colors hover:text-gray-600"
+            class="text-muted hover:text-primary rounded-md p-1 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red-500"
             @click="closeModal"
           >
             <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -62,11 +62,11 @@ const calendarUrl = 'https://cal.com/adelino-jose-ee7zyu/test-meeting'
           <!-- Loading State -->
           <div
             v-if="!iframeLoaded"
-            class="absolute inset-0 flex items-center justify-center rounded-lg bg-gray-50"
+            class="bg-surface absolute inset-0 flex items-center justify-center rounded-lg"
           >
             <div class="text-center">
               <div class="mx-auto mb-4 h-12 w-12 animate-spin border-b-2 border-redline-red rounded-full" />
-              <p class="text-gray-600">
+              <p class="text-muted-foreground">
                 Loading calendar...
               </p>
             </div>

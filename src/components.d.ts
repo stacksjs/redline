@@ -11,6 +11,7 @@ declare module 'vue' {
     CalendarModal: typeof import('./components/CalendarModal.vue')['default']
     ContactModal: typeof import('./components/ContactModal.vue')['default']
     CTASection: typeof import('./components/CTASection.vue')['default']
+    Doodle: typeof import('./components/Doodle.vue')['default']
     HeroSection: typeof import('./components/HeroSection.vue')['default']
     README: typeof import('./components/README.md')['default']
     RouterLink: typeof import('vue-router')['RouterLink']

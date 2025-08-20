@@ -18,7 +18,7 @@ function closeContactModal() {
 </script>
 
 <template>
-  <section id="contact" class="text-primary bg-surface relative py-20 pt-32">
+  <section id="contact" class="text-primary bg-surface relative py-20">
     <div class="mx-auto max-w-4xl px-4 text-center">
       <h2 class="mb-6 text-4xl font-bold font-racing">
         Ready to <span class="text-redline-red">Scale</span>?

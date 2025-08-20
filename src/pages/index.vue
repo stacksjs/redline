@@ -18,7 +18,9 @@ useHead({
   <div>
     <HeroSection />
     <WhyTrustSection />
+    <Doodle />
     <CTASection />
+    <Doodle invert />
     <ServicesSection />
   </div>
 </template>

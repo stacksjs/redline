@@ -113,7 +113,7 @@ const teamMembers = [
 
     <!-- Team Section -->
     <section class="bg-surface relative py-20 pb-32">
-      <img src="/doodle.png" alt="Transistor" class="absolute z-10 size-32 w-full object-contain text-blue-500 opacity-75 -bottom-[40px]">
+      <!-- <img src="/doodle.png" alt="Transistor" class="absolute z-10 size-32 w-full object-contain text-blue-500 opacity-75 -bottom-[40px]"> -->
       <div class="mx-auto max-w-6xl px-4">
         <div class="mb-16 text-center">
           <h2 class="text-primary mb-6 text-3xl font-bold font-racing">
@@ -147,6 +147,8 @@ const teamMembers = [
         </div>
       </div>
     </section>
+
+    <Doodle />
 
     <!-- CTA Section -->
     <CTASection />
