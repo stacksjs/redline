@@ -140,19 +140,19 @@ onUnmounted(() => {
           <!-- Client Login Button -->
           <RouterLink
             to="/login"
-            class="flex items-center rounded-full p-2 ring-offset-white transition-all duration-200 ease-in-out focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-red-500 dark:ring-offset-black"
-            :class="isDark ? 'text-blue-400 hover:bg-gray-800' : 'bg-gray-200 text-gray-600 hover:bg-gray-300'"
-            aria-label="Client Login"
+            class="flex items-center border rounded-md px-3 py-2 text-sm font-medium ring-offset-white transition-all duration-200 ease-in-out space-x-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-red-500 dark:ring-offset-black"
+            :class="isDark ? 'border-white text-white hover:bg-white hover:text-black' : 'border-gray-400 text-gray-700 hover:bg-gray-100'"
           >
-            <!-- User Profile Icon -->
+            <!-- Login Icon -->
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
               fill="currentColor"
-              class="size-5"
+              class="h-4 w-4"
             >
-              <path fill-rule="evenodd" d="M7.5 6a4.5 4.5 0 1 1 9 0 4.5 4.5 0 0 1-9 0ZM3.751 20.105a8.25 8.25 0 0 1 16.498 0 .75.75 0 0 1-.437.695A18.683 18.683 0 0 1 12 22.5c-2.786 0-5.433-.608-7.812-1.7a.75.75 0 0 1-.437-.695Z" clip-rule="evenodd" />
+              <path fill-rule="evenodd" d="M7.5 3.75A1.5 1.5 0 0 0 6 5.25v13.5a1.5 1.5 0 0 0 1.5 1.5h6a1.5 1.5 0 0 0 1.5-1.5V15a.75.75 0 0 1 1.5 0v3.75a3 3 0 0 1-3 3h-6a3 3 0 0 1-3-3V5.25a3 3 0 0 1 3-3h6a3 3 0 0 1 3 3V9A.75.75 0 0 1 15 9V5.25a1.5 1.5 0 0 0-1.5-1.5h-6Zm10.72 4.72a.75.75 0 0 1 1.06 0l3 3a.75.75 0 0 1 0 1.06l-3 3a.75.75 0 1 1-1.06-1.06l1.72-1.72H9a.75.75 0 0 1 0-1.5h10.94l-1.72-1.72a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
             </svg>
+            <span>Login</span>
           </RouterLink>
         </div>
 
