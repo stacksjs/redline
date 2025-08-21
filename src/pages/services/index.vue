@@ -111,7 +111,7 @@ const processSteps = [
     </section>
 
     <!-- Services Introduction -->
-    <section class="bg-primary pb-4 pt-8">
+    <section class="bg-primary pb-4 pt-16">
       <div class="mx-auto max-w-4xl rounded-lg px-4 pt-16 text-center transition-all">
         <h2 class="text-primary mb-6 text-3xl font-bold font-racing">
           Marketing That Drives Results
