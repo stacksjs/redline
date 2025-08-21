@@ -19,7 +19,7 @@ function closeCalendarModal() {
     <!-- Dark overlay for better text readability -->
     <div class="absolute inset-0 dark:bg-black dark:bg-opacity-60" />
 
-    <div class="relative z-10 mx-auto max-w-6xl px-4 py-12">
+    <div class="relative z-10 mx-auto max-w-6xl px-4 py-18">
       <div class="grid grid-cols-1 items-center gap-12 lg:grid-cols-2">
         <!-- Left Content -->
         <div class="space-y-8">

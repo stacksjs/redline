@@ -14,7 +14,7 @@ const props = withDefaults(defineProps<Props>(), {
     <img
       src="/doodle.png"
       alt="Transistor"
-      class="z-10 size-32 w-full object-contain text-blue-500 opacity-50 -bottom-[40px]" :class="[{ 'rotate-y-180': props.invert }]"
+      class="z-10 size-32 w-full object-contain text-blue-500 opacity-25 -bottom-[40px]" :class="[{ 'rotate-y-180': props.invert }]"
     >
     <div class="h-10 w-full" />
   </div>
