@@ -37,11 +37,26 @@ export default defineConfig({
     presetTypography(),
     presetWebFonts({
       fonts: {
-        sans: 'DM Sans',
-        serif: 'DM Serif Display',
-        mono: 'DM Mono',
-        racing: 'Racing Sans One',
-        nunito: 'Nunito Sans',
+        sans: {
+          name: 'DM Sans',
+          weights: ['400', '500', '600', '700'],
+        },
+        serif: {
+          name: 'DM Serif Display',
+          weights: ['400', '700'],
+        },
+        mono: {
+          name: 'DM Mono',
+          weights: ['400', '500', '600'],
+        },
+        racing: {
+          name: 'Racing Sans One',
+          weights: ['400'],
+        },
+        nunito: {
+          name: 'Nunito Sans',
+          weights: ['400', '500', '600', '700', '800'],
+        },
       },
       // processors: createLocalFontProcessor(),
     }),
@@ -50,5 +65,5 @@ export default defineConfig({
     transformerDirectives(),
     transformerVariantGroup(),
   ],
-  safelist: 'prose prose-sm m-auto text-left'.split(' '),
+  safelist: 'prose prose-sm m-auto text-left font-normal font-medium font-semibold font-bold font-extrabold font-racing font-nunito font-sans font-serif font-mono'.split(' '),
 })

@@ -43,6 +43,7 @@ body,
   margin: 0;
   padding: 0;
   font-family: 'DM Sans', sans-serif;
+  font-weight: 400; /* Ensure default weight is applied */
 }
 
 html {
@@ -157,4 +158,38 @@ html {
 .bg-gray-100,
 .bg-gray-200 {
   background-color: var(--redline-surface) !important;
+}
+
+/* Font utilities to ensure proper font weights are applied */
+.font-normal {
+  font-weight: 400 !important;
+}
+.font-medium {
+  font-weight: 500 !important;
+}
+.font-semibold {
+  font-weight: 600 !important;
+}
+.font-bold {
+  font-weight: 700 !important;
+}
+.font-extrabold {
+  font-weight: 800 !important;
+}
+
+/* Font family utilities */
+.font-racing {
+  font-family: 'Racing Sans One', cursive !important;
+}
+.font-nunito {
+  font-family: 'Nunito Sans', sans-serif !important;
+}
+.font-sans {
+  font-family: 'DM Sans', sans-serif !important;
+}
+.font-serif {
+  font-family: 'DM Serif Display', serif !important;
+}
+.font-mono {
+  font-family: 'DM Mono', monospace !important;
 }
