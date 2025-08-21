@@ -60,7 +60,7 @@ function handleSubmit() {
       </div>
 
       <!-- Login Form -->
-      <div class="bg-surface border-default border rounded-lg p-8 shadow-lg">
+      <div class="border-default bg-surface border rounded-lg p-8 shadow-lg">
         <!-- Error Message -->
         <div v-if="showError" class="mb-6 border border-red-200 rounded-md bg-red-50 p-4 dark:border-red-800 dark:bg-red-900/20">
           <div class="flex justify-between">
@@ -198,3 +198,8 @@ function handleSubmit() {
     </div>
   </div>
 </template>
+
+<route lang="yaml">
+meta:
+  layout: blank
+</route>

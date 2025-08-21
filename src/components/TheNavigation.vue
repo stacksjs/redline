@@ -140,7 +140,7 @@ onUnmounted(() => {
           <!-- Client Login Button -->
           <RouterLink
             to="/login"
-            class="flex items-center border rounded-md px-3 py-2 text-sm font-medium ring-offset-white transition-all duration-200 ease-in-out space-x-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-red-500 dark:ring-offset-black"
+            class="flex items-center border-2 rounded-md px-6 py-3 font-semibold ring-offset-white transition-all duration-200 ease-in-out space-x-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-red-500 dark:ring-offset-black"
             :class="isDark ? 'border-white text-white hover:bg-white hover:text-black' : 'border-gray-400 text-gray-700 hover:bg-gray-100'"
           >
             <!-- Login Icon -->

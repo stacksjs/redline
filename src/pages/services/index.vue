@@ -111,8 +111,8 @@ const processSteps = [
     </section>
 
     <!-- Services Introduction -->
-    <section class="bg-primary py-16">
-      <div class="mx-auto max-w-4xl px-4 text-center">
+    <section class="bg-primary pb-4 pt-8">
+      <div class="mx-auto max-w-4xl rounded-lg px-4 pt-16 text-center transition-all">
         <h2 class="text-primary mb-6 text-3xl font-bold font-racing">
           Marketing That Drives Results
         </h2>
@@ -123,13 +123,13 @@ const processSteps = [
     </section>
 
     <!-- Services Grid -->
-    <section class="bg-primary relative py-20">
+    <section class="bg-primary relative pb-8">
       <div class="mx-auto max-w-6xl px-4">
         <div class="grid grid-cols-1 gap-8 lg:grid-cols-3 md:grid-cols-2">
           <div
             v-for="service in services"
             :key="service.title"
-            class="bg-surface rounded-lg p-8 transition-all hover:shadow-lg"
+            class="bg-surface rounded-lg p-8"
           >
             <div class="mb-4 flex items-center">
               <div class="mr-3 text-3xl">
