@@ -49,31 +49,15 @@ onUnmounted(() => {
 
         <!-- Desktop Navigation -->
         <div class="hidden items-center md:flex space-x-8">
-          <!-- Who We Help Dropdown -->
-          <div class="group relative">
-            <RouterLink
-              to="/who-we-help"
-              class="flex items-center rounded-md font-medium ring-offset-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-red-500 dark:ring-offset-black"
-              :class="isScrolled ? 'text-muted-foreground hover:text-redline-red' : 'text-muted hover:text-redline-red'"
-              @click="closeDropdowns"
-            >
-              Who We Help
-              <svg class="ml-1 h-4 w-4" fill="currentColor" viewBox="0 0 20 20">
-                <path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" />
-              </svg>
-            </RouterLink>
-            <div class="bg-primary border-default invisible absolute left-0 top-full mt-2 w-48 border rounded-lg py-2 opacity-0 shadow-lg transition-all duration-200 group-hover:visible group-hover:opacity-100">
-              <RouterLink to="/local-businesses" class="text-primary hover:bg-surface block rounded-md px-4 py-2 ring-offset-white transition-colors hover:text-redline-red focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-red-500 dark:ring-offset-black">
-                Local Businesses
-              </RouterLink>
-              <RouterLink to="/auto-shops" class="text-primary hover:bg-surface block rounded-md px-4 py-2 ring-offset-white transition-colors hover:text-redline-red focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-red-500 dark:ring-offset-black">
-                Auto Shop Brands
-              </RouterLink>
-              <RouterLink to="/ecommerce" class="text-primary hover:bg-surface block rounded-md px-4 py-2 ring-offset-white transition-colors hover:text-redline-red focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-red-500 dark:ring-offset-black">
-                E-comm Brands
-              </RouterLink>
-            </div>
-          </div>
+          <!-- Who We Help Direct Link -->
+          <RouterLink
+            to="/who-we-help"
+            class="rounded-md font-medium ring-offset-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-red-500 dark:ring-offset-black"
+            :class="isScrolled ? 'text-muted-foreground hover:text-redline-red' : 'text-muted hover:text-redline-red'"
+            @click="closeDropdowns"
+          >
+            Who We Help
+          </RouterLink>
 
           <!-- Services Dropdown -->
           <div class="group relative">
@@ -88,7 +72,7 @@ onUnmounted(() => {
                 <path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" />
               </svg>
             </RouterLink>
-            <div class="border-default bg-primary invisible absolute left-0 top-full mt-2 w-64 border rounded-lg py-2 opacity-0 shadow-lg transition-all duration-200 group-hover:visible group-hover:opacity-100">
+            <div class="bg-primary border-default invisible absolute left-0 top-full mt-2 w-64 border rounded-lg py-2 opacity-0 shadow-lg transition-all duration-200 group-hover:visible group-hover:opacity-100">
               <RouterLink to="/services#google-ads" class="text-primary hover:bg-surface block rounded-md px-4 py-2 ring-offset-white transition-colors hover:text-redline-red focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-red-500 dark:ring-offset-black">
                 Google Ads & Paid Media
               </RouterLink>

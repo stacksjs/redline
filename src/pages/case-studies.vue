@@ -230,8 +230,6 @@ const caseStudies = [
       </div>
     </section>
 
-    <Doodle />
-
     <!-- CTA Section -->
     <CTASection />
   </div>

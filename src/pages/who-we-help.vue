@@ -74,6 +74,9 @@ const stats = [
         <p class="text-muted text-xl leading-relaxed">
           We don't work with everyone. We specialize in high-performance marketing for businesses that are serious about growth and ready to invest in results.
         </p>
+        <p class="text-muted mt-4 text-lg leading-relaxed">
+          We only partner with <span class="text-redline-red font-bold">one business per industry per city</span>. That means when you work with us, you're not competing with your own marketing agency, you're getting our full focus to help you dominate your market.
+        </p>
       </div>
     </section>
 

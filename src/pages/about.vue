@@ -148,8 +148,6 @@ const teamMembers = [
       </div>
     </section>
 
-    <Doodle />
-
     <!-- CTA Section -->
     <CTASection />
   </div>
