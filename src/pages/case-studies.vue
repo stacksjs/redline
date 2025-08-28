@@ -86,7 +86,7 @@ function closeContactModal() {
 <template>
   <div>
     <!-- Hero Section -->
-    <section class="bg-redline-black py-20 text-white">
+    <section class="bg-redline-black py-12 text-white md:py-20">
       <div class="mx-auto max-w-4xl px-4 text-center">
         <h1 class="mb-6 text-5xl font-bold font-racing">
           Client <span class="text-redline-red">Success Stories</span>
@@ -106,17 +106,17 @@ function closeContactModal() {
     />
 
     <!-- Case Studies -->
-    <section class="bg-primary relative py-20">
+    <section class="bg-primary relative py-12 md:py-20">
       <!-- <img src="/doodle.png" alt="Transistor" class="absolute z-10 size-32 w-full object-contain text-blue-500 opacity-75 -bottom-[30px]"> -->
       <div class="mx-auto max-w-6xl px-4">
-        <div class="space-y-20">
+        <div class="space-y-12 md:space-y-20">
           <div
             v-for="(study, index) in caseStudies"
             :key="study.title"
-            class="grid grid-cols-1 items-center gap-12 lg:grid-cols-2"
+            class="grid grid-cols-1 items-center gap-8 lg:grid-cols-2 md:gap-12"
           >
             <!-- Image -->
-            <div class="order-2" :class="index % 2 === 0 ? 'lg:order-1' : 'lg:order-2'">
+            <div class="order-1" :class="index % 2 === 0 ? 'lg:order-1' : 'lg:order-2'">
               <div class="bg-surface h-80 flex items-center justify-center overflow-hidden rounded-lg">
                 <!-- Automotive -->
                 <img
@@ -158,7 +158,7 @@ function closeContactModal() {
             </div>
 
             <!-- Content -->
-            <div class="order-1" :class="index % 2 === 0 ? 'lg:order-2' : 'lg:order-1'">
+            <div class="order-2" :class="index % 2 === 0 ? 'lg:order-2' : 'lg:order-1'">
               <div class="bg-surface rounded-lg p-8">
                 <div class="mb-4">
                   <span class="text-sm text-redline-red font-semibold tracking-wider uppercase">{{ study.industry }}</span>

@@ -3,10 +3,18 @@ import { onMounted, onUnmounted, ref } from 'vue'
 
 const isScrolled = ref(false)
 const contactModalOpen = ref(false)
-// Remove local isDarkMode - we'll use the global one from dark.ts
+const mobileMenuOpen = ref(false)
 
 function closeDropdowns() {
   // Function kept for compatibility but not needed anymore
+}
+
+function toggleMobileMenu() {
+  mobileMenuOpen.value = !mobileMenuOpen.value
+}
+
+function closeMobileMenu() {
+  mobileMenuOpen.value = false
 }
 
 function openContactModal() {
@@ -43,7 +51,7 @@ onUnmounted(() => {
         <RouterLink to="/" class="flex items-center space-x-3" @click="closeDropdowns">
           <!-- Logo with black circle and red line -->
           <div class="relative flex items-center justify-center">
-            <img src="/logo.png" alt="Redline Marketing Logo" class="transition-all duration-300" :class="isScrolled ? 'h-24' : 'h-32'">
+            <img src="/logo.png" alt="Redline Marketing Logo" class="transition-all duration-300" :class="isScrolled ? 'h-16 md:h-24' : 'h-20 md:h-32'">
           </div>
         </RouterLink>
 
@@ -147,11 +155,76 @@ onUnmounted(() => {
         <button
           class="rounded-md ring-offset-white transition-colors md:hidden focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-red-500 dark:ring-offset-black"
           :class="isScrolled ? 'text-muted-foreground hover:text-redline-red' : 'text-muted hover:text-redline-red'"
+          @click="toggleMobileMenu"
         >
-          <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <svg v-if="!mobileMenuOpen" class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
           </svg>
+          <svg v-else class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
         </button>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div v-if="mobileMenuOpen" class="bg-primary border-default border-t md:hidden">
+      <div class="mx-auto max-w-6xl px-4 py-4 space-y-4">
+        <RouterLink
+          to="/who-we-help"
+          class="text-primary hover:bg-surface block rounded-md px-4 py-2 font-medium ring-offset-white transition-colors hover:text-redline-red focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-red-500"
+          @click="closeMobileMenu"
+        >
+          Who We Help
+        </RouterLink>
+
+        <RouterLink
+          to="/services"
+          class="text-primary hover:bg-surface block rounded-md px-4 py-2 font-medium ring-offset-white transition-colors hover:text-redline-red focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-red-500"
+          @click="closeMobileMenu"
+        >
+          Services
+        </RouterLink>
+
+        <RouterLink
+          to="/case-studies"
+          class="text-primary hover:bg-surface block rounded-md px-4 py-2 font-medium ring-offset-white transition-colors hover:text-redline-red focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-red-500"
+          @click="closeMobileMenu"
+        >
+          Case Studies
+        </RouterLink>
+
+        <RouterLink
+          to="/about"
+          class="text-primary hover:bg-surface block rounded-md px-4 py-2 font-medium ring-offset-white transition-colors hover:text-redline-red focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-red-500"
+          @click="closeMobileMenu"
+        >
+          About Us
+        </RouterLink>
+
+        <button
+          class="w-full btn-primary"
+          @click="openContactModal(); closeMobileMenu()"
+        >
+          Contact Us
+        </button>
+
+        <RouterLink
+          to="/login"
+          class="flex items-center justify-center border-2 rounded-md px-6 py-3 font-semibold ring-offset-white transition-all duration-200 ease-in-out space-x-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-red-500"
+          :class="isDark ? 'border-white text-white hover:bg-white hover:text-black' : 'border-gray-400 text-gray-700 hover:bg-gray-100'"
+          @click="closeMobileMenu"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+            class="h-4 w-4"
+          >
+            <path fill-rule="evenodd" d="M7.5 3.75A1.5 1.5 0 0 0 6 5.25v13.5a1.5 1.5 0 0 0 1.5 1.5h6a1.5 1.5 0 0 0 1.5-1.5V15a.75.75 0 0 1 1.5 0v3.75a3 3 0 0 1-3 3h-6a3 3 0 0 1-3-3V5.25a3 3 0 0 1 3-3h6a3 3 0 0 1 3 3V9A.75.75 0 0 1 15 9V5.25a1.5 1.5 0 0 0-1.5-1.5h-6Zm10.72 4.72a.75.75 0 0 1 1.06 0l3 3a.75.75 0 0 1 0 1.06l-3 3a.75.75 0 1 1-1.06-1.06l1.72-1.72H9a.75.75 0 0 1 0-1.5h10.94l-1.72-1.72a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
+          </svg>
+          <span>Login</span>
+        </RouterLink>
       </div>
     </div>
   </nav>

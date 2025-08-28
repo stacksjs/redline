@@ -23,10 +23,10 @@ function openContactModal() {
 </script>
 
 <template>
-  <section class="bg-primary border-default py-16">
+  <section class="bg-primary border-default py-12 md:py-16">
     <div class="mx-auto max-w-6xl px-4">
       <!-- Header -->
-      <div class="mb-12 text-center">
+      <div class="mb-8 text-center md:mb-12">
         <h2 class="text-primary mb-4 text-4xl font-bold font-racing">
           {{ title }}
         </h2>
