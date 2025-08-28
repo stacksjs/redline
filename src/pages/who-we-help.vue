@@ -114,7 +114,7 @@ const stats = [
           <div
             v-for="(client, index) in clientTypes"
             :key="client.title"
-            class="grid grid-cols-1 items-center gap-12 lg:grid-cols-2"
+            class="grid grid-cols-1 items-center lg:grid-cols-2 md:gap-12"
             :class="{ 'lg:flex-row-reverse': index % 2 === 1 }"
           >
             <!-- Content -->
@@ -143,9 +143,10 @@ const stats = [
                 </ul>
               </div>
 
+              <!-- Desktop Learn More Button -->
               <RouterLink
                 :to="client.link"
-                class="inline-block btn-primary hover:bg-red-800"
+                class="hidden lg:inline-block btn-primary hover:bg-red-800"
               >
                 Learn More
               </RouterLink>
@@ -153,8 +154,8 @@ const stats = [
 
             <!-- Examples -->
             <div :class="{ 'lg:order-1': index % 2 === 1 }">
-              <div class="bg-surface rounded-lg p-8">
-                <h4 class="text-primary mb-6 text-xl font-semibold">
+              <div class="bg-surface rounded-lg px-2 py-2 lg:p-8">
+                <h4 class="text-primary mb-4 text-xl font-semibold lg:mb-6">
                   Business Types We Work With:
                 </h4>
                 <div class="grid grid-cols-1 gap-3">
@@ -168,6 +169,16 @@ const stats = [
                   </div>
                 </div>
               </div>
+
+              <!-- Mobile Learn More Button (after business types) -->
+              <div class="mt-6 text-center lg:hidden">
+                <RouterLink
+                  :to="client.link"
+                  class="inline-block btn-primary hover:bg-red-800"
+                >
+                  Learn More
+                </RouterLink>
+              </div>
             </div>
           </div>
         </div>
@@ -180,7 +191,7 @@ const stats = [
 
       <div class="mx-auto max-w-4xl px-4">
         <div class="text-center">
-          <h2 class="text-primary mb-8 text-3xl font-bold">
+          <h2 class="text-primary mb-8 text-3xl font-bold font-racing">
             Why Businesses Choose Redline
           </h2>
 
