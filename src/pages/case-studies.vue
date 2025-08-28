@@ -63,6 +63,24 @@ const caseStudies = [
     clientName: 'David Thompson, Owner',
   },
 ]
+
+const stats = [
+  { number: '600%', label: 'Average Lead Increase' },
+  { number: '8x', label: 'Return on Ad Spend' },
+  { number: '85%', label: 'Client Retention Rate' },
+  { number: '300+', label: 'Successful Campaigns' },
+  { number: '100M+', label: 'Organic Social Views Generated' },
+]
+
+const contactModalOpen = ref(false)
+
+function openContactModal() {
+  contactModalOpen.value = true
+}
+
+function closeContactModal() {
+  contactModalOpen.value = false
+}
 </script>
 
 <template>
@@ -80,44 +98,12 @@ const caseStudies = [
     </section>
 
     <!-- Stats Section -->
-    <section class="bg-primary border-default border-b py-16">
-      <div class="mx-auto max-w-6xl px-4">
-        <div class="grid grid-cols-2 gap-8 md:grid-cols-4">
-          <div class="text-center">
-            <div class="mb-2 text-4xl text-redline-red font-bold font-racing">
-              600%
-            </div>
-            <div class="text-muted-foreground text-sm font-medium">
-              Average Lead Increase
-            </div>
-          </div>
-          <div class="text-center">
-            <div class="mb-2 text-4xl text-redline-red font-bold font-racing">
-              8x
-            </div>
-            <div class="text-muted-foreground text-sm font-medium">
-              Return on Ad Spend
-            </div>
-          </div>
-          <div class="text-center">
-            <div class="mb-2 text-4xl text-redline-red font-bold font-racing">
-              85%
-            </div>
-            <div class="text-muted-foreground text-sm font-medium">
-              Client Retention Rate
-            </div>
-          </div>
-          <div class="text-center">
-            <div class="mb-2 text-4xl text-redline-red font-bold font-racing">
-              300+
-            </div>
-            <div class="text-muted-foreground text-sm font-medium">
-              Successful Campaigns
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+    <Stats
+      :stats="stats"
+      title="Client Success Metrics"
+      subtitle="Results that speak for themselves"
+      @open-contact="openContactModal"
+    />
 
     <!-- Case Studies -->
     <section class="bg-primary relative py-20">
@@ -164,9 +150,6 @@ const caseStudies = [
 
                 <!-- Fallback (should not occur) -->
                 <div v-else class="text-muted text-center">
-                  <div class="mb-2 text-4xl">
-                    📄
-                  </div>
                   <p class="text-sm">
                     Case Study
                   </p>
@@ -233,6 +216,9 @@ const caseStudies = [
     <!-- CTA Section -->
     <CTASection />
   </div>
+
+  <!-- Contact Modal -->
+  <ContactModal :is-open="contactModalOpen" @close="closeContactModal" />
 </template>
 
 <route lang="yaml">

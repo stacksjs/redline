@@ -13,10 +13,19 @@ useHead({
   ],
 })
 
+const contactModalOpen = ref(false)
+
+function openContactModal() {
+  contactModalOpen.value = true
+}
+
+function closeContactModal() {
+  contactModalOpen.value = false
+}
+
 const clientTypes = [
   {
     title: 'Local Businesses',
-    emoji: '🏪',
     description: 'Drive foot traffic, phone calls, and local revenue with marketing strategies built specifically for local businesses.',
     benefits: [
       'Geographic targeting within your service area',
@@ -29,7 +38,6 @@ const clientTypes = [
   },
   {
     title: 'Auto Shop Brands',
-    emoji: '🔧',
     description: 'Specialized marketing for automotive businesses that need to compete with chains and build customer trust.',
     benefits: [
       'Industry-specific keyword targeting',
@@ -42,7 +50,6 @@ const clientTypes = [
   },
   {
     title: 'E-commerce Brands',
-    emoji: '🛒',
     description: 'Scale your online store with data-driven campaigns that turn browsers into buyers and customers into repeat purchasers.',
     benefits: [
       'Full-funnel advertising campaigns',
@@ -60,6 +67,7 @@ const stats = [
   { number: '85%', label: 'Client Retention Rate' },
   { number: '$2M+', label: 'Revenue Generated' },
   { number: '24/7', label: 'Campaign Monitoring' },
+  { number: '100M+', label: 'Organic Social Views Generated' },
 ]
 </script>
 
@@ -81,24 +89,12 @@ const stats = [
     </section>
 
     <!-- Stats Section -->
-    <section class="bg-primary border-default py-16">
-      <div class="mx-auto max-w-6xl px-4">
-        <div class="grid grid-cols-2 gap-8 md:grid-cols-4">
-          <div
-            v-for="stat in stats"
-            :key="stat.label"
-            class="text-center"
-          >
-            <div class="mb-2 text-4xl text-redline-red font-bold font-racing">
-              {{ stat.number }}
-            </div>
-            <div class="text-muted-foreground text-sm font-medium">
-              {{ stat.label }}
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+    <Stats
+      :stats="stats"
+      title="Our Results"
+      subtitle="Numbers that speak for themselves"
+      @open-contact="openContactModal"
+    />
 
     <!-- Client Types Section -->
     <section class="bg-primary relative py-20">
@@ -123,10 +119,6 @@ const stats = [
           >
             <!-- Content -->
             <div :class="{ 'lg:order-2': index % 2 === 1 }">
-              <div class="mb-4 text-6xl">
-                {{ client.emoji }}
-              </div>
-
               <h3 class="text-primary mb-4 text-3xl font-bold">
                 {{ client.title }}
               </h3>
@@ -182,8 +174,6 @@ const stats = [
       </div>
     </section>
 
-    <Doodle />
-
     <!-- Why Choose Us Section -->
     <section class="bg-surface relative py-20">
       <!-- <img src="/doodle.png" alt="Transistor" class="absolute z-10 col-span-2 size-32 w-full rotate-y-180 object-contain text-blue-500 opacity-75 -bottom-10 lg:col-span-1"> -->
@@ -196,8 +186,10 @@ const stats = [
 
           <div class="grid grid-cols-1 gap-8 md:grid-cols-3">
             <div class="text-center">
-              <div class="mb-4 text-4xl">
-                🎯
+              <div class="mb-4 flex justify-center">
+                <svg class="h-12 w-12 text-redline-red" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
               </div>
               <h3 class="text-primary mb-3 text-xl font-semibold">
                 Specialized Focus
@@ -208,8 +200,10 @@ const stats = [
             </div>
 
             <div class="text-center">
-              <div class="mb-4 text-4xl">
-                📊
+              <div class="mb-4 flex justify-center">
+                <svg class="h-12 w-12 text-redline-red" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                </svg>
               </div>
               <h3 class="text-primary mb-3 text-xl font-semibold">
                 Data-Driven Approach
@@ -220,8 +214,10 @@ const stats = [
             </div>
 
             <div class="text-center">
-              <div class="mb-4 text-4xl">
-                🚀
+              <div class="mb-4 flex justify-center">
+                <svg class="h-12 w-12 text-redline-red" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+                </svg>
               </div>
               <h3 class="text-primary mb-3 text-xl font-semibold">
                 Proven Results
@@ -235,10 +231,12 @@ const stats = [
       </div>
     </section>
 
-    <Doodle invert />
     <!-- CTA Section -->
     <CTASection />
   </div>
+
+  <!-- Contact Modal -->
+  <ContactModal :is-open="contactModalOpen" @close="closeContactModal" />
 </template>
 
 <route lang="yaml">

@@ -18,57 +18,64 @@ const services = [
     title: 'Google Ads & Paid Media',
     description: 'Reach high-intent customers with campaigns that convert and drive measurable ROI.',
     features: ['Google Ads Management', 'Campaign Optimization', 'Keyword Research', 'Performance Tracking', 'Display & Video Ads'],
-    icon: '🎯',
+    icon: '',
     category: 'Advertising',
   },
   {
     title: 'Social Media Marketing',
     description: 'From organic growth to paid strategies across Meta, TikTok, LinkedIn and more platforms.',
     features: ['Content Strategy', 'Community Management', 'Paid Social Campaigns', 'Influencer Partnerships', 'Analytics & Reporting'],
-    icon: '📱',
+    icon: '',
     category: 'Social Media',
   },
   {
     title: 'SEO & Local SEO',
     description: 'Get found where it matters — in search results and in your local neighborhood.',
     features: ['Technical SEO', 'Local Business Optimization', 'Content Strategy', 'Link Building', 'Google Business Profile'],
-    icon: '🔍',
+    icon: '',
     category: 'Search Marketing',
   },
   {
     title: 'Website Strategy & CRO',
     description: 'We optimize for more than looks — we build websites that drive results and conversions.',
     features: ['A/B Testing', 'Landing Page Optimization', 'User Experience Analysis', 'Conversion Tracking', 'Performance Optimization'],
-    icon: '💻',
+    icon: '',
     category: 'Website',
   },
   {
     title: 'Email Marketing & Retention',
     description: 'Turn one-time buyers into loyal customers with strategic email campaigns and automation.',
     features: ['Email Campaign Design', 'Automation Workflows', 'List Building', 'Segmentation Strategy', 'Customer Retention'],
-    icon: '📧',
+    icon: '',
     category: 'Email Marketing',
   },
   {
     title: 'Marketing Automation',
     description: 'Scale your marketing efforts with smart automation that works around the clock.',
     features: ['Lead Nurturing', 'Behavioral Triggers', 'CRM Integration', 'Multi-Channel Workflows', 'Performance Analytics'],
-    icon: '⚡',
+    icon: '',
     category: 'Automation',
   },
   {
     title: 'Application & Web Development',
     description: 'Build powerful web applications and digital experiences that engage users and drive business growth.',
     features: ['Custom Web Applications', 'E-commerce Development', 'API Integration', 'Database Design', 'Mobile Optimization'],
-    icon: '🚀',
+    icon: '',
     category: 'Development',
   },
   {
     title: 'Brand Strategy & Design',
     description: 'Create a compelling brand identity that resonates with your audience and stands out in the market.',
     features: ['Brand Identity Design', 'Logo & Visual Systems', 'Brand Guidelines', 'Marketing Collateral', 'Brand Positioning'],
-    icon: '🎨',
+    icon: '',
     category: 'Branding',
+  },
+  {
+    title: 'Google My Business & Yelp Management',
+    description: 'Dominate local search results and build your online reputation with professional profile management.',
+    features: ['Google Business Profile Optimization', 'Yelp Business Page Management', 'Review Generation & Management', 'Local SEO Enhancement', 'Reputation Monitoring'],
+    icon: '',
+    category: 'Local Marketing',
   },
 ]
 
@@ -128,13 +135,11 @@ const processSteps = [
         <div class="grid grid-cols-1 gap-8 lg:grid-cols-3 md:grid-cols-2">
           <div
             v-for="service in services"
+            :id="service.category.toLowerCase().replace(' ', '-')"
             :key="service.title"
             class="bg-surface rounded-lg p-8"
           >
-            <div class="mb-4 flex items-center">
-              <div class="mr-3 text-3xl">
-                {{ service.icon }}
-              </div>
+            <div class="mb-4">
               <div class="text-sm text-redline-red font-semibold tracking-wider uppercase">
                 {{ service.category }}
               </div>
@@ -162,8 +167,6 @@ const processSteps = [
         </div>
       </div>
     </section>
-
-    <Doodle />
 
     <!-- Process Section -->
     <section class="bg-surface relative py-20">
@@ -201,8 +204,6 @@ const processSteps = [
       </div>
     </section>
 
-    <Doodle invert />
-
     <!-- Why Choose Us -->
     <section class="bg-primary relative py-20">
       <div class="mx-auto max-w-4xl px-4 text-center">
@@ -212,9 +213,6 @@ const processSteps = [
 
         <div class="grid grid-cols-1 gap-8 md:grid-cols-3">
           <div>
-            <div class="mb-4 text-4xl">
-              📊
-            </div>
             <h3 class="text-primary mb-3 text-xl font-semibold">
               Data-Driven Results
             </h3>
@@ -224,9 +222,6 @@ const processSteps = [
           </div>
 
           <div>
-            <div class="mb-4 text-4xl">
-              🎯
-            </div>
             <h3 class="text-primary mb-3 text-xl font-semibold">
               Industry Expertise
             </h3>
@@ -236,9 +231,6 @@ const processSteps = [
           </div>
 
           <div>
-            <div class="mb-4 text-4xl">
-              🚀
-            </div>
             <h3 class="text-primary mb-3 text-xl font-semibold">
               Proven Track Record
             </h3>
@@ -249,8 +241,6 @@ const processSteps = [
         </div>
       </div>
     </section>
-
-    <Doodle />
 
     <!-- CTA Section -->
     <CTASection />

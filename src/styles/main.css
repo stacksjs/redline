@@ -49,6 +49,7 @@ body,
 html {
   background: var(--redline-background);
   color: var(--redline-foreground);
+  scroll-behavior: smooth;
 }
 
 #nprogress {

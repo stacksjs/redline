@@ -53,7 +53,6 @@ useHead({
           <div class="not-prose grid grid-cols-1 gap-8 md:grid-cols-2">
             <div class="bg-surface rounded-lg p-6">
               <div class="mb-3 flex items-center">
-                <span class="mr-3 text-3xl">📍</span>
                 <h4 class="text-primary text-xl font-semibold">
                   Geographic Targeting
                 </h4>
@@ -65,7 +64,6 @@ useHead({
 
             <div class="bg-surface rounded-lg p-6">
               <div class="mb-3 flex items-center">
-                <span class="mr-3 text-3xl">🔍</span>
                 <h4 class="text-primary text-xl font-semibold">
                   Local Intent Keywords
                 </h4>
@@ -77,7 +75,6 @@ useHead({
 
             <div class="bg-surface rounded-lg p-6">
               <div class="mb-3 flex items-center">
-                <span class="mr-3 text-3xl">🤝</span>
                 <h4 class="text-primary text-xl font-semibold">
                   Community Connection
                 </h4>
@@ -89,7 +86,6 @@ useHead({
 
             <div class="bg-surface rounded-lg p-6">
               <div class="mb-3 flex items-center">
-                <span class="mr-3 text-3xl">⚡</span>
                 <h4 class="text-primary text-xl font-semibold">
                   Immediate Results
                 </h4>
@@ -102,8 +98,6 @@ useHead({
         </div>
       </div>
     </section>
-
-    <Doodle />
 
     <!-- CTA Section -->
     <CTASection />
