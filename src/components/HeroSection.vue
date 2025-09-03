@@ -51,16 +51,29 @@ function closeCalendarModal() {
             <p class="mb-3 text-xs tracking-wider uppercase md:mb-4 md:text-sm dark:text-gray-300">
               Trusted by:
             </p>
-            <div class="flex flex-wrap items-center justify-center gap-4 opacity-70 lg:justify-start md:gap-8">
+            <div class="flex flex-wrap items-center justify-center gap-4 opacity-70 lg:justify-start md:gap-4">
               <!-- Placeholder for customer logos -->
               <div class="h-8 min-w-[80px] flex items-center justify-center border border-gray-600 rounded bg-gray-800 px-2 py-4 text-center md:h-12 md:min-w-[120px] dark:bg-opacity-60 md:py-8">
-                <img src="https://tailwindcss.com/plus-assets/img/logos/158x48/transistor-logo-white.svg" alt="Transistor" class="h-6 max-h-8 w-12 object-contain md:h-10 md:max-h-12 md:w-20">
+                <img src="/public/partners/dh-shield-logo.png" alt="Transistor" class="h-6 max-h-8 w-12 cursor-pointer object-contain grayscale transition-all duration-300 md:h-10 md:max-h-12 md:w-20 hover:grayscale-0">
               </div>
               <div class="h-8 min-w-[80px] flex items-center justify-center border border-gray-600 rounded bg-gray-800 px-2 py-4 text-center md:h-12 md:min-w-[120px] dark:bg-opacity-60 md:py-8">
-                <img src="https://tailwindcss.com/plus-assets/img/logos/158x48/reform-logo-white.svg" alt="Reform" class="h-6 max-h-8 w-12 object-contain md:h-10 md:max-h-12 md:w-20">
+                <img src="/public/partners/ecm-logo.png" alt="Reform" class="h-6 max-h-8 w-12 cursor-pointer object-contain grayscale transition-all duration-300 md:h-10 md:max-h-12 md:w-20 hover:grayscale-0">
               </div>
               <div class="h-8 min-w-[80px] flex items-center justify-center border border-gray-600 rounded bg-gray-800 px-2 py-4 text-center md:h-12 md:min-w-[120px] dark:bg-opacity-60 md:py-8">
-                <img src="https://tailwindcss.com/plus-assets/img/logos/158x48/tuple-logo-white.svg" alt="Tuple" class="h-6 max-h-8 w-12 object-contain md:h-10 md:max-h-12 md:w-20">
+                <img src="/public/partners/escamex-logo.png" alt="Tuple" class="h-6 max-h-8 w-12 cursor-pointer object-contain grayscale transition-all duration-300 md:h-10 md:max-h-12 md:w-20 hover:grayscale-0">
+              </div>
+
+              <div class="h-8 min-w-[80px] flex items-center justify-center border border-gray-600 rounded bg-gray-800 px-2 py-4 text-center md:h-12 md:min-w-[120px] dark:bg-opacity-60 md:py-8">
+                <img src="/public/partners/Los-tres-party-rental-logo.png" alt="Tuple" class="h-6 max-h-8 w-12 cursor-pointer object-contain grayscale transition-all duration-300 md:h-10 md:max-h-12 md:w-20 hover:grayscale-0">
+              </div>
+              <div class="h-8 min-w-[80px] flex items-center justify-center border border-gray-600 rounded bg-gray-800 px-2 py-4 text-center md:h-12 md:min-w-[120px] dark:bg-opacity-60 md:py-8">
+                <img src="/public/partners/orozcos-auto-service.png" alt="Tuple" class="h-6 max-h-8 w-12 cursor-pointer object-contain grayscale transition-all duration-300 md:h-10 md:max-h-12 md:w-20 hover:grayscale-0">
+              </div>
+              <div class="h-8 min-w-[80px] flex items-center justify-center border border-gray-600 rounded bg-gray-800 px-2 py-4 text-center md:h-12 md:min-w-[120px] dark:bg-opacity-60 md:py-8">
+                <img src="/public/partners/ravens-logo.png" alt="Tuple" class="h-6 max-h-8 w-12 cursor-pointer object-contain grayscale transition-all duration-300 md:h-10 md:max-h-12 md:w-20 hover:grayscale-0">
+              </div>
+              <div class="h-8 min-w-[80px] flex items-center justify-center border border-gray-600 rounded bg-gray-800 px-2 py-4 text-center md:h-12 md:min-w-[120px] dark:bg-opacity-60 md:py-8">
+                <img src="/public/partners/retas-logo.png" alt="Tuple" class="h-6 max-h-8 w-12 cursor-pointer object-contain grayscale transition-all duration-300 md:h-10 md:max-h-12 md:w-20 hover:grayscale-0">
               </div>
             </div>
           </div>
