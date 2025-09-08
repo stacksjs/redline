@@ -22,8 +22,8 @@ function closeCalendarModal() {
     <div class="relative z-10 mx-auto max-w-6xl px-4 py-6 md:py-18">
       <div class="grid grid-cols-1 items-center gap-6 lg:grid-cols-2 md:gap-12">
         <!-- Hero Image - appears first on mobile, second on desktop -->
-        <div class="absolute z-10 order-1 size-full flex items-center justify-center lg:static lg:order-2 lg:justify-end">
-          <img src="/hero-blob.png" alt="Redline Marketing" class="size-[60%] object-contain md:size-[80%]">
+        <div class="absolute z-10 order-1 size-full flex justify-center lg:static lg:order-2 md:items-center lg:justify-end">
+          <img src="/hero-blob.png" alt="Redline Marketing" class="size-[60%] object-contain opacity-40 lg:size-[80%] lg:opacity-100 md:opacity-50">
         </div>
 
         <!-- Content - appears second on mobile, first on desktop -->
