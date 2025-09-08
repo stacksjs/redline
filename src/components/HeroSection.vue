@@ -54,26 +54,26 @@ function closeCalendarModal() {
             <div class="flex flex-wrap items-center justify-center gap-4 opacity-70 lg:justify-start md:gap-4">
               <!-- Placeholder for customer logos -->
               <div class="h-8 min-w-[80px] flex items-center justify-center border border-gray-600 rounded bg-gray-800 px-2 py-4 text-center md:h-12 md:min-w-[120px] dark:bg-opacity-60 md:py-8">
-                <img src="/public/partners/dh-shield-logo.png" alt="Transistor" class="h-6 max-h-8 w-12 cursor-pointer object-contain grayscale transition-all duration-300 md:h-10 md:max-h-12 md:w-20 hover:grayscale-0">
+                <img src="/partners/dh-shield-logo.png" alt="Transistor" class="h-6 max-h-8 w-12 cursor-pointer object-contain grayscale transition-all duration-300 md:h-10 md:max-h-12 md:w-20">
               </div>
               <div class="h-8 min-w-[80px] flex items-center justify-center border border-gray-600 rounded bg-gray-800 px-2 py-4 text-center md:h-12 md:min-w-[120px] dark:bg-opacity-60 md:py-8">
-                <img src="/public/partners/ecm-logo.png" alt="Reform" class="h-6 max-h-8 w-12 cursor-pointer object-contain grayscale transition-all duration-300 md:h-10 md:max-h-12 md:w-20 hover:grayscale-0">
+                <img src="/partners/ecm-logo.png" alt="Reform" class="h-6 max-h-8 w-12 cursor-pointer object-contain grayscale transition-all duration-300 md:h-10 md:max-h-12 md:w-20">
               </div>
               <div class="h-8 min-w-[80px] flex items-center justify-center border border-gray-600 rounded bg-gray-800 px-2 py-4 text-center md:h-12 md:min-w-[120px] dark:bg-opacity-60 md:py-8">
-                <img src="/public/partners/escamex-logo.png" alt="Tuple" class="h-6 max-h-8 w-12 cursor-pointer object-contain grayscale transition-all duration-300 md:h-10 md:max-h-12 md:w-20 hover:grayscale-0">
+                <img src="/partners/escamex-logo.png" alt="Tuple" class="h-6 max-h-8 w-12 cursor-pointer object-contain grayscale transition-all duration-300 md:h-20 md:max-h-20 md:w-20">
               </div>
 
               <div class="h-8 min-w-[80px] flex items-center justify-center border border-gray-600 rounded bg-gray-800 px-2 py-4 text-center md:h-12 md:min-w-[120px] dark:bg-opacity-60 md:py-8">
-                <img src="/public/partners/Los-tres-party-rental-logo.png" alt="Tuple" class="h-6 max-h-8 w-12 cursor-pointer object-contain grayscale transition-all duration-300 md:h-10 md:max-h-12 md:w-20 hover:grayscale-0">
+                <img src="/partners/Los-tres-party-rental-logo.png" alt="Tuple" class="h-6 max-h-8 w-12 cursor-pointer object-contain grayscale transition-all duration-300 md:h-16 md:max-h-16 md:w-20">
               </div>
               <div class="h-8 min-w-[80px] flex items-center justify-center border border-gray-600 rounded bg-gray-800 px-2 py-4 text-center md:h-12 md:min-w-[120px] dark:bg-opacity-60 md:py-8">
-                <img src="/public/partners/orozcos-auto-service.png" alt="Tuple" class="h-6 max-h-8 w-12 cursor-pointer object-contain grayscale transition-all duration-300 md:h-10 md:max-h-12 md:w-20 hover:grayscale-0">
+                <img src="/partners/orozcos-auto-service.png" alt="Tuple" class="h-6 max-h-8 w-12 cursor-pointer object-contain grayscale transition-all duration-300 md:h-10 md:max-h-12 md:w-20">
               </div>
               <div class="h-8 min-w-[80px] flex items-center justify-center border border-gray-600 rounded bg-gray-800 px-2 py-4 text-center md:h-12 md:min-w-[120px] dark:bg-opacity-60 md:py-8">
-                <img src="/public/partners/ravens-logo.png" alt="Tuple" class="h-6 max-h-8 w-12 cursor-pointer object-contain grayscale transition-all duration-300 md:h-10 md:max-h-12 md:w-20 hover:grayscale-0">
+                <img src="/partners/ravens-logo.png" alt="Tuple" class="h-6 max-h-8 w-12 cursor-pointer object-contain grayscale transition-all duration-300 md:h-16 md:max-h-16 md:w-20">
               </div>
               <div class="h-8 min-w-[80px] flex items-center justify-center border border-gray-600 rounded bg-gray-800 px-2 py-4 text-center md:h-12 md:min-w-[120px] dark:bg-opacity-60 md:py-8">
-                <img src="/public/partners/retas-logo.png" alt="Tuple" class="h-6 max-h-8 w-12 cursor-pointer object-contain grayscale transition-all duration-300 md:h-10 md:max-h-12 md:w-20 hover:grayscale-0">
+                <img src="/partners/retas-logo-white.png" alt="Tuple" class="h-6 max-h-8 w-12 cursor-pointer object-contain grayscale transition-all duration-300 md:h-24 md:max-h-24 md:w-20">
               </div>
             </div>
           </div>
