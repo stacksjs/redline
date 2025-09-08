@@ -22,12 +22,12 @@ function closeCalendarModal() {
     <div class="relative z-10 mx-auto max-w-6xl px-4 py-6 md:py-18">
       <div class="grid grid-cols-1 items-center gap-6 lg:grid-cols-2 md:gap-12">
         <!-- Hero Image - appears first on mobile, second on desktop -->
-        <div class="order-1 size-full flex items-center justify-center lg:order-2 lg:justify-end">
+        <div class="absolute z-10 order-1 size-full flex items-center justify-center lg:static lg:order-2 lg:justify-end">
           <img src="/hero-blob.png" alt="Redline Marketing" class="size-[60%] object-contain md:size-[80%]">
         </div>
 
         <!-- Content - appears second on mobile, first on desktop -->
-        <div class="order-2 text-center lg:order-1 space-y-6 lg:text-left md:space-y-8">
+        <div class="z-20 order-2 text-center lg:order-1 space-y-6 lg:text-left md:space-y-8">
           <div>
             <h1 class="mb-4 text-3xl font-bold leading-tight font-racing md:mb-6 lg:text-6xl md:text-5xl">
               <span class="text-redline-red">Redline</span> Your Marketing Today

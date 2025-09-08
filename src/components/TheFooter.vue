@@ -84,12 +84,12 @@ function closeCalendarModal() {
               (123) 456-7890
             </a>
           </div>
-          <div class="flex items-center gap-4">
+          <div class="relative w-full flex items-center justify-center gap-4">
             <p class="text-sm">
-              &copy; 2025 Redline Marketing Agency. All rights reserved.
+              &copy; 2025 Redline Marketing Agency. <br>All rights reserved.
             </p>
             <button
-              class="rounded-full p-2 transition-all duration-200 ease-in-out focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-red-500"
+              class="absolute right-0 rounded-full p-2 transition-all duration-200 ease-in-out focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-red-500"
               :class="isDark ? 'text-blue-400 hover:bg-gray-800 ring-offset-black' : 'bg-gray-200 text-gray-600 hover:bg-gray-300 ring-offset-white'"
               :aria-label="isDark ? 'Switch to light mode' : 'Switch to dark mode'"
               @click="() => toggleDark()"
