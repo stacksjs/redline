@@ -20,14 +20,14 @@ function closeCalendarModal() {
     <div class="absolute inset-0 dark:bg-black dark:bg-opacity-60" />
 
     <div class="relative z-10 mx-auto max-w-6xl px-4 py-6 md:py-18">
-      <div class="grid grid-cols-1 items-center gap-6 lg:grid-cols-2 md:gap-12">
+      <div class="grid grid-cols-1 items-center gap-6 lg:grid-cols-5">
         <!-- Hero Image - appears first on mobile, second on desktop -->
-        <div class="absolute z-10 order-1 size-full flex justify-center lg:static lg:order-2 md:items-center lg:justify-end">
+        <div class="absolute z-10 order-1 size-full flex justify-end lg:static lg:order-2 lg:col-span-2 md:items-center">
           <img src="/hero-blob.png" alt="Redline Marketing" class="size-[60%] object-contain opacity-40 lg:size-[80%] lg:opacity-100 md:opacity-50">
         </div>
 
         <!-- Content - appears second on mobile, first on desktop -->
-        <div class="z-20 order-2 text-center lg:order-1 space-y-6 lg:text-left md:space-y-8">
+        <div class="z-20 order-2 text-center lg:order-1 lg:col-span-3 space-y-6 lg:text-left md:space-y-8">
           <div>
             <h1 class="mb-4 text-3xl font-bold leading-tight font-racing md:mb-6 lg:text-6xl md:text-5xl">
               <span class="text-redline-red">Redline</span> Your Marketing Today
@@ -51,29 +51,29 @@ function closeCalendarModal() {
             <p class="mb-3 text-xs tracking-wider uppercase md:mb-4 md:text-sm dark:text-gray-300">
               Trusted by:
             </p>
-            <div class="flex flex-wrap items-center justify-center gap-4 opacity-70 lg:justify-start md:gap-4">
+            <div class="flex flex-wrap items-center justify-center gap-6 opacity-70 lg:justify-start md:gap-6">
               <!-- Placeholder for customer logos -->
-              <div class="h-8 min-w-[80px] flex items-center justify-center border border-gray-600 rounded bg-gray-800 px-2 py-4 text-center md:h-12 md:min-w-[120px] dark:bg-opacity-60 md:py-8">
-                <img src="/partners/dh-shield-logo.png" alt="Transistor" class="h-6 max-h-8 w-12 cursor-pointer object-contain grayscale transition-all duration-300 md:h-10 md:max-h-12 md:w-20">
+              <div class="h-12 min-w-[100px] flex items-center justify-center border border-gray-600 rounded bg-gray-800 px-3 py-6 text-center md:h-16 md:min-w-[140px] dark:bg-opacity-60 md:py-10">
+                <img src="/partners/dh-shield-logo.png" alt="Transistor" class="h-8 max-h-10 w-16 cursor-pointer object-contain grayscale transition-all duration-300 md:h-12 md:max-h-14 md:w-24">
               </div>
-              <div class="h-8 min-w-[80px] flex items-center justify-center border border-gray-600 rounded bg-gray-800 px-2 py-4 text-center md:h-12 md:min-w-[120px] dark:bg-opacity-60 md:py-8">
-                <img src="/partners/ecm-logo.png" alt="Reform" class="h-6 max-h-8 w-12 cursor-pointer object-contain grayscale transition-all duration-300 md:h-10 md:max-h-12 md:w-20">
+              <div class="h-12 min-w-[100px] flex items-center justify-center border border-gray-600 rounded bg-gray-800 px-3 py-6 text-center md:h-16 md:min-w-[140px] dark:bg-opacity-60 md:py-10">
+                <img src="/partners/ecm-logo.png" alt="Reform" class="h-8 max-h-10 w-16 cursor-pointer object-contain grayscale transition-all duration-300 md:h-12 md:max-h-14 md:w-24">
               </div>
-              <div class="h-8 min-w-[80px] flex items-center justify-center border border-gray-600 rounded bg-gray-800 px-2 py-4 text-center md:h-12 md:min-w-[120px] dark:bg-opacity-60 md:py-8">
-                <img src="/partners/escamex-logo.png" alt="Tuple" class="h-10 max-h-10 w-12 cursor-pointer object-contain grayscale transition-all duration-300 md:h-20 md:max-h-20 md:w-20">
+              <div class="h-12 min-w-[100px] flex items-center justify-center border border-gray-600 rounded bg-gray-800 px-3 py-6 text-center md:h-16 md:min-w-[140px] dark:bg-opacity-60 md:py-10">
+                <img src="/partners/escamex-logo.png" alt="Tuple" class="h-12 max-h-12 w-16 cursor-pointer object-contain grayscale transition-all duration-300 md:h-24 md:max-h-24 md:w-24">
               </div>
 
-              <div class="h-8 min-w-[80px] flex items-center justify-center border border-gray-600 rounded bg-gray-800 px-2 py-4 text-center md:h-12 md:min-w-[120px] dark:bg-opacity-60 md:py-8">
-                <img src="/partners/Los-tres-party-rental-logo.png" alt="Tuple" class="h-6 max-h-8 w-12 cursor-pointer object-contain grayscale transition-all duration-300 md:h-16 md:max-h-16 md:w-20">
+              <div class="h-12 min-w-[100px] flex items-center justify-center border border-gray-600 rounded bg-gray-800 px-3 py-6 text-center md:h-16 md:min-w-[140px] dark:bg-opacity-60 md:py-10">
+                <img src="/partners/Los-tres-party-rental-logo.png" alt="Tuple" class="h-8 max-h-10 w-16 cursor-pointer object-contain grayscale transition-all duration-300 md:h-20 md:max-h-20 md:w-24">
               </div>
-              <div class="h-8 min-w-[80px] flex items-center justify-center border border-gray-600 rounded bg-gray-800 px-2 py-4 text-center md:h-12 md:min-w-[120px] dark:bg-opacity-60 md:py-8">
-                <img src="/partners/orozcos-auto-service.png" alt="Tuple" class="h-6 max-h-8 w-12 cursor-pointer object-contain grayscale transition-all duration-300 md:h-10 md:max-h-12 md:w-20">
+              <div class="h-12 min-w-[100px] flex items-center justify-center border border-gray-600 rounded bg-gray-800 px-3 py-6 text-center md:h-16 md:min-w-[140px] dark:bg-opacity-60 md:py-10">
+                <img src="/partners/orozcos-auto-service.png" alt="Tuple" class="h-8 max-h-10 w-16 cursor-pointer object-contain grayscale transition-all duration-300 md:h-12 md:max-h-14 md:w-24">
               </div>
-              <div class="h-8 min-w-[80px] flex items-center justify-center border border-gray-600 rounded bg-gray-800 px-2 py-4 text-center md:h-12 md:min-w-[120px] dark:bg-opacity-60 md:py-8">
-                <img src="/partners/ravens-logo.png" alt="Tuple" class="h-6 max-h-8 w-12 cursor-pointer object-contain grayscale transition-all duration-300 md:h-16 md:max-h-16 md:w-20">
+              <div class="h-12 min-w-[100px] flex items-center justify-center border border-gray-600 rounded bg-gray-800 px-3 py-6 text-center md:h-16 md:min-w-[140px] dark:bg-opacity-60 md:py-10">
+                <img src="/partners/ravens-logo.png" alt="Tuple" class="h-8 max-h-10 w-16 cursor-pointer object-contain grayscale transition-all duration-300 md:h-20 md:max-h-20 md:w-24">
               </div>
-              <div class="h-8 min-w-[80px] flex items-center justify-center border border-gray-600 rounded bg-gray-800 px-2 py-4 text-center md:h-12 md:min-w-[120px] dark:bg-opacity-60 md:py-8">
-                <img src="/partners/retas-logo-white.png" alt="Tuple" class="h-14 max-h-14 w-12 cursor-pointer object-contain grayscale transition-all duration-300 md:h-24 md:max-h-24 md:w-20">
+              <div class="h-12 min-w-[100px] flex items-center justify-center border border-gray-600 rounded bg-gray-800 px-3 py-6 text-center md:h-16 md:min-w-[140px] dark:bg-opacity-60 md:py-10">
+                <img src="/partners/retas-logo-white.png" alt="Tuple" class="h-16 max-h-16 w-16 cursor-pointer object-contain grayscale transition-all duration-300 md:h-28 md:max-h-28 md:w-24">
               </div>
             </div>
           </div>
