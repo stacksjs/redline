@@ -17,7 +17,7 @@ useHead({
 <template>
   <div>
     <!-- Hero Section -->
-    <section class="bg-redline-black py-20 text-white">
+    <section class="bg-redline-black py-24 text-white">
       <div class="mx-auto max-w-4xl px-4 text-center">
         <h1 class="mb-6 text-5xl font-bold">
           <span class="text-redline-red">Local Business</span> Marketing That Works
@@ -29,7 +29,7 @@ useHead({
       </div>
     </section>
 
-    <section class="bg-primary py-20">
+    <section class="section-alt-bg section-separator py-24">
       <div class="mx-auto max-w-6xl px-4">
         <div class="text-primary prose-lg mx-auto max-w-5xl prose">
           <h2 class="text-primary mb-8 text-center text-3xl font-bold font-racing">

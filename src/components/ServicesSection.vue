@@ -2,11 +2,11 @@
 </script>
 
 <template>
-  <section class="bg-primary relative py-12 md:py-20">
+  <section class="section-accent-bg section-separator relative py-16 md:py-24">
     <!-- <img src="/doodle.png" alt="Transistor" class="absolute col-span-2 size-32 w-full rotate-y-180 object-contain text-blue-500 opacity-75 -top-[25px] lg:col-span-1"> -->
 
     <div class="mx-auto max-w-7xl px-6 lg:px-8">
-      <div class="mx-auto max-w-2xl text-center">
+      <div class="mx-auto max-w-2xl text-center lg:max-w-none">
         <!-- <h2 class="text-base/7 text-redline-red font-semibold">
           Everything you need
         </h2> -->

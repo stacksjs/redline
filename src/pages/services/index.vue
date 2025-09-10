@@ -106,7 +106,7 @@ const processSteps = [
 <template>
   <div>
     <!-- Hero Section -->
-    <section class="bg-redline-black py-20 text-white">
+    <section class="bg-redline-black py-24 text-white">
       <div class="mx-auto max-w-4xl px-4 text-center">
         <h1 class="mb-6 text-5xl font-bold font-racing">
           Our <span class="text-redline-red">Services</span>
@@ -118,7 +118,7 @@ const processSteps = [
     </section>
 
     <!-- Services Introduction -->
-    <section class="bg-primary pb-4 pt-16">
+    <section class="section-alt-bg section-separator pb-4 pt-20">
       <div class="mx-auto max-w-4xl rounded-lg px-4 pt-16 text-center transition-all">
         <h2 class="text-primary mb-6 text-3xl font-bold font-racing">
           Marketing That Drives Results
@@ -130,7 +130,7 @@ const processSteps = [
     </section>
 
     <!-- Services Grid -->
-    <section class="bg-primary relative pb-8">
+    <section class="section-alt-bg relative pb-12">
       <div class="mx-auto max-w-6xl px-4">
         <div class="grid grid-cols-1 gap-8 lg:grid-cols-3 md:grid-cols-2">
           <div
@@ -169,7 +169,7 @@ const processSteps = [
     </section>
 
     <!-- Process Section -->
-    <section class="bg-surface relative py-20">
+    <section class="section-accent-bg section-separator section-divider relative py-24">
       <div class="mx-auto max-w-6xl px-4">
         <div class="mb-16 text-center">
           <h2 class="text-primary mb-6 text-3xl font-bold font-racing">
@@ -205,7 +205,7 @@ const processSteps = [
     </section>
 
     <!-- Why Choose Us -->
-    <section class="bg-primary relative py-20">
+    <section class="section-alt-bg section-separator relative py-24">
       <div class="mx-auto max-w-4xl px-4 text-center">
         <h2 class="text-primary mb-8 text-3xl font-bold font-racing">
           Why Choose Redline Marketing

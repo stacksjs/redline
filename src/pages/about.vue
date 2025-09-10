@@ -82,7 +82,7 @@ const teamMembers = [
 <template>
   <div>
     <!-- Hero Section -->
-    <section class="bg-redline-black py-20 text-white">
+    <section class="bg-redline-black py-24 text-white">
       <div class="mx-auto max-w-4xl px-4 text-center">
         <h2 class="mb-6 text-4xl font-bold font-racing">
           About <span class="text-redline-red">Redline Marketing</span>
@@ -94,7 +94,7 @@ const teamMembers = [
     </section>
 
     <!-- Main Content -->
-    <section class="bg-primary py-20 md:text-2xl">
+    <section class="section-alt-bg section-separator py-24 md:text-2xl">
       <div class="mx-auto max-w-4xl px-4 text-center leading-relaxed">
         <div class="text-primary prose-lg mx-auto prose">
           <p>
@@ -112,7 +112,7 @@ const teamMembers = [
     </section>
 
     <!-- Team Section -->
-    <section class="bg-surface relative py-20 pb-32">
+    <section class="section-separator section-accent-bg section-divider relative py-24 pb-32">
       <!-- <img src="/doodle.png" alt="Transistor" class="absolute z-10 size-32 w-full object-contain text-blue-500 opacity-75 -bottom-[40px]"> -->
       <div class="mx-auto max-w-6xl px-4">
         <div class="mb-16 text-center">
@@ -126,16 +126,13 @@ const teamMembers = [
 
         <div class="grid grid-cols-1 gap-8 md:grid-cols-3">
           <div v-for="member in teamMembers" :key="member.name" class="text-center">
-            <!-- Placeholder for team member photo -->
-            <div class="bg-surface mb-4 h-32 w-full flex items-center justify-center rounded-lg">
-              <!-- Replace with actual photos when available -->
-              <div class="text-muted text-center">
-                <img
-                  alt=""
-                  :src="member.image"
-                  className="mx-auto size-24 rounded-full outline-1 -outline-offset-1 outline-black/5"
-                >
-              </div>
+            <!-- Team member photo -->
+            <div class="mb-6 flex justify-center">
+              <img
+                :alt="member.name"
+                :src="member.image"
+                class="mx-auto size-32 rounded-full object-cover ring-4 ring-redline-red/20 transition-all duration-300 hover:ring-redline-red/40"
+              >
             </div>
             <h3 class="text-primary mb-2 text-xl font-semibold">
               {{ member.name }}

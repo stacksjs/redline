@@ -74,7 +74,7 @@ const stats = [
 <template>
   <div>
     <!-- Hero Section -->
-    <section class="bg-redline-black py-20 text-white">
+    <section class="bg-redline-black py-24 text-white">
       <div class="mx-auto max-w-4xl px-4 text-center">
         <h1 class="mb-6 text-5xl font-bold font-racing">
           Who <span class="text-redline-red">We Help</span>
@@ -97,7 +97,7 @@ const stats = [
     />
 
     <!-- Client Types Section -->
-    <section class="bg-primary relative py-20">
+    <section class="section-alt-bg section-separator relative py-24">
       <!-- <img src="/doodle.png" alt="Design Element" class="absolute right-0 top-12 size-32 w-full rotate-12 object-contain opacity-75"> -->
 
       <div class="mx-auto max-w-6xl px-4">
@@ -186,7 +186,7 @@ const stats = [
     </section>
 
     <!-- Why Choose Us Section -->
-    <section class="bg-surface relative py-20">
+    <section class="section-accent-bg section-separator section-divider relative py-24">
       <!-- <img src="/doodle.png" alt="Transistor" class="absolute z-10 col-span-2 size-32 w-full rotate-y-180 object-contain text-blue-500 opacity-75 -bottom-10 lg:col-span-1"> -->
 
       <div class="mx-auto max-w-4xl px-4">

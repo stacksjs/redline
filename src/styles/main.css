@@ -33,6 +33,10 @@ html.dark {
   --redline-muted: #9ca3af; /* Light gray for muted text */
   --redline-muted-foreground: #d1d5db; /* Even lighter gray */
 
+  /* Section separation backgrounds */
+  --redline-section-alt: #0a0a0a; /* Slightly lighter black for alternating sections */
+  --redline-section-accent: #111111; /* Another subtle variation */
+
   color-scheme: dark;
 }
 
@@ -84,6 +88,34 @@ html {
   background-color: var(--redline-red-darker);
   border-color: var(--redline-red-darker);
   color: white;
+}
+
+/* Section separation utilities */
+.section-separator {
+  border-top: 1px solid var(--redline-border);
+}
+
+.section-alt-bg {
+  background: var(--redline-section-alt);
+}
+
+.section-accent-bg {
+  background: var(--redline-section-accent);
+}
+
+.section-divider {
+  position: relative;
+}
+
+.section-divider::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 1px;
+  background: linear-gradient(to right, transparent, var(--redline-red), transparent);
 }
 
 .btn-secondary {

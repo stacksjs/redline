@@ -86,7 +86,7 @@ function closeContactModal() {
 <template>
   <div>
     <!-- Hero Section -->
-    <section class="bg-redline-black py-12 text-white md:py-20">
+    <section class="bg-redline-black py-16 text-white md:py-24">
       <div class="mx-auto max-w-4xl px-4 text-center">
         <h1 class="mb-6 text-5xl font-bold font-racing">
           Client <span class="text-redline-red">Success Stories</span>
@@ -106,7 +106,7 @@ function closeContactModal() {
     />
 
     <!-- Case Studies -->
-    <section class="bg-primary relative py-12 md:py-20">
+    <section class="section-alt-bg section-separator relative py-16 md:py-24">
       <!-- <img src="/doodle.png" alt="Transistor" class="absolute z-10 size-32 w-full object-contain text-blue-500 opacity-75 -bottom-[30px]"> -->
       <div class="mx-auto max-w-6xl px-4">
         <div class="space-y-12 md:space-y-20">
