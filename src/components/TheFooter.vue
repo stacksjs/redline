@@ -76,12 +76,12 @@ function closeCalendarModal() {
         <!-- Mobile Layout: Stack vertically and center -->
         <div class="flex flex-col items-center gap-4 text-center md:hidden">
           <div class="flex items-center justify-center gap-4 text-sm">
-            <a href="mailto:hello@redlinemarketing.com" class="text-muted-foreground transition-colors hover:text-redline-red">
-              hello@redlinemarketing.com
+            <a href="mailto:hello@redlinemarketingagency.com" class="text-muted-foreground transition-colors hover:text-redline-red">
+              hello@redlinemarketingagency.com
             </a>
             <span class="text-muted-foreground">•</span>
-            <a href="tel:+1234567890" class="text-muted-foreground transition-colors hover:text-redline-red">
-              (123) 456-7890
+            <a href="tel:+15625215969" class="text-muted-foreground transition-colors hover:text-redline-red">
+              (562) 521-5969
             </a>
           </div>
           <p class="text-sm">
@@ -93,11 +93,11 @@ function closeCalendarModal() {
         <div class="hidden items-center justify-between md:flex">
           <p>&copy; 2025 Redline Marketing Agency. All rights reserved.</p>
           <div class="flex shrink-0 items-center gap-8">
-            <a href="mailto:hello@redlinemarketing.com" class="text-muted-foreground transition-colors hover:text-redline-red">
-              hello@redlinemarketing.com
+            <a href="mailto:hello@redlinemarketingagency.com" class="text-muted-foreground transition-colors hover:text-redline-red">
+              hello@redlinemarketingagency.com
             </a>
-            <a href="tel:+1234567890" class="text-muted-foreground transition-colors hover:text-redline-red">
-              (123) 456-7890
+            <a href="tel:+15625215969" class="text-muted-foreground transition-colors hover:text-redline-red">
+              (562) 521-5969
             </a>
           </div>
         </div>

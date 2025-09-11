@@ -18,7 +18,7 @@ function closeContactModal() {
 </script>
 
 <template>
-  <section id="contact" class="bg-surface text-primary section-separator section-divider relative py-12 md:py-20">
+  <section id="contact" class="section-separator section-divider bg-surface text-primary relative py-12 md:py-20">
     <div class="mx-auto max-w-4xl px-4 text-center">
       <h2 class="mb-6 text-4xl font-bold font-racing">
         Ready to <span class="text-redline-red">Scale</span>?
@@ -30,8 +30,8 @@ function closeContactModal() {
       </p>
 
       <div class="mb-4">
-        <button class="cta-btn relative inline-block px-8 py-4 text-lg btn-primary" @click="openCalendarModal">
-          <span>Book a free strategy call today and let's redline your marketing.</span>
+        <button class="relative inline-block text-white btn-primary" @click="openCalendarModal">
+          <span>Book a free strategy call</span>
 
           <!-- <img src="/custom-arrow.svg" alt="Transistor" class="absolute col-span-2 size-20 w-full object-contain text-blue-500 -bottom-[120px] -right-[180px] lg:col-span-1"> -->
         </button>

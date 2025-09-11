@@ -75,7 +75,7 @@ function handleSubmit() {
                 </p>
               </div>
               <div class="mt-3 text-center">
-                <a href="mailto:hello@redlinemarketing.com" class="text-sm text-red-800 font-medium dark:text-red-200 hover:text-red-900 dark:hover:text-red-100">
+                <a href="mailto:hello@redlinemarketingagency.com" class="text-sm text-red-800 font-medium dark:text-red-200 hover:text-red-900 dark:hover:text-red-100">
                   Contact Support →
                 </a>
               </div>
@@ -171,10 +171,10 @@ function handleSubmit() {
           </p>
           <div class="flex flex-col gap-2 sm:flex-row sm:justify-center sm:gap-4">
             <a
-              href="mailto:hello@redlinemarketing.com"
+              href="mailto:hello@redlinemarketingagency.com"
               class="hover:text-redline-red-darker text-sm text-redline-red transition-colors"
             >
-              hello@redlinemarketing.com
+              hello@redlinemarketingagency.com
             </a>
             <a
               href="tel:+1234567890"
