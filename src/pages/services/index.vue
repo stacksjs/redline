@@ -13,6 +13,33 @@ useHead({
   ],
 })
 
+// Handle scroll to anchor on page load and route changes
+const route = useRoute()
+
+onMounted(() => {
+  // Handle initial hash if present
+  if (route.hash) {
+    nextTick(() => {
+      const element = document.getElementById(route.hash.slice(1))
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' })
+      }
+    })
+  }
+})
+
+// Watch for hash changes
+watch(() => route.hash, (newHash) => {
+  if (newHash) {
+    nextTick(() => {
+      const element = document.getElementById(newHash.slice(1))
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' })
+      }
+    })
+  }
+})
+
 const services = [
   {
     title: 'Google Ads & Paid Media',
@@ -20,6 +47,7 @@ const services = [
     features: ['Google Ads Management', 'Campaign Optimization', 'Keyword Research', 'Performance Tracking', 'Display & Video Ads'],
     icon: 'target',
     category: 'Advertising',
+    anchor: 'google-ads',
   },
   {
     title: 'Social Media Marketing',
@@ -27,6 +55,7 @@ const services = [
     features: ['Content Strategy', 'Community Management', 'Paid Social Campaigns', 'Influencer Partnerships', 'Analytics & Reporting'],
     icon: 'share',
     category: 'Social Media',
+    anchor: 'social-media',
   },
   {
     title: 'SEO & Local SEO',
@@ -34,6 +63,7 @@ const services = [
     features: ['Technical SEO', 'Local Business Optimization', 'Content Strategy', 'Link Building', 'Google Business Profile'],
     icon: 'search',
     category: 'Search Marketing',
+    anchor: 'seo',
   },
   {
     title: 'Website Strategy & CRO',
@@ -41,6 +71,7 @@ const services = [
     features: ['A/B Testing', 'Landing Page Optimization', 'User Experience Analysis', 'Conversion Tracking', 'Performance Optimization'],
     icon: 'monitor',
     category: 'Website',
+    anchor: 'website',
   },
   {
     title: 'Email Marketing & Retention',
@@ -48,6 +79,7 @@ const services = [
     features: ['Email Campaign Design', 'Automation Workflows', 'List Building', 'Segmentation Strategy', 'Customer Retention'],
     icon: 'mail',
     category: 'Email Marketing',
+    anchor: 'email',
   },
   {
     title: 'Marketing Automation',
@@ -55,6 +87,7 @@ const services = [
     features: ['Lead Nurturing', 'Behavioral Triggers', 'CRM Integration', 'Multi-Channel Workflows', 'Performance Analytics'],
     icon: 'zap',
     category: 'Automation',
+    anchor: 'automation',
   },
   {
     title: 'Application & Web Development',
@@ -62,6 +95,7 @@ const services = [
     features: ['Custom Web Applications', 'E-commerce Development', 'API Integration', 'Database Design', 'Mobile Optimization'],
     icon: 'code',
     category: 'Development',
+    anchor: 'development',
   },
   {
     title: 'Brand Strategy & Design',
@@ -69,6 +103,7 @@ const services = [
     features: ['Brand Identity Design', 'Logo & Visual Systems', 'Brand Guidelines', 'Marketing Collateral', 'Brand Positioning'],
     icon: 'palette',
     category: 'Branding',
+    anchor: 'branding',
   },
   {
     title: 'Google My Business & Yelp Management',
@@ -76,6 +111,7 @@ const services = [
     features: ['Google Business Profile Optimization', 'Yelp Business Page Management', 'Review Generation & Management', 'Local SEO Enhancement', 'Reputation Monitoring'],
     icon: 'map',
     category: 'Local Marketing',
+    anchor: 'local-marketing',
   },
 ]
 
@@ -169,16 +205,16 @@ const processSteps = [
         <div class="grid grid-cols-1 mx-auto gap-8 lg:grid-cols-3 md:grid-cols-2">
           <div
             v-for="service in services"
-            :id="service.category.toLowerCase().replace(' ', '-')"
+            :id="service.anchor"
             :key="service.title"
-            class="group relative transform cursor-pointer rounded-2xl bg-white p-8 shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl hover:-translate-y-2"
+            class="rounded-2xl bg-white p-8 shadow-lg"
           >
             <!-- Service Card -->
             <div class="flex flex-col space-y-6">
               <!-- Icon and Category -->
               <div class="flex items-center space-x-4">
                 <!-- Icon Circle -->
-                <div class="h-16 w-16 flex items-center justify-center rounded-full from-redline-red to-red-600 bg-gradient-to-br text-white shadow-md transition-all duration-300 group-hover:scale-110 group-hover:shadow-lg">
+                <div class="h-16 w-16 flex items-center justify-center rounded-full from-redline-red to-red-600 bg-gradient-to-br text-white shadow-md">
                   <div v-html="iconComponents[service.icon]" />
                 </div>
                 <!-- Category Badge -->
@@ -188,7 +224,7 @@ const processSteps = [
               </div>
 
               <!-- Title -->
-              <h3 class="text-primary text-xl font-bold leading-tight transition-colors duration-300 group-hover:text-redline-red">
+              <h3 class="text-primary text-xl font-bold leading-tight">
                 {{ service.title }}
               </h3>
 
@@ -209,9 +245,6 @@ const processSteps = [
                 </li>
               </ul>
             </div>
-
-            <!-- Subtle Background Gradient on Hover -->
-            <div class="absolute inset-0 rounded-2xl from-redline-red/5 to-red-600/5 bg-gradient-to-br opacity-0 transition-opacity duration-300 -z-10 group-hover:opacity-100" />
           </div>
         </div>
       </div>
