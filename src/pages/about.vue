@@ -42,7 +42,7 @@ const teamMembers = [
     image: '/team/jesus.jpeg',
   },
   {
-    name: 'Desiree Diaz',
+    name: 'Jennifer Diaz ',
     role: 'Social Media Manager',
     image: 'https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80',
   },
