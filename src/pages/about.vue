@@ -88,7 +88,7 @@ const teamMembers = [
           About <span class="text-redline-red">Redline Marketing</span>
         </h2>
         <p class="[text-wrap:balance] mx-auto max-w-3xl text-white leading-relaxed md:text-2xl">
-          We're the marketing team that treats your business like our own — because when you win, we win.
+          We're the marketing team that treats your business like our own, because when you win, we win.
         </p>
       </div>
     </section>
@@ -105,7 +105,7 @@ const teamMembers = [
 
           <p>
             Whether you're a local auto shop looking to fill your bays, a service business wanting to dominate your area,
-            or an online store ready to scale — we've got the strategies, tools, and expertise to get you there.
+            or an online store ready to scale, we've got the strategies, tools, and expertise to get you there.
           </p>
         </div>
       </div>

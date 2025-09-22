@@ -20,7 +20,7 @@
     <!-- Engaging Description -->
     <div class="text-muted-foreground mx-auto max-w-2xl text-lg leading-relaxed space-y-4">
       <p>
-        Looks like you've taken a detour from our main route. Don't worry—even the best marketing campaigns have the occasional redirect!
+        Looks like you've taken a detour from our main route. Don't worry, even the best marketing campaigns have the occasional redirect!
       </p>
       <p>
         The page you're looking for might have been moved, updated, or is temporarily unavailable. But here's the good news: our navigation is designed to get you exactly where you need to go.

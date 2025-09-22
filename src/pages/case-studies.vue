@@ -205,7 +205,7 @@ function closeContactModal() {
                 <blockquote class="text-primary mb-4 border-l-4 border-redline-red pl-4 italic">
                   "{{ study.testimonial }}"
                 </blockquote>
-                <cite class="text-muted-foreground text-sm">— {{ study.clientName }}</cite>
+                <cite class="text-muted-foreground text-sm">{{ study.clientName }}</cite>
               </div>
             </div>
           </div>

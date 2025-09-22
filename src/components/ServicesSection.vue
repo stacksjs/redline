@@ -14,13 +14,13 @@ const services = [
   },
   {
     title: 'SEO & Local SEO',
-    description: 'Get found where it matters — in search results and in your local neighborhood.',
+    description: 'Get found where it matters, in search results and in your local neighborhood.',
     icon: 'search',
     anchor: '#seo',
   },
   {
     title: 'Website Strategy & CRO',
-    description: 'We optimize for more than looks — we build websites that drive results and conversions.',
+    description: 'We optimize for more than looks. We build websites that drive results and conversions.',
     icon: 'monitor',
     anchor: '#website',
   },

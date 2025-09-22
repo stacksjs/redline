@@ -25,7 +25,7 @@ function closeContactModal() {
       </h2>
 
       <p class="text-muted mb-8 text-xl leading-relaxed">
-        If you're tired of wasting ad spend, struggling to grow online, or just don't have time to manage it all — let's talk.
+        If you're tired of wasting ad spend, struggling to grow online, or just don't have time to manage it all, let's talk.
         We'll audit your current setup and show you exactly where the opportunities are.
       </p>
 

@@ -30,14 +30,14 @@ const services = [
   },
   {
     title: 'SEO & Local SEO',
-    description: 'Get found where it matters — in search results and in your local neighborhood.',
+    description: 'Get found where it matters, in search results and in your local neighborhood.',
     features: ['Technical SEO', 'Local Business Optimization', 'Content Strategy', 'Link Building', 'Google Business Profile'],
     icon: '',
     category: 'Search Marketing',
   },
   {
     title: 'Website Strategy & CRO',
-    description: 'We optimize for more than looks — we build websites that drive results and conversions.',
+    description: 'We optimize for more than looks. We build websites that drive results and conversions.',
     features: ['A/B Testing', 'Landing Page Optimization', 'User Experience Analysis', 'Conversion Tracking', 'Performance Optimization'],
     icon: '',
     category: 'Website',
