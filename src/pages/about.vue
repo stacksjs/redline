@@ -39,7 +39,7 @@ const teamMembers = [
   {
     name: 'Jesus Marquez',
     role: 'Founder & Marketing Director',
-    image: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80',
+    image: '/team/jesus.jpeg',
   },
   {
     name: 'Desiree Diaz',
@@ -49,32 +49,32 @@ const teamMembers = [
   {
     name: 'John Figueroa',
     role: 'Video Production Manager',
-    image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80',
+    image: '/team/john.jpg',
   },
   {
     name: 'Jose Ferrer',
     role: 'Marketing Specialist',
-    image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80',
+    image: '/team/jose.jpg',
   },
   {
     name: 'Chris Breuer',
     role: 'Web Developer',
-    image: 'https://images.unsplash.com/photo-1519345182560-3f2917c472ef?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80',
+    image: '/team/chris.png',
   },
   {
     name: 'Steven Rivera',
     role: 'Advertising Specialist',
-    image: 'https://images.unsplash.com/photo-1463453091185-61582044d556?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80',
+    image: '/team/steven.png',
   },
   {
     name: 'Bryan Elms',
     role: 'SEO Specialist',
-    image: 'https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80',
+    image: '/team/bryan.jpg',
   },
   {
     name: 'Cynthia Correa',
     role: 'Business Development Manager',
-    image: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80',
+    image: '/team/cynthia.png',
   },
 ]
 </script>
