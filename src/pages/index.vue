@@ -4,7 +4,7 @@ defineOptions({
 })
 
 useHead({
-  title: 'Redline Marketing Agency - High-Performance Marketing for Local Businesses & E-Commerce',
+  title: 'Redline Marketing Agency - High Performance Marketing Services for Local Businesses & E-Commerce',
   meta: [
     {
       name: 'description',
