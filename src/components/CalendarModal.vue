@@ -26,7 +26,7 @@ function onIframeLoad() {
 }
 
 // You can replace this with your actual Cal.com link
-const calendarUrl = 'https://cal.com/adelino-jose-ee7zyu/test-meeting'
+const calendarUrl = 'https://cal.com/jesus-marquez/marketing-consultation'
 </script>
 
 <template>
