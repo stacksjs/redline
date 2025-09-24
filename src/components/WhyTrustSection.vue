@@ -7,7 +7,7 @@
     <div class="mx-auto max-w-6xl px-4">
       <div class="mb-16 text-center">
         <h2 class="text-primary mb-6 text-4xl font-bold font-racing">
-          Why Business's trust <span class="text-redline-red">Redline Marketing</span>
+          Why Businesses Trust <span class="text-redline-red">Redline Marketing</span>
         </h2>
         <p class="text-muted mx-auto max-w-4xl text-xl leading-relaxed">
           We're not a one-size-fits-all agency. We're a lean, strategic team that treats your business like our own,
