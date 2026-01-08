@@ -80,8 +80,8 @@ function closeCalendarModal() {
               hello@redlinemarketingagency.com
             </a>
             <span class="text-muted-foreground">•</span>
-            <a href="tel:+15625215969" class="text-muted-foreground transition-colors hover:text-redline-red">
-              (562) 521-5969
+            <a href="tel:+15623023188" class="text-muted-foreground transition-colors hover:text-redline-red">
+              (562) 302-3188
             </a>
           </div>
           <p class="text-sm">
@@ -96,8 +96,8 @@ function closeCalendarModal() {
             <a href="mailto:hello@redlinemarketingagency.com" class="text-muted-foreground transition-colors hover:text-redline-red">
               hello@redlinemarketingagency.com
             </a>
-            <a href="tel:+15625215969" class="text-muted-foreground transition-colors hover:text-redline-red">
-              (562) 521-5969
+            <a href="tel:+15623023188" class="text-muted-foreground transition-colors hover:text-redline-red">
+              (562) 302-3188
             </a>
           </div>
         </div>
