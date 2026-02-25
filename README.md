@@ -69,33 +69,38 @@ This website is built using modern web technologies to ensure fast performance, 
 ### Prerequisites
 
 Before you begin, make sure you have the following installed:
+
 - **Node.js** (version 16 or higher)
 - **pnpm** (recommended) or npm
 
 ### Installation
 
 1. **Clone the repository**
+
    ```bash
    git clone <repository-url>
    cd redline
    ```
 
 2. **Install dependencies**
+
    ```bash
    pnpm install
-   # or if you prefer npm
+# or if you prefer npm
    npm install
    ```
 
 3. **Start the development server**
+
    ```bash
    pnpm dev
-   # or
+# or
    npm run dev
    ```
 
 4. **Open your browser**
-   Visit `http://localhost:3333` to see the website in action.
+
+   Visit `<http://localhost:3333>` to see the website in action.
 
 ### Available Scripts
 
@@ -141,6 +146,7 @@ This website is optimized for deployment on Netlify with zero configuration:
 4. Deploy!
 
 The website includes:
+
 - Automatic builds on git push
 - Form handling capabilities
 - Redirect rules for SEO
