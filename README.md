@@ -77,30 +77,30 @@ Before you begin, make sure you have the following installed:
 
 1. **Clone the repository**
 
-   ```bash
-   git clone <repository-url>
-   cd redline
-   ```
+  ```bash
+  git clone <repository-url>
+  cd redline
+  ```
 
 2. **Install dependencies**
 
-   ```bash
-   pnpm install
+  ```bash
+  pnpm install
 # or if you prefer npm
-   npm install
-   ```
+  npm install
+  ```
 
 3. **Start the development server**
 
-   ```bash
-   pnpm dev
+  ```bash
+  pnpm dev
 # or
-   npm run dev
-   ```
+  npm run dev
+  ```
 
 4. **Open your browser**
 
-   Visit `<http://localhost:3333>` to see the website in action.
+  Visit `<http://localhost:3333>` to see the website in action.
 
 ### Available Scripts
 

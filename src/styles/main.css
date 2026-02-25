@@ -185,7 +185,7 @@ html {
 }
 
 /* Normalize utility backgrounds to the semantic surface so the app looks
-   uniformly grayish in light and uniformly black in dark */
+  uniformly grayish in light and uniformly black in dark */
 .bg-white,
 .bg-gray-50,
 .bg-gray-100,
