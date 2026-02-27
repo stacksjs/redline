@@ -38,6 +38,7 @@
     "beasties": "catalog:build",
     "cypress": "catalog:dev",
     "cypress-vite": "catalog:dev",
+    "happy-dom": "14",
     "https-localhost": "catalog:dev",
     "lint-staged": "catalog:dev",
     "markdown-it-link-attributes": "catalog:build",

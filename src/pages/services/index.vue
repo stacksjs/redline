@@ -116,7 +116,7 @@ const services = [
 ]
 
 // Icon component mapping
-const iconComponents = {
+const iconComponents: Record<string, string> = {
   target: `<svg fill="none" stroke="currentColor" viewBox="0 0 24 24" class="w-6 h-6">
     <circle cx="12" cy="12" r="10"/>
     <circle cx="12" cy="12" r="6"/>
