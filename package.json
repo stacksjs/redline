@@ -5,7 +5,7 @@
   "scripts": {
     "build": "vite-ssg build",
     "dev": "vite --port 3333 --open",
-    "lint": "bunx --bun pickier lint .",
+    "lint": "bunx --bun pickier .",
     "preview": "vite preview",
     "preview-https": "serve dist",
     "test": "vitest",
@@ -13,8 +13,8 @@
     "test:unit": "vitest",
     "typecheck": "vue-tsc --noEmit",
     "up": "taze major -I",
-    "postinstall": "npx simple-git-hooks",
-    "sizecheck": "npx vite-bundle-visualizer"
+    "sizecheck": "npx vite-bundle-visualizer",
+    "lint:fix": "bunx --bun pickier . --fix"
   },
   "dependencies": {
     "@unhead/vue": "catalog:frontend",
@@ -69,12 +69,6 @@
     "unplugin": "catalog:build",
     "vite": "catalog:build",
     "vite-plugin-inspect": "catalog:build"
-  },
-  "simple-git-hooks": {
-    "pre-commit": "pnpm lint-staged"
-  },
-  "lint-staged": {
-    "*.{vue,ts,js}": "bunx --bun pickier lint --fix"
   },
   "workspaces": {
     "catalogs": {
