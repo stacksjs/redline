@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import type { ChartConfiguration, ChartDataset } from 'chart.js'
 import { Chart } from 'chart.js/auto'
 import { computed, nextTick, onMounted, ref, watch } from 'vue'
 
@@ -18,6 +19,16 @@ useHead({
     { name: 'description', content: 'Orozcos auto brands reports' },
   ],
 })
+
+type SupportedChartType = 'bar' | 'line' | 'doughnut'
+
+function isRecord(value: unknown): value is Record<string, unknown> {
+  return typeof value === 'object' && value !== null && !Array.isArray(value)
+}
+
+function mergeRecords(a: Record<string, unknown>, b?: Record<string, unknown>): Record<string, unknown> {
+  return { ...a, ...(b ?? {}) }
+}
 
 // ── Sample data ──
 const SAMPLE = {
@@ -60,7 +71,7 @@ const activeSmBrand = ref('orozco')
 const sheetUrl = ref('')
 const connectStatus = ref('')
 const dataMode = ref('Sample Data')
-const chartInstances: Record<string, Chart> = {}
+const chartInstances: Record<string, Chart<SupportedChartType, number[], string>> = {}
 
 // Canvas refs for charts
 const chartRevenueLoc = ref<HTMLCanvasElement | null>(null)
@@ -143,38 +154,51 @@ const yelpTable = computed(() => {
 const COLORS = ['#c0392b', '#1a5276', '#1a7a4a', '#d4a017', '#6c3483', '#c0550a', '#2c7873', '#444']
 const COLORS_LIGHT = ['rgba(192,57,43,0.7)', 'rgba(26,82,118,0.7)', 'rgba(26,122,74,0.7)', 'rgba(212,160,23,0.7)', 'rgba(108,52,131,0.7)', 'rgba(192,85,10,0.7)', 'rgba(44,120,115,0.7)', 'rgba(68,68,68,0.7)']
 
-function makeChart(
+function makeChart<TType extends SupportedChartType>(
   canvas: HTMLCanvasElement | null,
   id: string,
-  type: 'bar' | 'line' | 'doughnut',
+  type: TType,
   labels: string[],
-  datasets: object[],
-  opts: object = {},
+  datasets: Array<ChartDataset<TType, number[]>>,
+  opts: Record<string, unknown> = {},
 ) {
   if (!canvas)
     return
   if (chartInstances[id])
     chartInstances[id].destroy()
-  chartInstances[id] = new Chart(canvas, {
+
+  const optsPlugins = isRecord(opts.plugins) ? opts.plugins : undefined
+  const plugins = mergeRecords(
+    { legend: { labels: { font: { family: 'Barlow', size: 11 }, color: '#4a4540' } } },
+    optsPlugins,
+  )
+
+  const optsScales = isRecord(opts.scales) ? opts.scales : undefined
+  const scales = (type === 'bar' || type === 'line')
+    ? mergeRecords(
+        {
+          x: { ticks: { font: { family: 'Barlow', size: 10 }, color: '#9a9590', maxRotation: 35 }, grid: { color: '#e8e4de' } },
+          y: { ticks: { font: { family: 'Barlow', size: 10 }, color: '#9a9590' }, grid: { color: '#e8e4de' } },
+        },
+        optsScales,
+      )
+    : undefined
+
+  const baseOptions: Record<string, unknown> = {
+    responsive: true,
+    maintainAspectRatio: false,
+    plugins,
+    ...(scales ? { scales } : {}),
+    ...opts,
+  }
+
+  const config: ChartConfiguration<TType, number[], string> = {
     type,
     data: { labels, datasets },
-    options: {
-      responsive: true,
-      maintainAspectRatio: false,
-      plugins: {
-        legend: { labels: { font: { family: 'Barlow', size: 11 }, color: '#4a4540' } },
-        ...(opts as any).plugins,
-      },
-      scales: type === 'bar' || type === 'line'
-        ? {
-            x: { ticks: { font: { family: 'Barlow', size: 10 }, color: '#9a9590', maxRotation: 35 }, grid: { color: '#e8e4de' } },
-            y: { ticks: { font: { family: 'Barlow', size: 10 }, color: '#9a9590' }, grid: { color: '#e8e4de' } },
-            ...(opts as any).scales,
-          }
-        : undefined,
-      ...opts,
-    },
-  })
+    options: baseOptions as unknown as ChartConfiguration<TType, number[], string>['options'],
+  }
+
+  chartInstances[id] = new Chart(canvas, config) as Chart<SupportedChartType, number[], string>
 }
 
 function buildCharts() {
