@@ -62,7 +62,8 @@
     "vite-ssg": "catalog:build",
     "vite-ssg-sitemap": "catalog:build",
     "vitest": "catalog:dev",
-    "vue-tsc": "catalog:dev"
+    "vue-tsc": "catalog:dev",
+    "bun-git-hooks": "catalog:dev"
   },
   "resolutions": {
     "unplugin": "catalog:build",
@@ -107,7 +108,6 @@
         "eslint-plugin-cypress": "^4.2.0",
         "eslint-plugin-format": "^1.0.1",
         "https-localhost": "^4.7.1",
-        "lint-staged": "^15.5.0",
         "bun-git-hooks": "^0.3.1",
         "taze": "^19.0.2",
         "typescript": "^5.8.2",
@@ -129,5 +129,13 @@
         "@types/nprogress": "^0.2.3"
       }
     }
+  },
+  "git-hooks": {
+    "pre-commit": {
+      "staged-lint": {
+        "*.{js,ts,json,yaml,yml,md}": "bunx --bun pickier lint --fix"
+      }
+    },
+    "commit-msg": "bunx gitlint --edit .git/COMMIT_EDITMSG"
   }
 }
