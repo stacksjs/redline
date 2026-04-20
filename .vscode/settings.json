@@ -9,32 +9,39 @@
     "source.fixAll": "explicit",
     "source.organizeImports": "never"
   },
+
+  "[stx]": {
+    "editor.defaultFormatter": "pickier.pickier-vscode"
+  },
+  // Shell
+  "[shellscript]": {
+    "editor.defaultFormatter": "foxundermoon.shell-format"
+  },
+  // Markdown
+  "[markdown]": {
+    "editor.defaultFormatter": "DavidAnson.vscode-markdownlint",
+    "editor.formatOnSave": true
+  },
+  "[dockerfile]": {
+    "editor.defaultFormatter": "foxundermoon.shell-format"
+  },
+  "markdownlint.config": {
+    "default": true,
+    "MD033": {
+      "allowed_elements": [
+        "details",
+        "summary",
+        "VPTeamPage",
+        "VPTeamPageTitle",
+        "VPTeamMembers",
+        "script"
+      ]
+    },
+    "MD041": false
+  },
   "cSpell.words": ["Vitesse", "Vite", "unocss", "vitest", "vueuse", "pinia", "demi", "antfu", "iconify", "intlify", "vitejs", "unplugin", "pnpm"],
   "i18n-ally.sourceLanguage": "en",
   "i18n-ally.keystyle": "nested",
   "i18n-ally.localesPaths": "locales",
-  "i18n-ally.sortKeys": true,
-
-  // Disable the default formatter
-  "prettier.enable": false,
-  "editor.formatOnSave": false,
-
-  // Auto fix,
-
-  // The following is optional.
-  // It's better to put under project setting `.vscode/settings.json`
-  // to avoid conflicts with working with different eslint configs
-  // that does not support all formats.
-  "eslint.validate": [
-    "javascript",
-    "javascriptreact",
-    "typescript",
-    "typescriptreact",
-    "vue",
-    "html",
-    "markdown",
-    "json",
-    "jsonc",
-    "yaml"
-  ]
+  "i18n-ally.sortKeys": true
 }
