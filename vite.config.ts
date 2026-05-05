@@ -1,4 +1,5 @@
 import path from 'node:path'
+import UnoCSS from 'unocss/vite'
 import VueI18n from '@intlify/unplugin-vue-i18n/vite'
 import Shiki from '@shikijs/markdown-it'
 import { unheadVueComposablesImports } from '@unhead/vue'
@@ -25,6 +26,7 @@ export default defineConfig({
   },
 
   plugins: [
+    UnoCSS(),
     // https://github.com/posva/unplugin-vue-router
     VueRouter({
       extensions: ['.vue', '.md'],
