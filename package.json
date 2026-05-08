@@ -1,7 +1,6 @@
 {
   "type": "module",
   "private": true,
-  "packageManager": "pnpm@10.7.0",
   "scripts": {
     "build": "vite-ssg build",
     "dev": "vite --port 3333 --open",
@@ -131,10 +130,10 @@
   },
   "git-hooks": {
     "pre-commit": {
-      "staged-lint": {
+      "stagedLint": {
         "*.{js,ts,json,yaml,yml,md}": "bunx --bun pickier lint --fix"
       }
     },
-    "commit-msg": "bunx gitlint --edit .git/COMMIT_EDITMSG"
+    "commit-msg": "bunx --bun @stacksjs/gitlint --edit .git/COMMIT_EDITMSG"
   }
 }
