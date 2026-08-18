@@ -13,3 +13,4 @@ pantry
 .env
 .env.local
 .ts-cloud
+storage/cloud

@@ -1,0 +1,92 @@
+name: Deploy
+
+# Push to deploy: every commit on main ships the site to the shared Stacks
+# Hetzner box and reconciles Cloudflare in front of it.
+on:
+  push:
+    branches:
+      - main
+  # Manual re-run, for retrying a deploy without an empty commit.
+  workflow_dispatch:
+
+# One deploy at a time. Two concurrent runs would race on the same rpx fragment
+# and the same DNS records; `cancel-in-progress: false` lets the in-flight one
+# finish rather than abandoning a half-shipped release.
+concurrency:
+  group: deploy-production
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Secrets cannot be evaluated in a job-level `if`, so the gate is a step.
+      # Without it this workflow goes red on every push until all three secrets
+      # exist — a failing deploy that means nothing, which is the fastest way to
+      # teach everyone to ignore a red main.
+      - name: Check deploy credentials
+        id: creds
+        env:
+          HCLOUD_TOKEN: ${{ secrets.HCLOUD_TOKEN }}
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          HCLOUD_SSH_KEY: ${{ secrets.HCLOUD_SSH_KEY }}
+        run: |
+          missing=""
+          [ -n "$HCLOUD_TOKEN" ] || missing="$missing HCLOUD_TOKEN"
+          [ -n "$CLOUDFLARE_API_TOKEN" ] || missing="$missing CLOUDFLARE_API_TOKEN"
+          [ -n "$HCLOUD_SSH_KEY" ] || missing="$missing HCLOUD_SSH_KEY"
+          if [ -n "$missing" ]; then
+            echo "configured=false" >> "$GITHUB_OUTPUT"
+            echo "::notice title=Deploy skipped::Missing repository secrets:$missing"
+          else
+            echo "configured=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - uses: actions/checkout@v4
+        if: steps.creds.outputs.configured == 'true'
+
+      # ts-cloud is not a dependency of this project (see scripts/deploy.ts).
+      # The CLI runs straight from TypeScript source, so this needs no build —
+      # only the checkout and its own dependencies.
+      - name: Check out ts-cloud
+        if: steps.creds.outputs.configured == 'true'
+        uses: actions/checkout@v4
+        with:
+          repository: stacksjs/ts-cloud
+          ref: main
+          path: .ts-cloud
+
+      - uses: oven-sh/setup-bun@v2
+        if: steps.creds.outputs.configured == 'true'
+
+      - name: Install ts-cloud dependencies
+        if: steps.creds.outputs.configured == 'true'
+        run: bun install
+        working-directory: .ts-cloud
+
+      - name: Install
+        if: steps.creds.outputs.configured == 'true'
+        run: bun install
+
+      # The deploy ships the built site over SSH, so the runner needs a key the
+      # box authorises. Keep it to this job's filesystem — never the repo.
+      - name: Configure SSH
+        if: steps.creds.outputs.configured == 'true'
+        env:
+          HCLOUD_SSH_KEY: ${{ secrets.HCLOUD_SSH_KEY }}
+        run: |
+          mkdir -p ~/.ssh
+          printf '%s\n' "$HCLOUD_SSH_KEY" > ~/.ssh/id_ed25519
+          chmod 600 ~/.ssh/id_ed25519
+          ssh-keyscan -H 178.105.248.188 >> ~/.ssh/known_hosts 2>/dev/null
+
+      - name: Deploy
+        if: steps.creds.outputs.configured == 'true'
+        env:
+          TS_CLOUD_PATH: ${{ github.workspace }}/.ts-cloud
+          HCLOUD_TOKEN: ${{ secrets.HCLOUD_TOKEN }}
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+        # `bun run deploy` reads .env, which does not exist in CI — the secrets
+        # above are already in the environment, so call the script directly.
+        run: bun scripts/deploy.ts deploy --env production
