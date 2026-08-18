@@ -16,9 +16,9 @@
     "lint:fix": "bunx --bun pickier . --fix",
     "format": "bunx --bun pickier . --format",
     "format:fix": "bunx --bun pickier . --format --write",
-    "deploy": "bun --env-file=.env scripts/deploy.ts deploy --env production",
-    "deploy:dry": "bun --env-file=.env scripts/deploy.ts deploy --env production --dry-run",
-    "cloud": "bun --env-file=.env scripts/deploy.ts"
+    "deploy": "bun --env-file=.env ./node_modules/.bin/cloud deploy --env production",
+    "deploy:dry": "bun --env-file=.env ./node_modules/.bin/cloud deploy --env production --dry-run",
+    "cloud": "bun --env-file=.env ./node_modules/.bin/cloud"
   },
   "dependencies": {
     "@unhead/vue": "catalog:frontend",
@@ -35,6 +35,7 @@
     "@iconify-json/carbon": "catalog:dev",
     "@intlify/unplugin-vue-i18n": "catalog:build",
     "@shikijs/markdown-it": "catalog:build",
+    "@stacksjs/ts-cloud": "^0.9.0",
     "@types/markdown-it-link-attributes": "catalog:types",
     "@types/nprogress": "catalog:types",
     "@vitejs/plugin-vue": "catalog:build",

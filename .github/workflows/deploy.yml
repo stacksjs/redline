@@ -49,39 +49,8 @@ jobs:
       - uses: oven-sh/setup-bun@v2
         if: steps.creds.outputs.configured == 'true'
 
-      # ts-cloud is not a dependency of this project (see scripts/deploy.ts), so
-      # it is cloned at deploy time.
-      #
-      # Deliberately OUTSIDE the workspace, which is why this is a plain clone
-      # rather than actions/checkout (whose `path` cannot escape the workspace).
-      # ts-cloud runs a secret scan over the tree it is about to deploy, and a
-      # checkout of its own source sitting inside that tree gets scanned too:
-      # its fixtures and password-shaped constants trip the scanner and the
-      # deploy is blocked by seventeen findings that have nothing to do with
-      # this site.
-      - name: Check out ts-cloud
-        if: steps.creds.outputs.configured == 'true'
-        run: |
-          git clone --depth 1 --branch main https://github.com/stacksjs/ts-cloud.git "$RUNNER_TEMP/ts-cloud"
-
-      - name: Install ts-cloud dependencies
-        if: steps.creds.outputs.configured == 'true'
-        run: bun install
-        working-directory: ${{ runner.temp }}/ts-cloud
-
-      # The CLI runs from TypeScript source, but it imports the sibling
-      # workspace packages by name and those resolve to their `dist` — which a
-      # fresh clone has not built. Without this the deploy dies on "Cannot find
-      # module '@ts-cloud/core'". Order matters: core's types come from
-      # aws-types, so aws-types builds first. The CLI package itself needs no
-      # build; Bun executes its entry directly.
-      - name: Build ts-cloud workspace packages
-        if: steps.creds.outputs.configured == 'true'
-        working-directory: ${{ runner.temp }}/ts-cloud
-        run: |
-          bun run --filter '@ts-cloud/aws-types' build
-          bun run --filter '@ts-cloud/core' build
-
+      # `@stacksjs/ts-cloud` is a normal devDependency, so its CLI arrives with
+      # the install — nothing to clone or build.
       - name: Install
         if: steps.creds.outputs.configured == 'true'
         run: bun install
@@ -101,9 +70,8 @@ jobs:
       - name: Deploy
         if: steps.creds.outputs.configured == 'true'
         env:
-          TS_CLOUD_PATH: ${{ runner.temp }}/ts-cloud
           HCLOUD_TOKEN: ${{ secrets.HCLOUD_TOKEN }}
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
         # `bun run deploy` reads .env, which does not exist in CI — the secrets
-        # above are already in the environment, so call the script directly.
-        run: bun scripts/deploy.ts deploy --env production
+        # above are already in the environment, so call the CLI directly.
+        run: bun ./node_modules/.bin/cloud deploy --env production

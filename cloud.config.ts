@@ -1,3 +1,5 @@
+import type { CloudConfig } from '@stacksjs/ts-cloud'
+
 /**
  * Deployment configuration for redlinemarketingagency.com.
  *
@@ -10,14 +12,7 @@
  *
  * @see https://ts-cloud.stacksjs.com/features/cloudflare
  */
-/*
- * Untyped on purpose. The `CloudConfig` type lives in `@stacksjs/ts-cloud`,
- * which this project does not install — see `scripts/deploy.ts` for why. The
- * config is still validated: the CLI loads it through ts-cloud's own validator,
- * so `bun run deploy:dry` reports a bad shape in about a second and changes
- * nothing.
- */
-const config = {
+const config: CloudConfig = {
   project: {
     name: 'redline',
     slug: 'redline',
