@@ -54,6 +54,20 @@ if (!existsSync(join(checkout, 'node_modules'))) {
   process.exit(1)
 }
 
+// The CLI runs from TypeScript source, but it imports its sibling workspace
+// packages by name and those resolve to their built `dist`. A fresh clone has
+// none, and the failure surfaces as `Cannot find module '@ts-cloud/core'` from
+// a file deep inside the CLI — which reads like a broken install rather than a
+// missing build step.
+if (!existsSync(join(checkout, 'packages', 'core', 'dist'))) {
+  console.error(`ts-cloud checkout at ${checkout} has not been built.`)
+  console.error('Run:')
+  console.error(`  cd ${checkout}`)
+  console.error("  bun run --filter '@ts-cloud/aws-types' build")
+  console.error("  bun run --filter '@ts-cloud/core' build")
+  process.exit(1)
+}
+
 const result = spawnSync('bun', [join(checkout, CLI_ENTRY), ...process.argv.slice(2)], {
   stdio: 'inherit',
   env: process.env,

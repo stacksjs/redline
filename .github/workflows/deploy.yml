@@ -65,6 +65,19 @@ jobs:
         run: bun install
         working-directory: .ts-cloud
 
+      # The CLI runs from TypeScript source, but it imports the sibling
+      # workspace packages by name and those resolve to their `dist` — which a
+      # fresh clone has not built. Without this the deploy dies on "Cannot find
+      # module '@ts-cloud/core'". Order matters: core's types come from
+      # aws-types, so aws-types builds first. The CLI package itself needs no
+      # build; Bun executes its entry directly.
+      - name: Build ts-cloud workspace packages
+        if: steps.creds.outputs.configured == 'true'
+        working-directory: .ts-cloud
+        run: |
+          bun run --filter '@ts-cloud/aws-types' build
+          bun run --filter '@ts-cloud/core' build
+
       - name: Install
         if: steps.creds.outputs.configured == 'true'
         run: bun install
