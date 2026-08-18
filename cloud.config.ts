@@ -81,19 +81,33 @@ const config: CloudConfig = {
           comment: 'Microsoft 365 inbound mail',
         },
         {
-          // `~all` (softfail), not `-all`. A hard fail silently breaks every
-          // sender that is not Exchange Online — a marketing tool, a CRM, the
-          // site's own contact form. Tighten to `-all` only once the full
-          // sender list is confirmed and DMARC reports are coming in.
+          // GoDaddy's value, and it is the correct one rather than Microsoft's
+          // bare include. The chain is secureserver.net -> spf-0.secureserver.net
+          // -> spf.protection.outlook.com, so it authorises Exchange Online AND
+          // GoDaddy's own relays; `include:spf.protection.outlook.com` alone
+          // would hard-fail anything sent through GoDaddy's infrastructure
+          // (forwarding, webmail). Costs 3 of the 10 permitted DNS lookups.
+          //
+          // `-all` is a hard fail, per GoDaddy's sheet. Any third-party sender
+          // outside that chain — a marketing tool, a CRM — will start bouncing.
+          // If that happens, either add its include or soften to `~all`.
           type: 'TXT',
           name: '@',
-          content: 'v=spf1 include:spf.protection.outlook.com ~all',
-          comment: 'SPF',
+          content: 'v=spf1 include:secureserver.net -all',
+          comment: 'SPF (GoDaddy M365 chain)',
         },
         {
-          // `p=none` monitors without affecting delivery. Move to quarantine or
-          // reject only after reports show every legitimate sender aligning —
-          // and add `rua=` once there is a mailbox or service to receive them.
+          // Microsoft 365 domain ownership verification.
+          type: 'TXT',
+          name: '@',
+          content: 'NETORGFT19085181.onmicrosoft.com',
+          comment: 'M365 domain verification',
+        },
+        {
+          // Not from GoDaddy's sheet. `p=none` only observes — it changes no
+          // delivery decision — but it is what produces the evidence needed
+          // before tightening anything. Add `rua=` once there is a mailbox or
+          // service to receive the reports.
           type: 'TXT',
           name: '_dmarc',
           content: 'v=DMARC1; p=none',
@@ -108,11 +122,30 @@ const config: CloudConfig = {
           content: 'autodiscover.outlook.com',
           comment: 'Outlook client auto-configuration',
         },
-        // DKIM still to come: selector1/selector2 CNAMEs need the tenant's
-        // <name>.onmicrosoft.com, which is only visible in the M365 admin
-        // centre. The targets are then
-        // selector1-redlinemarketingagency-com._domainkey.<tenant>.onmicrosoft.com
-        // (and selector2-…), so adding them is a two-line change here.
+        {
+          type: 'CNAME',
+          name: 'email',
+          content: 'email.secureserver.net',
+          comment: 'GoDaddy webmail vanity host',
+        },
+        // DKIM. The selector hosts do not resolve yet, which means DKIM has
+        // never been switched on for this domain in the tenant — Microsoft only
+        // generates the keys when you enable it. These CNAMEs are inert until
+        // then, and publishing them first is Microsoft's required order: the
+        // portal refuses to enable DKIM until they exist. Tenant name comes
+        // from the verification TXT above.
+        {
+          type: 'CNAME',
+          name: 'selector1._domainkey',
+          content: 'selector1-redlinemarketingagency-com._domainkey.NETORGFT19085181.onmicrosoft.com',
+          comment: 'DKIM selector 1 (inert until DKIM is enabled in M365)',
+        },
+        {
+          type: 'CNAME',
+          name: 'selector2._domainkey',
+          content: 'selector2-redlinemarketingagency-com._domainkey.NETORGFT19085181.onmicrosoft.com',
+          comment: 'DKIM selector 2 (inert until DKIM is enabled in M365)',
+        },
       ],
     },
 
