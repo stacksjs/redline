@@ -85,13 +85,13 @@ function closeCalendarModal() {
             </a>
           </div>
           <p class="text-sm">
-            &copy; 2025 Redline Marketing Agency. <br>All rights reserved.
+            &copy; 2026 Redline Marketing Agency. <br>All rights reserved.
           </p>
         </div>
 
         <!-- Desktop Layout: Original layout -->
         <div class="hidden items-center justify-between md:flex">
-          <p>&copy; 2025 Redline Marketing Agency. All rights reserved.</p>
+          <p>&copy; 2026 Redline Marketing Agency. All rights reserved.</p>
           <div class="flex shrink-0 items-center gap-8">
             <a href="mailto:hello@redlinemarketingagency.com" class="text-muted-foreground transition-colors hover:text-redline-red">
               hello@redlinemarketingagency.com
