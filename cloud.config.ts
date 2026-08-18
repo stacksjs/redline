@@ -53,6 +53,67 @@ const config: CloudConfig = {
     dns: {
       provider: 'cloudflare',
       domain: 'redlinemarketingagency.com',
+
+      /**
+       * Records the deploy cannot infer from `sites` — mail, in this case.
+       *
+       * These live here because they are exactly what went missing when the
+       * nameservers moved off Netlify: the zone arrived at Cloudflare empty,
+       * nothing in a deploy reads MX or SPF, and mail was silently dead until
+       * someone went looking. Declaring them makes the zone reproducible from
+       * this repo rather than from a dashboard nobody can log into.
+       *
+       * Reconciled on every deploy, upsert-only — never removes a record it was
+       * not asked to manage.
+       *
+       * Mail is Microsoft 365, resold through GoDaddy (the domain is federated
+       * to sso.godaddy.com). The MX target is Microsoft's per-domain inbound
+       * host: it exists only because the domain is provisioned in the tenant,
+       * which is what confirms it rather than it being a guess at the naming
+       * pattern.
+       */
+      records: [
+        {
+          type: 'MX',
+          name: '@',
+          content: 'redlinemarketingagency-com.mail.protection.outlook.com',
+          priority: 0,
+          comment: 'Microsoft 365 inbound mail',
+        },
+        {
+          // `~all` (softfail), not `-all`. A hard fail silently breaks every
+          // sender that is not Exchange Online — a marketing tool, a CRM, the
+          // site's own contact form. Tighten to `-all` only once the full
+          // sender list is confirmed and DMARC reports are coming in.
+          type: 'TXT',
+          name: '@',
+          content: 'v=spf1 include:spf.protection.outlook.com ~all',
+          comment: 'SPF',
+        },
+        {
+          // `p=none` monitors without affecting delivery. Move to quarantine or
+          // reject only after reports show every legitimate sender aligning —
+          // and add `rua=` once there is a mailbox or service to receive them.
+          type: 'TXT',
+          name: '_dmarc',
+          content: 'v=DMARC1; p=none',
+          comment: 'DMARC (monitor only)',
+        },
+        {
+          // Must stay DNS-only, which is the default for declared records: a
+          // proxied CNAME here resolves to Cloudflare instead of Microsoft and
+          // breaks Outlook client auto-configuration.
+          type: 'CNAME',
+          name: 'autodiscover',
+          content: 'autodiscover.outlook.com',
+          comment: 'Outlook client auto-configuration',
+        },
+        // DKIM still to come: selector1/selector2 CNAMEs need the tenant's
+        // <name>.onmicrosoft.com, which is only visible in the M365 admin
+        // centre. The targets are then
+        // selector1-redlinemarketingagency-com._domainkey.<tenant>.onmicrosoft.com
+        // (and selector2-…), so adding them is a two-line change here.
+      ],
     },
 
     compute: {

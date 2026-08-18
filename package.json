@@ -35,7 +35,7 @@
     "@iconify-json/carbon": "catalog:dev",
     "@intlify/unplugin-vue-i18n": "catalog:build",
     "@shikijs/markdown-it": "catalog:build",
-    "@stacksjs/ts-cloud": "^0.9.1",
+    "@stacksjs/ts-cloud": "^0.9.2",
     "@types/markdown-it-link-attributes": "catalog:types",
     "@types/nprogress": "catalog:types",
     "@vitejs/plugin-vue": "catalog:build",
